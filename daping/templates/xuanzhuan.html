@@ -1,0 +1,304 @@
+<html>
+<head>
+    <script typet="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+    <style>
+        html,body, h1,h2,h3,h4,ul,li,p,a,input,label, form,ins{margin: 0;padding: 0;  text-decoration:none;}
+        div,header,footer,section,nav,article,input,span,p,button{ box-sizing:border-box;}
+        .container_carousel .loading{position: static;min-height: 200px}
+        .container_carousel .loading:before {display:block; content:""; width: 40px; height: 40px; background:url(https://etoro-cdn.etorostatic.com/studio/content/lp/cache_1/new_crypto/v12/images/etoro_loader_cyc.png) no-repeat center center; top: 50%; left: 50%;  margin: -20px 0 0 -20px;background-size: cover;  -webkit-animation: t_loader 0.5s linear infinite;  -moz-animation: t_loader 0.5s linear infinite;  animation: t_loader 0.5s linear infinite;position: absolute;}
+        .container_carousel {margin: 0 auto;  width: 270px;  height: 415px;  position: relative;  -webkit-perspective: 1000px;  -moz-perspective: 1000px;  -o-perspective: 1000px;  -ms-perspective: 1000px;  perspective: 1000px;  }
+        .carousel {height: 100%;  width: 100%;  position: absolute;  -webkit-transform-style: preserve-3d;  -moz-transform-style: preserve-3d;  -o-transform-style: preserve-3d;  -ms-transform-style: preserve-3d;  transform-style: preserve-3d;  transition: transform 1s;  -ms-transform: translate3d(0, 0, 0);  -moz-transform: translate3d(0, 0, 0);  -webkit-transform: translate3d(0, 0, 0);  transform: translate3d(0, 0, 0);  }
+        .carousel .item {display: block;  position: absolute;  background: #000;  width: 270px;  height: 423px;  color: #FFF;  opacity: 0.95;  box-shadow: 4px 4px 20px 2px rgba(0,0,0,0.4);  }
+        .carousel .box1 {transform: rotateY(0deg) translateZ(340px) scale(0.5);}
+        .carousel .box2 {transform: rotateY(51.42deg) translateZ(340px) scale(0.5);}
+        .carousel .box3 {transform: rotateY(102.85deg) translateZ(340px) scale(0.5);}
+        .carousel .box4 {transform: rotateY(154.28deg) translateZ(340px) scale(0.5);}
+        .carousel .box5 {transform: rotateY(205.71deg) translateZ(340px) scale(0.5);}
+        .carousel .box6 {transform: rotateY(257.14deg) translateZ(340px) scale(0.5);}
+        .carousel .box7 {transform: rotateY(308.57deg) translateZ(340px) scale(0.5);}
+        .carousel .image { position: relative;  left: 0;  width: 100%;  height: 198px;  overflow: hidden;  background-repeat: no-repeat;  background-size: 940% 100%;  -webkit-transition: left 1s ease-in-out;  -moz-transition: left 1s ease-in-out;  -o-transition: left 1s ease-in-out;  transition: left 1s ease-in-out;  }
+        .carousel .image .img_body { margin: 0 auto;  height: 100%;  width: auto;  border: 0;  background-repeat: no-repeat;  background-position: center center;  background-size: contain;  }
+        .carousel .info {background: #fff;  height: 225px;  }
+        .carousel .name {overflow: hidden;  text-overflow: ellipsis;  white-space: nowrap;  padding: 20px 15px !important;  }
+        .carousel .row{  padding: 7px 15px;  width: 100%;   border-bottom: 1px solid #e5e5e5;  height: 75px;  background: linear-gradient(#ffffff,rgba(229, 229, 229, 0.62));}
+        .carousel .num {font-size: 27px;  color: #3a3d48;  overflow: hidden;  text-overflow: ellipsis;  white-space: nowrap;  }
+        .carousel .m_name {display: inline-block;  font-size: 27px;  font-weight: bold;  color: #2c2c2c;  vertical-align: middle;  text-transform: uppercase;  letter-spacing: -0.5px;  }
+        .carousel .info .name .d_name {display: inline-block;  font-weight: 500;  font-size: 18px;  color: #777777;  vertical-align: middle;  border-left: solid 2px #e3e3e3;  padding-left: 6px;  max-width: 69%;  }
+        .carousel .text_title {display:inherit; font-size: 15px; font-weight: 500;  color: #777777;  vertical-align: middle; margin-left: 4px; }
+    </style>
+</head>
+<body>
+<div class="container_carousel">
+    <div class="carousel" id="carousel">
+
+    </div>
+</div>
+<script type="text/javascript">
+    var etoro_lp = {};
+
+    etoro_lp.api = {
+        getArrayList: {
+            instrument: []
+        },
+        localObj: {
+            instrument: []
+        },
+
+        currencyLocation: function(e) {
+            switch (etoro_lp.settings.culture) {
+                case "fr-fr":
+                    e += "$";
+                    break;
+                case "de-de":
+                    e += " USD";
+                    break;
+                case "pl-pl":
+                    e += "$";
+                    break;
+                case "ar-ae":
+                    e = "????? " + e;
+                    break;
+                case "zh-cn":
+                case "zh-tw":
+                    e += "美元";
+                    break;
+                default:
+                    e = "$" + e
+            }
+            return e
+        }
+    };
+    etoro_lp.settings = {
+        "res" : {
+            "title" : 'Compare our top cryptocurrencies and choose the best cryptocurrency to buy or sell in 2017',
+            "decentralised_title" : 'DECENTRALISED',
+            "gain_title" : 'Gain in 2017',
+            "max_supply_title" : 'MAX SUPPLY',
+            "current_price_title" : 'CURRENT PRICE',
+            "market_cap_title" : 'MARKET CAP',
+            "CTA" : 'Trade'
+        }
+    };
+    // 这个就是基本数据
+    etoro_lp.api.localObj.instrument = [
+        {
+            "instrumentId": 100000,
+            "symbolFull": 'BTC',
+            "displayName": 'Bitcoin',
+            "url": 'https://www.etoro.com/markets/btc',
+            "btn_text": 'Trade BTC',
+            "image": 'https://etoro-cdn.etorostatic.com/market-avatars/btc/50x50.png',
+            "image150": 'https://etoro-cdn.etorostatic.com/market-avatars/btc/150x150.png',
+            "decentralised": 'images/V.png',
+            "max_suplly": '21M',
+            "market_cap": '$319B',
+            "gain": '1973%v',
+            "ask": '7690.73',
+            "bid": '7577.12'
+        },
+        {
+            "instrumentId": '100001',
+            "symbolFull": 'ETHEREUM',
+            "displayName": 'Ethereum',
+            "url": 'https://www.etoro.com/markets/ethereum',
+            "btn_text": 'Trade ETH',
+            "image": 'https://etoro-cdn.etorostatic.com/market-avatars/eth-usd/50x50.png',
+            "image150": 'https://etoro-cdn.etorostatic.com/market-avatars/eth-usd/150x150.png',
+            "decentralised": 'images/V.png',
+            "max_suplly": '93M',
+            "market_cap": '$70B',
+            "gain": '9075%',
+            "ask": '609.9738',
+            "bid": '597.96'
+        },
+        {
+            "instrumentId": '100003',
+            "symbolFull": 'XRP',
+            "displayName": 'By Ripple Labs',
+            "url": 'https://www.etoro.com/markets/xrp',
+            "btn_text": 'Trade XRP',
+            "image": 'https://etoro-cdn.etorostatic.com/market-avatars/100003/50x50.png',
+            "image150": 'https://etoro-cdn.etorostatic.com/market-avatars/100003/150x150.png',
+            "decentralised": 'images/X.png',
+            "max_suplly": '100B',
+            "market_cap": '$29B',
+            "gain": '12455%',
+            "ask": '0.6514',
+            "bid": '0.63'
+        },
+        {
+            "instrumentId": '100005',
+            "symbolFull": 'LTC',
+            "displayName": 'Litecoin',
+            "url": 'https://www.etoro.com/markets/ltc',
+            "btn_text": 'Trade LTC',
+            "image": 'https://etoro-cdn.etorostatic.com/market-avatars/100005/50x50.png',
+            "image150": 'https://etoro-cdn.etorostatic.com/market-avatars/100005/150x150.png',
+            "decentralised": 'images/V.png',
+            "max_suplly": '84M',
+            "market_cap": '$17B',
+            "gain": '7950%',
+            "ask": '125.8',
+            "bid": '122.12'
+        },
+        {
+            "instrumentId": '100004',
+            "symbolFull": 'DASH',
+            "displayName": 'Dash',
+            "url": 'https://www.etoro.com/markets/dash',
+            "btn_text": 'Trade DASH',
+            "image": 'https://etoro-cdn.etorostatic.com/market-avatars/100004/50x50.png',
+            "image150": 'https://etoro-cdn.etorostatic.com/market-avatars/100004/150x150.png',
+            "decentralised": 'images/V.png',
+            "max_suplly": '19M',
+            "market_cap": '$8B',
+            "gain": '10100%',
+            "ask": '352.25',
+            "bid": '341.97'
+        },
+        {
+            "instrumentId": '100020',
+            "symbolFull": 'XLM',
+            "displayName": 'Stellar',
+            "url": 'https://www.etoro.com/markets/xlm',
+            "btn_text": 'Trade XLM',
+            "image": 'https://etoro-cdn.etorostatic.com/market-avatars/100020/50x50.png',
+            "image150": 'https://etoro-cdn.etorostatic.com/market-avatars/100020/150x150.png',
+            "decentralised": 'images/V.png',
+            "max_suplly": '100M',
+            "market_cap": '$6.7B',
+            "gain": '13744%',
+            "ask": '0.3044',
+            "bid": '0.29'
+        },
+        {
+            "instrumentId": '100023',
+            "symbolFull": 'NEO',
+            "displayName": 'NEO',
+            "url": 'https://www.etoro.com/markets/neo',
+            "btn_text": 'Trade NEO',
+            "image": 'https://etoro-cdn.etorostatic.com/market-avatars/100023/50x50.png',
+            "image150": 'https://etoro-cdn.etorostatic.com/market-avatars/100023/150x150.png',
+            "decentralised": 'images/X.png',
+            "max_suplly": '100M',
+            "market_cap": '$7.5B',
+            "gain": '52413%',
+            "ask": '56.65',
+            "bid": '53.93'
+        },
+        {
+            "instrumentId": '100002',
+            "symbolFull": 'BCH',
+            "displayName": 'Bitcoin Cash',
+            "url": 'https://www.etoro.com/markets/bch',
+            "btn_text": 'Trade BCH',
+            "image": 'https://etoro-cdn.etorostatic.com/market-avatars/100002/50x50.png',
+            "image150": 'https://etoro-cdn.etorostatic.com/market-avatars/100002/150x150.png',
+            "decentralised": 'images/V.png',
+            "max_suplly": '21M',
+            "market_cap": '$31B',
+            "gain": '234%',
+            "ask": '1101.91',
+            "bid": '1048.95'
+        },
+        {
+            "instrumentId": '100007',
+            "symbolFull": 'ETC',
+            "displayName": 'Ethereum Classic',
+            "url": 'https://www.etoro.com/markets/etc',
+            "btn_text": 'Trade ETC',
+            "image": 'https://etoro-cdn.etorostatic.com/market-avatars/100007/50x50.png',
+            "image150": 'https://etoro-cdn.etorostatic.com/market-avatars/100007/150x150.png',
+            "decentralised": 'images/V.png',
+            "max_suplly": '97M',
+            "market_cap": '$3B',
+            "gain": '2482%',
+            "ask": '15.9499',
+            "bid": '15.48'
+        }
+    ];
+    etoro_lp.page_action = {
+        api: {},
+        UI: {
+            flag_focus: 1,
+            timerId: 0,
+            currdeg: 0,
+            createUI: function() {
+                var e;
+                e = etoro_lp.api.localObj.instrument;
+                for (var t = "", a = '<div class="item box{num_box}"><a target="_blank" href="{stock_url}"><div class="image" style="background-image: url({Image})"><div class="img_body" style="background-image: url({Image})"></div></div><div class="info"><div class="row name"><span class="m_name">{SymbolFull}</span> <span class="d_name cut_text">{DisplayName}</span> </div><div class="row num"><span>{current_price}</span><span class="text_title cut_text">' + etoro_lp.settings.res.current_price_title + '</span></div><div class="row num">{market_cap}<span class="text_title cut_text">' + etoro_lp.settings.res.market_cap_title + "</span></div></div></a></div>", n = 1, r = 0; r < 7; r++) {
+                    current = e[r];
+                    var o = a;
+                    t += o = (o = (o = (o = (o = (o = (o = o.replace(/{num_box}/g, n)).replace(/{SymbolFull}/g, current.symbolFull)).replace(/{DisplayName}/g, current.displayName)).replace(/{Image}/g, current.image150)).replace(/{stock_url}/g, current.url)).replace("{current_price}", etoro_lp.api.currencyLocation(current.bid))).replace("{market_cap}", current.market_cap),
+                        n++
+                }
+                "1" == etoro_lp.settings.explorer ? ($(".top-append-to").append(t),
+                    this.sliderInit()) : ($(".carousel .loading").removeClass("loading"),
+                    $(".carousel").append(t),
+                    this.carouselInit())
+            },
+            createTableUI: function() {
+                var e;
+                e = etoro_lp.api.localObj.instrument;
+                var t = "<tr><th></th><th></th><th>" + etoro_lp.settings.res.gain_title + "</th><th>" + etoro_lp.settings.res.max_supply_title + "</th><th>" + etoro_lp.settings.res.decentralised_title + "</th><th>" + etoro_lp.settings.res.current_price_title + "</th><th>" + etoro_lp.settings.res.market_cap_title + "</th><th></th> </tr>"
+                    , a = ""
+                    , n = '<tr><td><a target="_blank" href="{stock_url}"><img src="{Image}"></a></td><td> <a target="_blank" href="{stock_url}"><span class="ints_name">{SymbolFull}</span><span class="full_name">{DisplayName}</span></a></td><td><p class="inst_num border" data-sign="{change_sign}">{gain}</p> </td><td><p class="inst_num">{max_suplly}</p></td><td><p class="decentralised"><img class="decentralised_img" src="{decentralised}"></p></td><td><p class="inst_num">{current_price}</p></td><td><p class="inst_num">{market_cap}</p></td><td><a class="cta_trade" target="_blank" href="{stock_url}">{btn_text}</a></td></tr>';
+                for (var r in window.innerWidth < 768 && (n = '<div class="cover"><a target="_blank" href="{stock_url}"><div class="image"> <img src="{Image}"></div> <p class="ints_name">{SymbolFull}<span class="full_name">{DisplayName}</span></p> </a>   <div class="info clearfix"> <div class="fl2"> <p>' + etoro_lp.settings.res.gain_title + ': </p></div><div class="fl"> <p class="inst_num" data-sign="{change_sign}">{gain}</p> </div> <div class="clearfix"></div><div class="info clearfix"> <div class="fl2"> <p>' + etoro_lp.settings.res.max_supply_title + ': </p></div><div class="fl"> <p class="inst_num">{max_suplly}</p> </div> <div class="clearfix"></div> </div> <div class="info clearfix">  <div class="fl2"> <p>' + etoro_lp.settings.res.decentralised_title + ': </p> </div><div class="fl"> <p class="decentralised"><img class="decentralised_img" src="{decentralised}"></p> </div> <div class="clearfix"></div> </div><div class="info clearfix"> <div class="fl2"> <p>' + etoro_lp.settings.res.current_price_title + ': </p></div><div class="fl"> <p class="inst_num">{current_price}</p> </div> <div class="clearfix"></div> </div><div class="info clearfix"> <div class="fl2"> <p>' + etoro_lp.settings.res.market_cap_title + ': </p></div><div class="fl"> <p class="inst_num">{market_cap}</p> </div> <div class="clearfix"></div> </div><a class="cta_trade" target="_blank" href="{stock_url}">{btn_text}</a> </div> </div><div class="clearfix">'),
+                    e) {
+                    current = e[r];
+                    var o = n;
+                    a += o = (o = (o = (o = (o = (o = (o = (o = (o = (o = (o = o.replace(/{SymbolFull}/g, current.symbolFull)).replace(/{DisplayName}/g, current.displayName)).replace(/{Image}/g, current.image)).replace(/{stock_url}/g, current.url)).replace(/{decentralised}/g, current.decentralised)).replace("{current_price}", etoro_lp.api.currencyLocation(current.bid))).replace("{max_suplly}", current.max_suplly)).replace("{market_cap}", current.market_cap)).replace("{gain}", current.gain)).replace(/{change_sign}/g, "positive")).replace(/{btn_text}/g, current.btn_text)
+                }
+                window.innerWidth > 767 && (a = t + a),
+                    $(".tooltip .innerHTML").find("loading"),
+                    $(".s2 .loading").removeClass("loading"),
+                    $(".tooltip .innerHTML").append(a)
+            },
+            sliderInit: function() {
+                $(".top-append-to").slick({
+                    centerMode: !0,
+                    adaptiveHeight: !1,
+                    variableWidth: !0,
+                    arrows: !1,
+                    autoplay: !0,
+                    speed: 2e3,
+                    autoplaySpeed: 500,
+                    slidesToShow: 1,
+                    pauseOnHover: !0,
+                    slidesToScroll: 3,
+                    swipeToSlide: !0
+                }),
+                    $(".top-append-to").css("opacity", "1")
+            },
+            carouselInit: function() {
+                var e = $(".carousel")
+                    , t = 51.42;
+                etoro_lp.page_action.UI.timerId = window.setInterval(function() {
+                    !function() {
+                        etoro_lp.page_action.UI.currdeg = etoro_lp.page_action.UI.currdeg - t;
+                        var a = etoro_lp.page_action.UI.currdeg;
+                        e.css({
+                            transform: "rotateY(" + a + "deg)"
+                        })
+                    }()
+                }, 2e3)
+            },
+            clearTimeout_carousel: function() {
+                clearTimeout(etoro_lp.page_action.UI.timerId)
+            }
+        }
+    };
+    etoro_lp.page_action.UI.createUI();
+
+    $(document).ready(function(e) {
+        $(".carousel").mouseenter(function() {
+            etoro_lp.page_action.UI.clearTimeout_carousel()
+        }),
+            $(".carousel").mouseleave(function() {
+                etoro_lp.page_action.UI.carouselInit()
+            });
+    })
+
+
+</script>
+</body>

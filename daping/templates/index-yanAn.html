@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>陕西大屏-延安</title>
+
+    <link rel="stylesheet" th:href="@{/css/index-all.css}"/>
+    <!--<link rel="stylesheet" href="../static/css/index-all.css">-->
+</head>
+<body>
+<div class="isIe">
+    若需访问大屏内容，请使用火狐或谷歌浏览器
+</div>
+<div class="index-div">
+    <div class="index-title-div">
+        <!--<img src="../static/images/title-bg.png" class="index-title-bg">-->
+        <img id="title" th:src="@{/images/title-bg.png}"  class="index-title-bg"/>
+        <div class="index-title-fontDiv">
+            <!--<img src="../static/images/title-font-yanan.png" class="index-title-font">-->
+            <img th:src="@{/images/title-font-yanan.png}" class="index-title-font">
+        </div>
+        <div class="show-time"></div>
+        <div class="show-visited">月累计访问量: <span id="monthVisited"></span> </div>
+    </div>
+    <!--左一-->
+    <div class="index-left1-div">
+        <!--左一上-->
+        <div id="fzws">
+            <div class="title">
+                <span class="fz">移网发展</span>
+                <span class="active ws">移网网上</span>
+            </div>
+            <div class="body">
+                <div class="today">
+                    <p class="title">当日实时发展量<span style="font-size: 0.8rem">(户)</span></p>
+                    <div id="fzwsNum">
+                    </div>
+                </div>
+                <div class="month">
+                    <p class="title">月发展量<span style="font-size: 0.8rem;display: contents;">(户)</span>
+                        <span class="num" id="total_month"></span>
+                        <span class="rate down-rate"></span>
+                    </p>
+                    <div class="body" id="lineMonth"></div>
+                </div>
+            </div>
+        </div>
+        <!--左一下-->
+        <div id="numList">
+            <div>
+                <span class="total-title">5G产品日发展<span style="font-size: 0.8rem">(户)</span></span>
+                <span class="light-num" id="pro_01_day"></span>
+                <span class="little-title">月发展<span style="font-size: 0.8rem">(户)</span></span>
+                <span class="numbox">
+                        <span class="num" id="pro_01_month"></span>
+                        <span class="rate up-rate" id="pro_01_month_rate"></span>
+                    </span>
+            </div>
+            <div>
+                <span class="total-title">4G产品日发展<span style="font-size: 0.8rem">(户)</span></span>
+                <span class="light-num" id="pro_02_day"></span>
+                <span class="little-title">月发展<span style="font-size: 0.8rem">(户)</span></span>
+                <span class="numbox">
+                        <span class="num" id="pro_02_month"></span>
+                        <span class="rate up-rate" id="pro_02_month_rate"></span>
+                    </span>
+            </div>
+            <div>
+                <span class="total-title">中高端产品日发展<span style="font-size: 0.8rem">(户)</span></span>
+                <span class="light-num" id="pro_03_day"></span>
+                <span class="little-title">月发展<span style="font-size: 0.8rem">(户)</span></span>
+                <span class="numbox">
+                        <span class="num" id="pro_03_month"></span>
+                        <span class="rate down-rate" id="pro_03_month_rate"></span>
+                    </span>
+            </div>
+        </div>
+    </div>
+    <!--左二-->
+    <div class="index-left2-div">
+        <div class="index-left1-title-wg">
+            <span id="table-tab2" class="index-left1-title-span table-tab"></span>
+            <span id="table-tab1" class="index-left1-title-span"></span>
+            <span id="table-tab0" class="index-left1-title-span"></span>
+        </div>
+        <div class="index-left-content" id="timeChart"></div>
+    </div>
+    <!--左三-->
+    <div class="index-left3-div">
+        <div class="index-left2-title-wg"></div>
+        <div class="index-left-content" id="storeRankChart"></div>
+    </div>
+    <!--右一-->
+    <div class="index-right1-div-cp" id="index-right1-div">
+        <!-- 5.移网业务 -->
+        <div id="ywyw">
+            <div id="infos">
+                <div class="info-title">
+                    <p id="info-title"></p>
+                    <p>
+                            <span>月累计：
+                                <span id="month_value"></span>
+                            </span>
+                        <span>月累计环比：
+                                <span id="day_hb"></span>
+                            </span>
+                        <span id="rwWcl">任务完成率：
+                                <span id="rw_wcl"></span>
+                            </span>
+                    </p>
+                </div>
+                <p class="chart-title"></p>
+                <div class="topChart-div">
+                    <div id="topChart"></div>
+                </div>
+            </div>
+            <div id="map">
+                <div id="mapContainer"></div>
+                <div id="pieContainer"></div>
+                <div id="mapLegend">
+                    <div id="btns">
+                        <div class="btn active">全部</div>
+                        <div class="btn">5G</div>
+                        <div class="btn">4G</div>
+                        <div class="btn">中高端</div>
+                    </div>
+                    <div id="legend">
+                        <p class="title">月累计发展量</p>
+                        <ul>
+                            <li>
+                                <span class="color"></span>
+                                <span class="item" id="mapRank3">>=400</span>
+                            </li>
+                            <li>
+                                <span class="color"></span>
+                                <span class="item" id="mapRank2">200-400</span>
+                            </li>
+                            <li>
+                                <span class="color"></span>
+                                <span class="item"  id="mapRank1">0-200</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--右二-->
+    <div class="index-right2-div">
+        <div class="index-right2-left" id="city"></div>
+        <div class="index-right2-right" id="info">
+            <div class="left">
+                <div class="title">宽带业务</div>
+                <div class="ctn">
+                    <div class="bttop">
+                        <div class="stitle">
+                            <div class="tip"></div>
+                            日发展<span style="font-size: 0.8rem">(户)</span>
+                        </div>
+                        <div class="light-num" id="kd_num">0</div>
+                    </div>
+                    <div class="bttop">
+                        <div class="stitle">
+                            <div class="tip"></div>
+                            月发展<span style="font-size: 0.8rem">(户)</span>
+                        </div>
+                        <div class="light-num" id="kd_num_month">0</div>
+                    </div>
+                    <div class="btbottom">
+                        <div class="stitle">
+                            <span class="tip"></span>
+                            月环比排名
+                        </div>
+                        <ul class="top-rank" id="kd_top3">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<!--<script th:src="../static/js/jquery-1.11.3.js"></script>
+<script th:src="../static/js/echarts.min.js"></script>
+<script src="../static/js/yanan.js"></script>
+<script src="../static/js/index-yanAn.js"></script>-->
+<script th:src="@{/js/jquery-1.11.3.js}"></script>
+<script th:src="@{/js/echarts.min.js}"></script>
+<script th:src="@{/js/yanan.js}"></script>
+<script th:src="@{/js/index-yanAn.js}"></script>
+</html>

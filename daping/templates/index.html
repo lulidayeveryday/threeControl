@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" th:href="@{/css/index.css}"/>
+    <title>陕西大屏</title>
+</head>
+<body>
+<div class="isIe">
+    若需访问大屏内容，请使用火狐或谷歌浏览器
+</div>
+<div class="title-box">
+    <img id="title" th:src="@{/images/title.png}" width="100%" alt=""/>
+    <!--实时时钟-->
+    <p class="show-time"></p>
+    <p class="show-visited">月累计访问量: <span id="monthVisited"></span> 户</p>
+</div>
+<div id="main">
+    <div class="left">
+        <!-- 1.发展、网上 -->
+        <div id="fzws">
+            <div class="title">
+                <span class="active fz">移网发展</span>
+                <span calss="ws">移网网上</span>
+            </div>
+            <div class="body">
+                <div class="today">
+                    <p class="title">当日实时发展量<span style="font-size: 0.8rem">(户)</span></p>
+                    <div id="fzwsNum">
+                    </div>
+                </div>
+                <div class="month">
+                    <p class="title">月累计发展量<span style="font-size: 0.8rem;display: contents;">(户)</span>
+                        <span class="num" id="total_month"></span>
+                        <span class="rate down-rate"></span>
+                    </p>
+                    <div class="body" id="lineMonth"></div>
+                </div>
+            </div>
+        </div>
+        <!-- 2. -->
+        <div id="numList">
+            <div>
+                <span class="total-title">5G产品当日发展量<span style="font-size: 0.8rem">(户)</span></span>
+                <span class="light-num" id="pro_01_day"></span>
+                <span class="little-title">月累计发展量<span style="font-size: 0.8rem">(户)</span></span>
+                <span class="numbox">
+                        <span class="num" id="pro_01_month"></span>
+                        <span class="rate up-rate" id="pro_01_month_rate"></span>
+                    </span>
+            </div>
+            <div>
+                <span class="total-title">4G产品当日发展量<span style="font-size: 0.8rem">(户)</span></span>
+                <span class="light-num" id="pro_02_day"></span>
+                <span class="little-title">月累计发展量<span style="font-size: 0.8rem">(户)</span></span>
+                <span class="numbox">
+                        <span class="num" id="pro_02_month"></span>
+                        <span class="rate up-rate" id="pro_02_month_rate"></span>
+                    </span>
+            </div>
+            <div>
+                <span class="total-title">中高端产品当日发展量<span style="font-size: 0.8rem">(户)</span></span>
+                <span class="light-num" id="pro_03_day"></span>
+                <span class="little-title">月累计发展量<span style="font-size: 0.8rem">(户)</span></span>
+                <span class="numbox">
+                        <span class="num" id="pro_03_month"></span>
+                        <span class="rate down-rate" id="pro_03_month_rate"></span>
+                    </span>
+            </div>
+        </div>
+        <!-- 3.渠道发展量区域发展量排行 -->
+        <div id="areaRank">
+            <div class="body">
+                <div id="timeChart" style=""></div>
+                <!--width: 474px;height: 246px;-->
+                <!--<div class="timeChartLegend"></div>
+                <ul id="rank"></ul>-->
+            </div>
+        </div>
+        <!-- 4.发展渠道发展量top10 -->
+        <div id="storeRank">
+            <img th:src="@{/images/store-rank_title.png}" width="100%" alt="" class="title"/>
+            <div class="body" id="storeRankChart"></div>
+        </div>
+    </div>
+    <div class="right">
+        <!-- 5.移网业务 -->
+        <div id="ywyw">
+            <div id="info">
+                <div class="info-title">
+                    <p id="info-title"></p>
+                    <p>
+                            <span>月累计发展量：
+                                <span id="month_value"></span>
+                            </span>
+                        <span>月累计环比：
+                                <span id="day_hb"></span>
+                            </span>
+                    </p>
+                </div>
+                <p class="chart-title"></p>
+                <div id="topChart"></div>
+            </div>
+            <div id="map">
+                <div id="mapContainer"></div>
+                <div id="mapLegend">
+                    <div id="btns">
+                        <div class="btn active">全部</div>
+                        <div class="btn">5G</div>
+                        <div class="btn">4G</div>
+                        <div class="btn">中高端</div>
+                    </div>
+                    <div id="legend">
+                        <p class="title">月累计发展量</p>
+                        <ul>
+                            <li>
+                                <span class="color"></span>
+                                <span class="item" id="mapRank3">>=400</span>
+                            </li>
+                            <li>
+                                <span class="color"></span>
+                                <span class="item" id="mapRank2">200-400</span>
+                            </li>
+                            <li>
+                                <span class="color"></span>
+                                <span class="item"  id="mapRank1">0-200</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 6.折线统计图 -->
+        <div id="lineWo">
+            <div id="city"></div>
+            <div id="info">
+                <!--<div class="left">
+                    <div class="title">宽移融合</div>
+                    <div class="ctn">
+                        <div class="bttop">
+                            <div class="stitle">
+                                <div class="tip"></div>
+                                当日实时发展量
+                            </div>
+                            <div class="light-num" id="zhwj_num">0</div>
+                        </div>
+                        <div class="bttop">
+                            <div class="stitle">
+                                <div class="tip"></div>
+                                月累计发展量
+                            </div>
+                            <div class="light-num" id="zhwj_num_month">0</div>
+                        </div>
+                        <div class="btbottom">
+                            <div class="stitle">
+                                <span class="tip"></span>
+                                月累计排名
+                            </div>
+                            <ul class="top-rank" id="zhwj_top3">
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>-->
+                <div class="left">
+                    <div class="title">宽带业务</div>
+                    <div class="ctn">
+                        <div class="bttop">
+                            <div class="stitle">
+                                <div class="tip"></div>
+                                当日实时发展量<span style="font-size: 0.8rem">(户)</span>
+                            </div>
+                            <div class="light-num" id="kd_num">0</div>
+                        </div>
+                        <div class="bttop">
+                            <div class="stitle">
+                                <div class="tip"></div>
+                                当月累计实时发展量<span style="font-size: 0.8rem">(户)</span>
+                            </div>
+                            <div class="light-num" id="kd_num_month">0</div>
+                        </div>
+                        <div class="btbottom">
+                            <div class="stitle">
+                                <span class="tip"></span>
+                                月环比排名
+                            </div>
+                            <ul class="top-rank" id="kd_top3">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script th:src="@{/js/jquery-1.11.3.js}"></script>
+<script th:src="@{/js/echarts.min.js}"></script>
+<script th:src="@{/js/shanxi.js}"></script>
+<script th:src="@{/js/charts.js}"></script>
+</body>
+<script th:inline="javascript">
+
+    function getExplorerInfo(){
+        var ua = navigator.userAgent.toLocaleLowerCase();
+        var browserType=null;
+        if (ua.match(/msie/) != null || ua.match(/trident/) != null) {
+            $('.isIe').css('display','block');
+            browserType = "IE";
+            browserVersion = ua.match(/msie ([\d.]+)/) != null ? ua.match(/msie ([\d.]+)/)[1] : ua.match(/rv:([\d.]+)/)[1];
+            if(browserVersion==9.0||browserVersion==10.0||browserVersion==11.0){
+                return { browserType: "IE" };
+            }else{
+                return { browserType: "IE8以下" };
+            }
+
+        } else if (ua.match(/firefox/) != null) {
+            browserType = "火狐";
+            return { browserType: "火狐" };
+        }else if (ua.match(/ubrowser/) != null) {
+            browserType = "UC";
+            return { browserType: "UC" };
+        }else if (ua.match(/opera/) != null) {
+            browserType = "欧朋";
+            return { browserType: "欧朋" };
+        } else if (ua.match(/bidubrowser/) != null) {
+            browserType = "百度";
+            return { browserType: "百度" };
+        }else if (ua.match(/metasr/) != null) {
+            browserType = "搜狗";
+            return { browserType: "搜狗" };
+        }else if (ua.match(/tencenttraveler/) != null || ua.match(/qqbrowse/) != null) {
+            browserType = "QQ";
+            return { browserType: "QQ" };
+        }else if (ua.match(/maxthon/) != null) {
+            browserType = "遨游";
+            return { browserType: "遨游" };
+        }else if (ua.match(/chrome/) != null) {
+            var is360 = _mime("type", "application/vnd.chromium.remoting-viewer");
+            function _mime(option, value) {
+                var mimeTypes = navigator.mimeTypes;
+                for (var mt in mimeTypes) {
+                    if (mimeTypes[mt][option] == value) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+            if(is360){
+                $('.isIe').css('display','block');
+                browserType = '360';
+            }else{
+                browserType = '谷歌';
+            }
+            return { browserType: "360" };
+        }else if (ua.match(/safari/) != null) {
+            browserType = "Safari";
+            return { browserType: "Safari" };
+        }
+    }
+    getExplorerInfo();
+    $.ajax({
+        url:'http://135.146.68.83:8080/shanxi/main/callcount',  // ajax请求要请求的地址
+        type:"get", // 请求的类型  get  post
+        data:"", // 请求要发送的数据  常在post请求中使用，get请求只需要拼接请求的url就可以
+        success:function (data) {
+            // 请求成功之后要执行的方法
+            // data  接收请求成功之后的返回值
+            console.log(data);
+        },
+        error:function (error) {
+            // 请求失败之后要执行的内容
+        }
+    })
+    /*<![CDATA[*/
+    var socket;
+    if (typeof(WebSocket) == "undefined") {
+        console.log("您的浏览器不支持WebSocket");
+    } else {
+        console.log("您的浏览器支持WebSocket");
+        //实现化WebSocket对象，指定要连接的服务器地址与端口  建立连接
+        //
+    <!--socket = new WebSocket("ws://10.93.51.171:8080/shanxi/websocket");-->
+        socket = new WebSocket("ws://135.146.68.83:8080/shanxi/websocket");
+        //打开事件
+        socket.onopen = function () {
+            console.log("Socket 已打开");
+            //socket.send("这是来自客户端的消息" + location.href + new Date());
+        };
+        //获得消息事件
+        socket.onmessage = function (msg) {
+            var data = JSON.parse(msg.data);
+            console.log(data);
+            $('#monthVisited').html(data.callCount);
+            var proTypes = ['1', '2', '3'];
+            $.each(proTypes, function (i, e) {
+                var prop = 'data_' + e + '_map';
+                $('#pro_0' + e + '_day').html(data[prop].total);
+                $('#pro_0' + e + '_month').html(data[prop].monthTotal);
+                var hb = data[prop].monthTb;
+                if (hb > 0) {
+                    $('#pro_0' + e + '_month_rate').removeClass('down-rate').removeClass('up-rate').addClass('up-rate');
+                } else {
+                    $('#pro_0' + e + '_month_rate').removeClass('down-rate').removeClass('up-rate').addClass('down-rate');
+                }
+                $('#pro_0' + e + '_month_rate').html(hb + '%');
+            })
+
+            var dataFZ = {
+                "today": data.data_all_map.total,
+                "month": {
+                    "num": data.data_all_map.monthTotal,
+                    "rate": data.data_all_map.monthTb,
+                    "yAxis": data.monthLine
+                }
+            }
+            var index = data.times;
+            var dataWS = data.onNet;
+            fzwsData(dataFZ, dataWS, index);
+            $(".btn.active").removeClass("active");
+            switch (index % 4) {
+                case 1:
+                    $(".btn:eq(1)").addClass("active");
+                    topData = getTopData(data.data_1_top);
+                    mapData = data.data_1_map.cityMap;
+                    setInfoTitle('5G', data.data_1_map.monthTotal, data.data_1_map.monthTb);
+                    break;
+                case 2:
+                    $(".btn:eq(2)").addClass("active");
+                    topData = getTopData(data.data_2_top);
+                    mapData = data.data_2_map.cityMap;
+                    setInfoTitle('4G', data.data_2_map.monthTotal, data.data_2_map.monthTb);
+                    break;
+                case 3:
+                    $(".btn:eq(3)").addClass("active");
+                    topData = getTopData(data.data_3_top);
+                    mapData = data.data_3_map.cityMap;
+                    setInfoTitle('中高端', data.data_3_map.monthTotal, data.data_3_map.monthTb);
+                    break;
+                default:
+                    $(".btn:eq(0)").addClass("active");
+                    topData = getTopData(data.data_all_top);
+                    mapData = data.data_all_map.cityMap;
+                    setInfoTitle('全部', data.data_all_map.monthTotal, data.data_all_map.monthTb);
+                    break;
+            }
+            mapChart(mapData);
+            topChart(topData);
+
+            var xData = ['西安', '咸阳', '榆林', '渭南', '宝鸡', '延安', '汉中', '安康', '商洛', '铜川'];
+            var rankData = data.data_all_map.cityMap;
+            var kdData = data.data_kd_map.cityMap;
+            var rankDataNew = [];
+            $.each(xData,function(i,e){
+                for (var j = 0; j < rankData.length; j++) {
+                    if (e == rankData[j].cityName) {
+                        rankData[j].rate = rankData[j].monthTb;
+                        rankData[j].value = rankData[j].total;
+                        rankData[j].name = rankData[j].cityName;
+                        var rank = 10;
+                        $.each(rankData,function(m,s){
+                            if(Number(rankData[j].monthTb) >= Number(s.monthTb)){
+                                rank --;
+                            }
+                        })
+                        rankData[j].rank = rank + 1;
+                        rankDataNew.push(rankData[j]);
+                        break;
+                    }
+                }
+                for (var j = 0; j < kdData.length; j++) {
+                    if (e == kdData[j].cityName) {
+                        kdData[j].rate = kdData[j].monthTb;
+                        kdData[j].value = kdData[j].total;
+                        kdData[j].name = kdData[j].cityName;
+                        var rank = 10;
+                        $.each(kdData,function(m,s){
+                            if(Number(kdData[j].monthTb) >= Number(s.monthTb)){
+                                rank --;
+                            }
+                        })
+                        kdData[j].rank = rank + 1;
+                        break;
+                    }
+                }
+            });
+            departTop10(rankDataNew);
+            timeChart(rankDataNew);
+            data.data_kd_map.cityMap = kdData;
+            setCityData(data.data_kd_map);
+        };
+
+        //关闭事件
+        socket.onclose = function () {
+            console.log("Socket已关闭");
+        };
+        //发生了错误事件
+        socket.onerror = function () {
+            alert("Socket发生了错误");
+            //此时可以尝试刷新页面
+        }
+    }
+
+    function setInfoTitle(title, month_value, day_hb) {
+        $('#info-title').html('全省' + title + '产品发展量<span style="font-size: 0.8rem">(户)</span>');
+        $('.chart-title').html(title + '产品月累计发展量TOP10');
+        $('#month_value').html(month_value);
+        $('#day_hb').html(day_hb + '%');
+    }
+
+    function setCityData(kdData) {
+        $('#kd_num').html(kdData.total);
+        $('#kd_num_month').html(kdData.monthTotal);
+        /*$('#zhwj_num').html(zhwjData.total);
+        $('#zhwj_num_month').html(zhwjData.monthTotal);*/
+        var topHtml = "";
+        for (var i = 0;i < 3; i++) {
+            for(var m = 0;m<kdData.cityMap.length;m++){
+                if(kdData.cityMap[m].rank === (i+1)){
+                    topHtml += '<li class="top top' + (i + 1) + '">' + kdData.cityMap[m].cityName;
+                    // topHtml += '<span class="up"></span>';
+                    topHtml += '</li>';
+                }
+            }
+        }
+        $('#kd_top3').html(topHtml);
+       /* topHtml = "";
+        for (var i = 0; i < zhwjData.cityMap.length && i < 3; i++) {
+            topHtml += '<li class="top top' + (i + 1) + '">' + zhwjData.cityMap[i].cityName;
+            // topHtml += '<span class="up"></span>';
+            topHtml += '</li>';
+        }
+        $('#zhwj_top3').html(topHtml);*/
+        cityChart(kdData.cityMap);
+    }
+
+    function departTop10(array) {
+        var storeHtml = '';
+        var title = ['排名','地市','日发展量','月发展量','月环比','排名','地市','日发展量','月发展量','月环比'];
+        var data = array;
+        storeHtml += '<table border="0" cellspacing="0" cellpadding="0" class="rank-table">';
+        storeHtml += '<thead>';
+        storeHtml += '<tr>';
+        for (var i = 0;i<title.length;i++){
+            storeHtml += '<th>' + title[i] + '</th>';
+        }
+        storeHtml += '</tr>';
+        storeHtml += '</thead>';
+        storeHtml += '<tbody>';
+        for (var j = 0;j < 5 ;j++){
+            storeHtml += '<tr>';
+            storeHtml += '<td>' + data[j].rank + '</td>';
+            storeHtml += '<td>' + data[j].name + '</td>';
+            storeHtml += '<td>' + data[j].total + '</td>';
+            storeHtml += '<td>' + data[j].monthTotal + '</td>';
+            if(data[j].monthTb >= 0){
+                storeHtml += '<td style="border-right: solid 1px #dbdbdb;color: #40d0e0;">' + data[j].monthTb + '%</td>';
+            }else{
+                storeHtml += '<td style="border-right: solid 1px #dbdbdb;color: #ff3116;">' + data[j].monthTb + '%</td>';
+            }
+            storeHtml += '<td>' + data[j + 5].rank + '</td>';
+            storeHtml += '<td>' + data[j + 5].name + '</td>';
+            storeHtml += '<td>' + data[j + 5].total + '</td>';
+            storeHtml += '<td>' + data[j + 5].monthTotal + '</td>';
+            if(data[j + 5].monthTb >= 0){
+                storeHtml += '<td style="color: #40d0e0;">' + data[j + 5].monthTb + '%</td>';
+            }else{
+                storeHtml += '<td style="color: #ff3116;">' + data[j + 5].monthTb + '%</td>';
+            }
+            storeHtml += '</tr>';
+        }
+        storeHtml += '</tbody>';
+        storeHtml += '</table>';
+        $("#timeChart").html(storeHtml);
+    }
+
+    function getTopData(array) {
+        // console.log(array);
+        var topName = [];
+        var topValue = [];
+        for (var i = array.length - 1; i >= 0; i--) {
+            var name = array[i].name;
+            /*if (name.length > 6) {
+                name = name.substring(0, 6) + "...";
+            }*/
+            topName.push(name);
+            topValue.push(array[i].value);
+        }
+        var topData = {};
+        topData.name = topName;
+        topData.value = topValue;
+        return topData;
+    }
+
+    /*]]>*/
+</script>
+
+<script th:inline="javascript">
+    /*<![CDATA[*/
+    /*1.动态显示实时时钟*/
+    function showTime() {
+        var date = new Date();
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;
+        var day = date.getDate();
+        var hour = date.getHours().toString().length == 1 ? "0" + date.getHours() : date.getHours();
+        var minute = date.getMinutes().toString().length == 1 ? "0" + date.getMinutes() : date.getMinutes();
+        var second = date.getSeconds().toString().length == 1 ? "0" + date.getSeconds() : date.getSeconds();
+        $(".show-time").html(year + '年' + month + '月' + day + '日 ' + hour + ':' + minute + ':' + second);
+    }
+
+    setInterval(showTime, 1000);
+    var monthLineData;
+
+    function fzwsData(dataFZ, dataWS, index) {
+        //发展假数据
+        var dataFZ = dataFZ;
+        // 网上假数据
+        var dataWS = dataWS
+        $("#fzws>.title>.active").removeClass("active").siblings().addClass("active");
+        var data;
+        if ($("#fzws>.title>.active").hasClass("fz")) {
+            data = dataFZ
+            $('.month').show();
+            monthLineData = data.month.yAxis;
+            monthLineChart(monthLineData);
+            $("#fzws .month>.title>.num").html(data.month.num).next().html(data.month.rate + "%");
+            if (data.month.rate > 0) $("#fzws .month>.title>.rate").removeClass("down-rate").addClass("up-rate");
+            else $("#fzws .month>.title>.rate").removeClass("up-rate").addClass("down-rate");
+            $('#fzws .today').css('width', '45%');
+            $('#fzws .today .title').html('当日实时发展量<span style="font-size: 0.8rem">(户)</span>');
+            var html = '';
+            for (var i = 0; i < 5; i++) {
+                html += '<div class="shadow"></div>';
+                if (i == 1) {
+                    html += '<span class="dh">,</span>';
+                }
+            }
+            $('#fzwsNum').html(html);
+            var todayNum = String(data.today).split("");
+        } else {
+            $('.month').hide();
+            $('#fzws .today').css('width', '80%');
+            var html = '';
+            for (var i = 0; i < 8; i++) {
+                html += '<div class="shadow"></div>';
+                if (i == 1 || i == 4) {
+                    html += '<span class="dh">,</span>';
+                }
+            }
+            $('#fzwsNum').html(html);
+            $('#fzws .today .title').html('当日网上用户数<span style="font-size: 0.8rem">(户)</span>');
+            data = dataWS;
+            var todayNum = String(data).split("");
+        }
+        //渲染
+        //today
+        var shadowList = document.querySelectorAll("#fzws .shadow");
+        for (var i = shadowList.length - 1; i > -1; i--) {
+            var n = todayNum[todayNum.length - 1] ? todayNum[todayNum.length - 1] : "";
+            shadowList[i].innerHTML = n;
+            todayNum.pop();
+        }
+        //month
+
+        //charts
+
+    }
+
+    //计算元素尺寸
+    function winResize() {
+        var rate = 0.3241, rem = 14, rate2 = 0.2597, rate3 = 0.424, rate4 = 0.5774, rate5 = 0.24328, rate6 = 0.1734,
+            ratew = 0.465, rateh = 0.6494;
+        var top = $("#title").height() - 1 * rem , bodyHeight = $("body").height();
+        $("#main").css("top", top).height(bodyHeight - top);
+        $("#fzws").height($("#fzws").width() * rate + 1.2 * rem);
+        $("#fzws>.body").height(($("#fzws").height() - 2 * rem) * 0.93);
+        $("#numList").height($("#numList").width() * rate2 - 1.6 * rem);
+        $("#areaRank,#storeRank").height($("#areaRank,#storeRank").width() * rate3);
+        $("#areaRank>.body").height($("#areaRank").height() - $("#storeRank>.title").height());
+        $("#storeRank>.body").height($("#storeRank").height() - $("#storeRank>.title").height());
+        // $("#ywyw").height($("#ywyw").width() * rate4 + 1.4 * rem);
+        $("#lineWo").height($("#lineWo").width() * rate5);
+        $("#ywyw").height($('.right').height() - $("#lineWo").height() - 1 * rem);
+        // $("#lineWo").height($("#lineWo").width() * rate5);
+        $("#fzws>.body>.month>.body").height($("#fzws>.body").height() - 2.5 * rem);
+
+        $("#info>.info-title").height(($("#ywyw").height() - 1.4 * rem) * rate6);
+        $("#topChart").height(($("#ywyw").height() - 1.4 * rem) * rateh);
+        $("#topChart").width($("#ywyw").width() * ratew);
+        $("#mapContainer,#mapLegend").height($("#ywyw").height() - 3 * rem);
+        $("#btns>.btn").css("line-height", $("#btns>.btn").height() + "px");
+        $("#legend>ul").height($("#legend").height() - 3 * rem);
+        $("#legend>ul>li").css("line-height", $("#legend>ul>li").height() + "px");
+        $("#info .ctn").height($("#lineWo").height() - 2 * rem);
+        $("#info .ctn .light-num").height($("#info .ctn .bttop").height() - 1.2 * rem).css("line-height", $("#info .ctn .bttop").height() - 1.2 * rem + 'px');
+        $("#info .ctn .top-rank").height($("#info .ctn .btbottom").height() - 1.4 * rem);
+        $('.chart-title').css("top", $('.info-title').height() + 3 * rem);
+        //月累计发展量
+        monthLineChart(monthLineData);
+        //渠道发展量区域发展量排行
+
+    }
+
+
+    winResize();
+
+    $(window).resize(function () {
+        winResize();
+    })
+    /*]]>*/
+</script>
+
+</html>

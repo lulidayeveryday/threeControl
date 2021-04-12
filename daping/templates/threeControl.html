@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <title>三控大屏</title>
+    <link rel="stylesheet" href="../static/css/threeControl.css">
+</head>
+<body>
+<div class="three-control-div">
+    <div class="three-control-title">
+        <div class="three-control-title-font">全量客户运营—三控</div>
+        <div class="three-control-title-time"></div>
+    </div>
+    <div class="three-control-content">
+        <div class="three-control-content-left">
+            <div class="three-control-content-center-div2-title">控流失</div>
+            <div class="three-control-content-center-div2-content">
+                <div class="three-control-top">
+                    <div class="three-control-top-div1">
+                        <img src="../static/images/threeControl/icon_cl.png" class="three-control-top-div1-img">
+                        <span>策略</span>
+                        <span class="font-yellow" style="font-weight: bold;font-size: 1.2rem"><span id="controlLossHead1">5</span><span class="card-unit">个</span></span>
+                    </div>
+                    <div class="three-control-top-div2">
+                        <img src="../static/images/threeControl/icon_user.png" class="three-control-top-div1-img">
+                        <span>覆盖</span>
+                        <span class="font-yellow" style="font-weight: bold;font-size: 1.2rem"><span id="controlLossHead2">5</span><span class="card-unit">万</span></span>
+                    </div>
+                    <div class="three-control-top-div3">
+                        <img src="../static/images/threeControl/icon_jh.png" class="three-control-top-div1-img">
+                        <span>月激活率</span>
+                        <span class="font-yellow" style="font-weight: bold;font-size: 1.2rem"><span id="controlLossHead3">5</span><span class="card-unit">%</span></span>
+                    </div>
+                </div>
+                <div class="right-div-content-title">沉默激活</div>
+                <div class="three-control-content-left-ul">
+                    <div class="three-control-content-left-ul-div" style="float: left">
+                        <span class="point-green"></span>
+                        <span class="blue-font">日激活</span>
+                        <span class="font-right"><span id="silentActivation1">3652</span><span class="card-unit">户</span></span>
+                    </div>
+                    <div class="three-control-content-left-ul-div" style="float: right">
+                        <span class="point-blue"></span>
+                        <span class="blue-font">月激活</span>
+                        <span class="font-right"><span id="silentActivation2">3652</span><span class="card-unit"><span id="silentActivation2Unit">万</span>户</span></span>
+                    </div>
+                    <div class="three-control-content-left-ul-div" style="float: left">
+                        <span class="point-purple"></span>
+                        <span class="blue-font">月环比</span>
+                        <span class="font-right font-red"><span id="silentActivation3">3652</span><span class="card-unit">%</span><span id="silentActivation3Sj">↑</span></span>
+                    </div>
+                    <div class="three-control-content-left-ul-div" style="float: right">
+                        <span class="point-orange"></span>
+                        <span class="blue-font">月激活率</span>
+                        <span class="font-right"><span id="silentActivation4">3652</span><span class="card-unit">%</span></span>
+                    </div>
+                </div>
+                <div class="right-div-content-echarts" id="leftChart1"></div>
+                <div class="right-div-content-title">高危模型</div>
+                <div class="right-div-content-card">
+                    <div class="left-div-content-card-bg">
+                        <div class="three-control-content-left-ul-div2">
+                            <img src="../static/images/threeControl/gw_icon_ri.png" style="width: 0.9rem;margin: 0 0.4rem 0 0.6rem;">
+                            <span class="blue-font">日激活</span>
+                            <span class="font-right"><span id="highRiskModel1">1</span><span class="card-unit">户</span></span>
+                        </div>
+                        <div class="three-control-content-left-ul-div2">
+                            <img src="../static/images/threeControl/gw_icon_yue.png" style="width: 0.9rem;margin: 0 0.4rem 0 0.6rem;">
+                            <span class="blue-font">月激活</span>
+                            <span class="font-right"><span id="highRiskModel2">1</span><span class="card-unit">万户</span></span>
+                        </div>
+                        <div class="three-control-content-left-ul-div2">
+                            <img src="../static/images/threeControl/gw_icon_hb.png" style="width: 0.9rem;margin: 0 0.4rem 0 0.6rem;">
+                            <span class="blue-font">月环比</span>
+                            <span class="font-right font-red"><span id="highRiskModel3">1</span><span class="card-unit">%</span><span id="highRiskModel3Sj">1</span></span>
+                        </div>
+                    </div>
+                    <div class="left-div-content-card-bg">
+                        <div class="three-control-content-left-ul-div2">
+                            <img src="../static/images/threeControl/gw_icon_ri.png" style="width: 0.9rem;margin: 0 0.4rem 0 0.6rem;">
+                            <span class="blue-font">日办理</span>
+                            <span class="font-right"><span id="highRiskModel4">1</span><span class="card-unit">户</span></span>
+                        </div>
+                        <div class="three-control-content-left-ul-div2">
+                            <img src="../static/images/threeControl/gw_icon_yue.png" style="width: 0.9rem;margin: 0 0.4rem 0 0.6rem;">
+                            <span class="blue-font">月办理</span>
+                            <span class="font-right"><span id="highRiskModel5">1</span><span class="card-unit"><span id="highRiskModel5Unit"></span>户</span></span>
+                        </div>
+                        <div class="three-control-content-left-ul-div2">
+                            <img src="../static/images/threeControl/gw_icon_hb.png" style="width: 0.9rem;margin: 0 0.4rem 0 0.6rem;">
+                            <span class="blue-font">月环比</span>
+                            <span class="font-right font-red"><span id="highRiskModel6">1</span><span class="card-unit">%</span><span id="highRiskModel6Sj">1</span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-div-content-echarts" id="leftChart2"></div>
+                <div class="right-div-content-title">副卡激活</div>
+                <div class="three-control-content-left-ul">
+                    <div class="three-control-content-left-ul-div" style="float: left">
+                        <span class="point-green"></span>
+                        <span class="blue-font">日激活</span>
+                        <span class="font-right"><span id="secondaryCardActive1">1</span><span class="card-unit">户</span></span>
+                    </div>
+                    <div class="three-control-content-left-ul-div" style="float: right">
+                        <span class="point-blue"></span>
+                        <span class="blue-font">月激活</span>
+                        <span class="font-right"><span id="secondaryCardActive2">1</span><span class="card-unit"><span id="secondaryCardActive2Unit">万</span>户</span></span>
+                    </div>
+                    <div class="three-control-content-left-ul-div" style="float: left">
+                        <span class="point-purple"></span>
+                        <span class="blue-font">月环比</span>
+                        <span class="font-right font-red"><span id="secondaryCardActive3">1</span><span class="card-unit">%</span><span id="secondaryCardActive3Sj">1</span></span>
+                    </div>
+                    <div class="three-control-content-left-ul-div" style="float: right">
+                        <span class="point-orange"></span>
+                        <span class="blue-font">月激活率</span>
+                        <span class="font-right"><span id="secondaryCardActive4">1</span><span class="card-unit">%</span></span>
+                    </div>
+                </div>
+                <div class="right-div-content-echarts" id="leftChart3">
+                </div>
+            </div>
+        </div>
+        <div class="three-control-content-center">
+            <div class="three-control-content-center-div1">
+                <div class="three-control-content-center-div1-title">
+                    <img src="../static/images/threeControl/map_button_left.png"
+                         class="three-control-content-center-div1-title-img">
+                    <span id="centerMapTitle">控流失-激活率环比</span>
+                    <img src="../static/images/threeControl/map_button_right.png"
+                         class="three-control-content-center-div1-title-img">
+                </div>
+                <div class="three-control-content-center-div1-img">
+                    <div class="three-control-content-center-div1-cityPoint cityPoint-yl">
+                        <span>榆林</span>
+                        <span class="three-control-content-center-div1-cityPoint-numBg font-red" id="controlLossActiveRateYl">4.8% ↑</span>
+                    </div>
+                    <div class="three-control-content-center-div1-cityPoint cityPoint-ya">
+                        <span>延安</span>
+                        <span class="three-control-content-center-div1-cityPoint-numBg font-green" id="controlLossActiveRateYa">-4.8% ↓</span>
+                    </div>
+                    <div class="three-control-content-center-div1-cityPoint cityPoint-tc">
+                        <span>铜川</span>
+                        <span class="three-control-content-center-div1-cityPoint-numBg font-green" id="controlLossActiveRateTc">-4.8% ↓</span>
+                    </div>
+                    <div class="three-control-content-center-div1-cityPoint cityPoint-bj">
+                        <span class="three-control-content-center-div1-cityPoint-numBg font-green" id="controlLossActiveRateBj">-4.8% ↓</span>
+                        <span>宝鸡</span>
+                    </div>
+                    <div class="three-control-content-center-div1-cityPoint cityPoint-xy">
+                        <span class="three-control-content-center-div1-cityPoint-numBg font-green" id="controlLossActiveRateXy">-4.8% ↓</span>
+                        <span>咸阳</span>
+                    </div>
+                    <div class="three-control-content-center-div1-cityPoint cityPoint-xa">
+                        <span>西安</span>
+                        <span class="three-control-content-center-div1-cityPoint-numBg font-green" id="controlLossActiveRateXa">-4.8% ↓</span>
+                    </div>
+                    <div class="three-control-content-center-div1-cityPoint cityPoint-wn">
+                        <span>渭南</span>
+                        <span class="three-control-content-center-div1-cityPoint-numBg font-green" id="controlLossActiveRateWn">-4.8% ↓</span>
+                    </div>
+                    <div class="three-control-content-center-div1-cityPoint cityPoint-hz">
+                        <span>汉中</span>
+                        <span class="three-control-content-center-div1-cityPoint-numBg font-green" id="controlLossActiveRateHz">-4.8% ↓</span>
+                    </div>
+                    <div class="three-control-content-center-div1-cityPoint cityPoint-ak">
+                        <span>安康</span>
+                        <span class="three-control-content-center-div1-cityPoint-numBg font-green" id="controlLossActiveRateAk">-4.8% ↓</span>
+                    </div>
+                    <div class="three-control-content-center-div1-cityPoint cityPoint-sl">
+                        <span>商洛</span>
+                        <span class="three-control-content-center-div1-cityPoint-numBg font-green" id="controlLossActiveRateSl">-4.8% ↓</span>
+                    </div>
+                </div>
+            </div>
+            <div class="three-control-content-center-div2">
+                <div class="three-control-content-center-div2-title">控降套</div>
+                <div class="three-control-content-center-div2-content">
+                    <div class="three-control-content-center-div2-card">
+                        <div class="card-title">降套</div>
+                        <div class="card-content1">
+                            日降套
+                            <span class="card-num"><span id="controlLowerSleeve1">329</span><span class="card-unit">户</span></span>
+                        </div>
+                        <div class="card-content1 card-content1-bottom">
+                            月降套
+                            <span class="card-num"><span id="controlLowerSleeve2">12356</span><span class="card-unit"><span id="controlLowerSleeve2Unit"></span>户</span></span>
+                        </div>
+                        <div class="card-pie card-pie-s">
+                            <div class="card-pid-num" id="controlLowerSleeve3">0.18%↑</div>
+                            <div class="card-pid-title">月环比</div>
+                        </div>
+                    </div>
+                    <div class="three-control-content-center-div2-card">
+                        <div class="card-title">降套减收</div>
+                        <div class="card-content2">
+                            月降套减收
+                            <span class="card-num"><span id="controlLowerSleeve4">329</span><span class="card-unit">万元</span></span>
+                        </div>
+                        <div class="card-content2 card-content1-bottom">
+                            户均减收
+                            <span class="card-num"><span id="controlLowerSleeve5">12356</span><span class="card-unit">元</span></span>
+                        </div>
+                    </div>
+                    <div class="three-control-content-center-div2-bar" id="centerDiv2Bar"></div>
+                </div>
+            </div>
+        </div>
+        <div class="three-control-content-right">
+            <div class="three-control-content-center-div2-title">控携出</div>
+            <div class="three-control-content-center-div2-content">
+                <div class="right-div-content-title">申请与维挽</div>
+                <div class="three-control-content-center-div2-card right-div-card">
+                    <div class="card-title">携出申请量</div>
+                    <div class="card-content1">
+                        日携出申请
+                        <span class="card-num"><span id="controlCarryOut1">329</span><span class="card-unit">户</span></span>
+                    </div>
+                    <div class="card-content1 card-content1-bottom">
+                        月携出申请
+                        <span class="card-num"><span id="controlCarryOut2">1.56</span><span class="card-unit">万户</span></span>
+                    </div>
+                    <div class="card-pie card-pie-s">
+                        <div class="card-pid-num" id="controlCarryOut3">0.18%↑</div>
+                        <div class="card-pid-title">月环比</div>
+                    </div>
+                </div>
+                <div class="three-control-content-center-div2-card right-div-card">
+                    <div class="card-title">维挽量</div>
+                    <div class="card-content1">
+                        日维挽量
+                        <span class="card-num"><span id="controlCarryOut4">329</span><span class="card-unit">户</span></span>
+                    </div>
+                    <div class="card-content1 card-content1-bottom">
+                        月维挽量
+                        <span class="card-num"><span id="controlCarryOut5">3.23</span><span class="card-unit">万户</span></span>
+                    </div>
+                    <div class="card-pie card-pie-s">
+                        <div class="card-pid-num" id="controlCarryOut6">0.18%↑</div>
+                        <div class="card-pid-title">月环比</div>
+                    </div>
+                </div>
+                <div class="three-control-content-right-echarts" id="rightChart1"></div>
+                <div class="right-div-content-title right-div-content-title2">携入携出</div>
+                <div class="right-div-content-card-div">
+                    <div class="right-div-content-card-bg">
+                        <div class="right-div-content-card-title">携出量</div>
+                        <div class="right-div-content-card-content">
+                            <div class="right-div-content-card-content-div">
+                                <div class="right-div-content-card-content-div1"><span id="carryInAndOut1"></span><span class="card-unit">户</span>
+                                </div>
+                                <div class="right-div-content-card-content-div2">日携出</div>
+                            </div>
+                            <div class="right-div-content-card-content-line"></div>
+                            <div class="right-div-content-card-content-div">
+                                <div class="right-div-content-card-content-div1"><span id="carryInAndOut2"></span><span class="card-unit">万户</span>
+                                </div>
+                                <div class="right-div-content-card-content-div2">月携出</div>
+                            </div>
+                            <div class="right-div-content-card-content-line"></div>
+                            <div class="right-div-content-card-content-div">
+                                <div class="right-div-content-card-content-div1-no-color font-red"><span id="carryInAndOut3"></span><span
+                                        class="card-unit">%</span><span id="carryInAndOut3Sj"></span>
+                                </div>
+                                <div class="right-div-content-card-content-div2">月环比</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-div-content-card-bg">
+                        <div class="right-div-content-card-title">携出减收</div>
+                        <div class="right-div-content-card-content">
+                            <div class="right-div-content-card-content-div3">
+                                <img src="../static/images/threeControl/xrxc_icon_ylj.png" style="width: 67%;margin: 15%;vertical-align: middle;">
+                            </div>
+                            <div class="right-div-content-card-content-div3-font">
+                                <div class="blue-font">月累计</div>
+                                <div class="right-div-content-card-content-div1-no-color gray-blue-font"
+                                     style="text-align: left"><span id="carryInAndOut4"></span><span class="card-unit">万</span></div>
+                            </div>
+                            <div class="right-div-content-card-content-div3">
+                                <img src="../static/images/threeControl/xrxc_icon_hb.png" style="width: 67%;margin: 15%;vertical-align: middle;">
+                            </div>
+                            <div class="right-div-content-card-content-div3-font">
+                                <div class="blue-font">月环比</div>
+                                <div class="right-div-content-card-content-div1-no-color font-red" style="text-align: left"><span id="carryInAndOut5"></span><span class="card-unit">%</span><span id="carryInAndOut5Sj"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-div-content-card-bg">
+                        <div class="right-div-content-card-title">携入量</div>
+                        <div class="right-div-content-card-content">
+                            <div class="right-div-content-card-content-div">
+                                <div class="right-div-content-card-content-div1"><span id="carryInAndOut6"></span><span class="card-unit">户</span>
+                                </div>
+                                <div class="right-div-content-card-content-div2">日携入</div>
+                            </div>
+                            <div class="right-div-content-card-content-line"></div>
+                            <div class="right-div-content-card-content-div">
+                                <div class="right-div-content-card-content-div1"><span id="carryInAndOut7"></span><span class="card-unit"><span id="carryInAndOut7Unit"></span>户</span>
+                                </div>
+                                <div class="right-div-content-card-content-div2">月携入</div>
+                            </div>
+                            <div class="right-div-content-card-content-line"></div>
+                            <div class="right-div-content-card-content-div">
+                                <div class="right-div-content-card-content-div1-no-color font-green"><span id="carryInAndOut8"></span><span
+                                        class="card-unit">%</span><span id="carryInAndOut8Sj"></span>
+                                </div>
+                                <div class="right-div-content-card-content-div2">月环比</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-div-content-card-bg">
+                        <div class="right-div-content-card-title">携出携入比</div>
+                        <div class="right-div-content-card-content">
+                            <div class="right-div-content-card-content-div4"><span
+                                    class="right-div-content-card-content-div4-num" id="carryInAndOut9">2.1</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="three-control-content-right-echarts2" id="rightChart2"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../static/js/jquery-1.11.3.js"></script>
+<script src="../static/js/echarts.min.js"></script>
+<script src="../static/js/threeControl.js"></script>
+</html>

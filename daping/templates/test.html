@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="EditPlus®">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <title>边缘线条转圈效果</title>
+</head>
+<style>
+    .gif_pic{
+        text-align: center ;
+        margin-top: 100px;
+    }
+    @-webkit-keyframes rotation{
+        from { -webkit-transform: rotate(0deg);}
+        to { -webkit-transform: rotate(360deg); }
+    }
+    .add_pic{
+        -webkit-transform: rotate(360deg);
+        animation: rotation 3s linear infinite;
+        - moz-animation: rotation 3s linear infinite;
+        -webkit-animation: rotation 3s linear infinite ;
+        -o-animation: rotation 3s linear infinite;
+    }
+    .test{
+
+        transform-style: flat|preserve-3d;
+
+        transform-style: flat;
+        transform-style: preserve-3d;
+        -webkit-transform: rotateX(-33.5deg) rotateY(45deg);
+        transform: rotateX(-43.5deg)
+    }
+    .img{ border-radius: 250px;}
+    .loading_gif_text{
+        margin-top: 20px;
+        color: #00b0ff;
+        font-size: 16px;
+    }
+</style>
+<body>
+<div class="gif_pic">
+    <div style="width: 100px;height: 100px;" class="test">
+        <img class="add_pic img" src="../static/images/threeControl/xrxc_icon_ylj.png" width="100" height= "100" /> </div>
+    <div class="loading_gif_text">正在识别中...</div>
+</div>
+</body>
+</html>

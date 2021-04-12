@@ -1,0 +1,744 @@
+@font-face {
+    font-family: 'lcdd';
+    src: url('../font/LcdD.ttf');
+}
+
+@media screen and (min-width:3073px){
+    html{
+        height: 100%;
+        font-size: 28px;
+        color: #1D1C1C;
+    }
+}
+
+@media screen and (min-width:2049px) and (max-width: 3072px){
+    html{
+        height: 100%;
+        font-size: 20px;
+        color: #1D1C1C;
+    }
+}
+
+@media screen and (min-width:1921px) and (max-width: 2048px){
+    html{
+        height: 100%;
+        font-size: 16px;
+        color: #1D1C1C;
+    }
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1920px){
+    html{
+        height: 100%;
+        font-size: 14px;
+        color: #1D1C1C;
+    }
+}
+
+@media screen and (min-width: 1367px) and (max-width: 1440px){
+    html{
+        height: 100%;
+        font-size: 11px;
+        color: #1D1C1C;
+    }
+}
+
+@media screen and (min-width: 1221px) and (max-width: 1366px){
+    html{
+        height: 100%;
+        font-size: 10px;
+        color: #1D1C1C;
+    }
+}
+
+@media screen and (max-width: 1220px){
+    html{
+        height: 100%;
+        font-size: 9px;
+        color: #1D1C1C;
+    }
+}
+
+body{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "microsoft yahei", Arial, Helvetica, sans-serif;
+    color: #88d7fd;;
+    background-color: #02092d;
+}
+
+.three-control-div{
+    width: 100%;
+    height: 100%;
+}
+
+.three-control-title{
+    height: 5.3rem;
+    background: url(../images/threeControl/bg_title.png) no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.three-control-title-font{
+    font-size: 2.4rem;
+    line-height: 4.8rem;
+    background-image: -webkit-linear-gradient(bottom,#88d7fd,#fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+.three-control-title-time{
+    font-family: lcdd;
+    color: #2579ff;
+    font-size: 1.3rem;
+    position: absolute;
+    top: 45%;
+    left: 90.5%;
+    left: -moz-calc(100% - 13rem);
+    left: -webkit-calc(100% - 13rem);
+    left: calc(100% - 13rem);
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0.15rem;
+}
+
+.three-control-content{
+    position: absolute;
+    width: 96%;
+    width: -moz-calc(100% - 3rem);
+    width: -webkit-calc(100% - 3rem);
+    width: calc(100% - 3rem);
+    height: 80%;
+    height: -moz-calc(100% - 7.4rem);
+    height: -webkit-calc(100% - 7.4rem);
+    height: calc(100% - 7.4rem);
+    top: 6.8rem;
+    left: 1.5rem;
+}
+
+.three-control-content-left{
+    position: absolute;
+    width: 32.5%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: url(../images/threeControl/bg_kls.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.three-control-content-left-ul{
+    margin: 0 0.5rem;
+    height: 4rem;
+}
+
+.three-control-content-left-ul-div{
+    width: 43%;
+    margin-top: 0.7rem;
+    height: 1.3rem;
+    background-image: linear-gradient(
+            90deg
+            , rgba(37, 121, 255, 0) 0%, rgba(37, 121, 255, 0.14) 100%);
+    line-height: 1.3rem;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    color: rgba(255,255,255,0.8);
+}
+
+.three-control-content-left-ul-div2{
+    font-size: 1rem;
+    letter-spacing: 2px;
+    color: rgba(255,255,255,0.8);
+}
+
+.point-green{
+    width: 0.4rem;
+    height: 0.4rem;
+    background-color: #07fc8f;
+    border-radius: 0.2rem;
+    display: inline-block;
+}
+
+.point-blue{
+    width: 0.4rem;
+    height: 0.4rem;
+    background-color: #06bcff;
+    border-radius: 0.2rem;
+    display: inline-block;
+}
+
+.point-purple{
+    width: 0.4rem;
+    height: 0.4rem;
+    background-color: #b085ff;
+    border-radius: 0.2rem;
+    display: inline-block;
+}
+
+.point-orange{
+    width: 0.4rem;
+    height: 0.4rem;
+    background-color: #fb7f13;
+    border-radius: 0.2rem;
+    display: inline-block;
+}
+
+.three-control-top{
+    position: relative;
+    height: 2rem;
+    margin-bottom: 1.2rem;
+}
+
+.three-control-top-div1{
+    background-image: linear-gradient(
+            90deg
+            , rgba(37, 121, 255, 0) 0%, rgba(37, 121, 255, 0.1) 100%);
+    height: 100%;
+    line-height: 2rem;
+    width: 9rem;
+    position: absolute;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.three-control-top-div2{
+    background-image: linear-gradient(
+            90deg
+            , rgba(37, 121, 255, 0) 0%, rgba(37, 121, 255, 0.1) 100%);
+    height: 100%;
+    line-height: 2rem;
+    width: 11rem;
+    position: absolute;
+    color: #fff;
+    font-size: 1.1rem;
+    left: 33%;
+}
+
+.three-control-top-div3{
+    background-image: linear-gradient(
+            90deg
+            , rgba(37, 121, 255, 0) 0%, rgba(37, 121, 255, 0.1) 100%);
+    height: 100%;
+    line-height: 2rem;
+    width: 12.5rem;
+    position: absolute;
+    color: #fff;
+    font-size: 1.1rem;
+    left: 69%;
+}
+
+.three-control-top-div1-img{
+    width: 1.02rem;
+    margin: 0.4rem;
+    vertical-align: middle;
+}
+
+.three-control-content-center{
+    position: absolute;
+    width: 32.5%;
+    width: -moz-calc(35% - 2.4rem);
+    width: -webkit-calc(35% - 2.4rem);
+    width: calc(35% - 2.4rem);
+    height: 100%;
+    left: 0;
+    left: -moz-calc(32.5% + 1.2rem);
+    left: -webkit-calc(32.5% + 1.2rem);
+    left: calc(32.5% + 1.2rem);
+    top: 0;
+}
+
+.three-control-content-center-div1{
+    position: absolute;
+    width: 100%;
+    height: 62.7%;
+    background: url(../images/threeControl/map_bg.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.three-control-content-center-div1-img{
+    transition: all 0.6s;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../images/threeControl/map_sx.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.three-control-content-center-div1-img-big{
+    transform: scale(1.09);
+ }
+
+.three-control-content-center-div1-cityPoint{
+    position: absolute;
+    color: #06bcff;
+    height: 1.6rem;
+    line-height: 1.6rem;
+    font-size: 0.8rem;
+}
+
+.cityPoint-yl{
+    top: 20%;
+    left: 59%;
+}
+
+.cityPoint-ya{
+    left: 58%;
+    top: 36.5%;
+}
+
+.cityPoint-tc{
+    top: 47.6%;
+    left: 54%;
+}
+
+.cityPoint-bj{
+    top: 59%;
+    right: 59%;
+}
+
+.cityPoint-xy{
+    top: 54.5%;
+    right: 46%;
+}
+
+.cityPoint-xa{
+    top: 59.8%;
+    left: 54%;
+}
+
+.cityPoint-wn{
+    top: 52.6%;
+    left: 63.5%;
+}
+
+.cityPoint-hz{
+    top: 73.6%;
+    left: 32.5%;
+}
+
+.cityPoint-ak{
+    top: 80.1%;
+    left: 53.5%;
+}
+
+.cityPoint-sl{
+    top: 67.4%;
+    left: 64.5%;
+}
+
+.three-control-content-center-div1-cityPoint-numBg{
+    min-width: 4.1rem;
+    height: 1.6rem;
+    display: inline-block;
+    background: url(../images/threeControl/map_bg_xfk.png) no-repeat;
+    background-size: 100% 100%;
+    vertical-align: middle;
+    margin : 0 0.2rem;
+    font-size: 0.8rem;
+    line-height: 1.6rem;
+    text-align: center;
+}
+
+.font-red{
+    color: #dc6159;
+}
+
+.font-green{
+    color: #06fd81;
+}
+
+.three-control-content-center-div1-title{
+    position: absolute;
+    height: 2rem;
+    width: 80%;
+    top: 3%;
+    left: 10%;
+    background: url(../images/threeControl/map_img_line.png) no-repeat 0% 50%;
+    background-size: 100% 13%;
+    color: #88d7fd;
+    line-height: 2rem;
+    text-align: center;
+    font-size: 1.35rem;
+    letter-spacing: 2px;
+}
+
+.three-control-content-center-div1-title-img{
+    width: 0.6rem;
+    position: relative;
+    top: -0.1rem;
+}
+
+.three-control-content-center-div2{
+    position: absolute;
+    width: 100%;
+    height: 36.3%;
+    height: -moz-calc(37.3% - 1rem);
+    height: -webkit-calc(37.3% - 1rem);
+    height: calc(37.3% - 1rem);
+    bottom: 0;
+    background: url(../images/threeControl/bg_kjt.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.three-control-content-center-div2-title{
+    height: 2.8rem;
+    width: 63%;
+    line-height: 2.6rem;
+    font-weight: bold;
+    font-size: 1.3rem;
+    position: absolute;
+    letter-spacing: 0.2rem;
+    top: 0;
+    text-align: center;
+    vertical-align: middle;
+    left: 18.5%;
+    background: url(../images/threeControl/img_title.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.three-control-content-center-div2-content{
+    position: absolute;
+    bottom: 0;
+    height: 80%;
+    height: -moz-calc(100% - 3.8rem);
+    height: -webkit-calc(100% - 3.8rem);
+    height: calc(100% - 3.8rem);
+    width: 96%;
+    left: 2%;
+}
+
+.right-div-content-title{
+    color: #88d7fd;
+    font-weight: bold;
+    font-size: 1.1rem;
+    height: 1.1rem;
+    border-left: solid 0.25rem #88d7fd;
+    padding-left: 1rem;
+    margin-left: 0.5rem;
+    margin-top: 0.4rem;
+    line-height: 1.1rem;
+}
+
+.right-div-content-echarts{
+    height: 17%;
+    height: -moz-calc((100% - 23rem)/3);
+    height: -webkit-calc((100% - 23rem)/3);
+    height: calc((100% - 23rem)/3);
+}
+
+.right-div-content-card{
+    height: 6.5rem;
+    margin-top: 0.8rem;
+}
+
+.right-div-content-title2{
+    position: absolute;
+    top: 43%;
+    top: -moz-calc(43% - 0.25rem);
+    top: -webkit-calc(43% - 0.25rem);
+    top: calc(43% - 0.25rem);
+}
+
+.three-control-content-center-div2-card{
+    margin: 0 0.5%;
+    width: 48.5%;
+    height: 35%;
+    background: url(../images/threeControl/kjt_bg_card.png) no-repeat;
+    background-size: 100% 100%;
+    float: left;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    position: relative;
+}
+
+.right-div-content-card-bg{
+    background: url(../images/threeControl/kjt_bg_card.png) no-repeat;
+    background-size: 100% 100%;
+    float: left;
+    width: 49%;
+    width: -moz-calc(50% - 1rem);
+    width: -webkit-calc(50% - 1rem);
+    width: calc(50% - 1rem);
+    margin: 0.5rem;
+    height: 49%;
+    height: -moz-calc(50% - 1rem);
+    height: -webkit-calc(50% - 1rem);
+    height: calc(50% - 1rem);
+}
+
+.left-div-content-card-bg{
+    background: url(../images/threeControl/kjt_bg_card.png) no-repeat;
+    background-size: 100% 100%;
+    float: left;
+    width: 49%;
+    width: -moz-calc(50% - 1rem);
+    width: -webkit-calc(50% - 1rem);
+    width: calc(50% - 1rem);
+    margin: 0  0.5rem;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.right-div-content-card-title{
+    height: 1rem;
+    color: #88d7fd;;
+    font-size: 1rem;
+    margin: 1rem 0 0 0.5rem;
+    font-weight: bold;
+}
+
+.right-div-content-card-content{
+    width: 100%;
+    height: 90%;
+    height: -moz-calc(100% - 3rem);
+    height: -webkit-calc(100% - 3rem);
+    height: calc(100% - 3rem);
+    margin-top: 1rem;
+}
+
+.right-div-content-card-content-div3{
+    width: 4.7rem;
+    height: 100%;
+    float: left;
+}
+
+.right-div-content-card-content-div3-font{
+    width: 4.7rem;
+    height: 100%;
+    float: left;
+    width: -moz-calc(50% - 4.7rem);
+    width: -webkit-calc(50% - 4.7rem);
+    width: calc(50% - 4.7rem);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.blue-font{
+    color: #2579ff;
+    font-size: 0.8rem;
+}
+
+.font-right{
+    float: right;
+    margin-right: 0.5rem;
+}
+
+.gray-blue-font{
+    color: #88d7fd;
+}
+
+.right-div-content-card-content-div4{
+    width: 100%;
+    height: 100%;
+    background: url(../images/threeControl/xrxc_img_yh.png) no-repeat center;
+    background-size: 61% 79%;
+    text-align: center;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.right-div-content-card-content-div4-num{
+    position: relative;
+    top: -0.8rem;
+}
+
+.right-div-content-card-content-div{
+    width: 33%;
+    width: -moz-calc((100% - 4px)/3);
+    width: -webkit-calc((100% - 4px)/3);
+    width: calc((100% - 4px)/3);
+    height: 100%;
+    float: left;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.right-div-content-card-content-div1{
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.right-div-content-card-content-div1-no-color{
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.right-div-content-card-content-div2{
+    height: 2.6rem;
+    width: 100%;
+    text-align: center;
+    background: url(../images/threeControl/xrxc_img_tp.png) no-repeat center bottom;
+    background-size: 78% 60%;
+    color: #2579ff;
+    font-size: 0.8rem;
+    line-height: 2.6rem;
+}
+
+.right-div-content-card-content-line{
+    width: 1px;
+    height: 70%;
+    float: left;
+    position: relative;
+    top: 15%;
+    background-color: #628aff;
+    opacity: 0.3;
+}
+
+.right-div-content-card-div{
+    width: 100%;
+    height: 28%;
+    height: -moz-calc(28% + 1rem);
+    height: -webkit-calc(28% + 1rem);
+    height: calc(28% + 1rem);
+    position: absolute;
+    top: 43%;
+    top: -moz-calc(43% + 1.75rem);
+    top: -webkit-calc(43% + 1.75rem);
+    top: calc(43% + 1.75rem);
+}
+
+.three-control-content-right-echarts2{
+    width: 100%;
+    height: 40%;
+    position: absolute;
+    height: -moz-calc(29% - 2.75rem);
+    height: -webkit-calc(29% - 2.75rem);
+    height: calc(29% - 2.75rem);
+    bottom: 0;
+}
+
+.right-div-card{
+    margin: 1rem 0.5rem 0;
+    width: 47%;
+    width: -moz-calc(50% - 1rem);
+    width: -webkit-calc(50% - 1rem);
+    width: calc(50% - 1rem);
+    height: 14%;
+}
+
+.three-control-content-center-div2-bar{
+    width: 100%;
+    height: 65%;
+    position: absolute;
+    bottom: 0;
+}
+
+.card-title{
+    font-weight: bold;
+    font-size: 1rem;
+    font-stretch: normal;
+    letter-spacing: 1px;
+    color: #88d7fd;
+    padding-left: 1rem;
+}
+
+.card-content1{
+    width: 54%;
+    padding-left: 1rem;
+    letter-spacing: 1px;
+    color: #2579ff;
+    font-size: 1rem;
+}
+
+.card-content2{
+    width: 85%;
+    width: -moz-calc(100% - 2.4rem);
+    width: -webkit-calc(100% - 2.4rem);
+    width: calc(100% - 2.4rem);
+    padding-left: 1rem;
+    letter-spacing: 1px;
+    color: #2579ff;
+    font-size: 1rem;
+}
+
+.card-num{
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    float: right;
+}
+
+.card-pie{
+    width: 5rem;
+    height: 4.2rem;
+    position: absolute;
+    bottom: 0.8rem;
+    right: 1.5rem;
+    text-align: center;
+}
+
+.card-pid-num{
+    position: relative;
+    top: 1.5rem;
+}
+
+.card-pid-title{
+    color: #2579ff;
+    font-weight: 500;
+    position: relative;
+    top: 2rem;
+}
+
+.card-pie-s{
+    background: url("../images/threeControl/img_hb_jd.png") no-repeat;
+    background-size: 100% 100%;
+    color: #dc6159;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.card-pie-j{
+    background: url("../images/threeControl/img_hb_sg.png") no-repeat;
+    background-size: 100% 100%;
+    color: #06fd81;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.card-unit{
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.card-content1-bottom{
+    margin-bottom: 0.3rem;
+}
+
+.font-yellow{
+    color: #f5a623;
+}
+
+.three-control-content-right{
+    position: absolute;
+    width: 32.5%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background: url(../images/threeControl/bg_kls.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.three-control-content-right-echarts{
+    width: 100%;
+    height: 40%;
+    position: absolute;
+    height: -moz-calc(29% - 2.75rem);
+    height: -webkit-calc(29% - 2.75rem);
+    height: calc(29% - 2.75rem);
+    top: 14%;
+    top: -moz-calc(14% + 2.5rem);
+    top: -webkit-calc(14% + 2.5rem);
+    top: calc(14% + 2.5rem);
+}
