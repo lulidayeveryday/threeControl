@@ -17,1141 +17,9 @@ $(function () {
     /*时间*/
     setInterval(showTime, 1000);
     /*获取数据*/
-    /*dataAll = {
-        "data_kyrh_map": {
-            "total": 510,
-            "monthTotal": 85728,
-            "monthTb": "367.90"
-        },
-        "data_3_map": {
-            "cityMap": [
-                {
-                    "total": 161,
-                    "cityName": "宝塔",
-                    "monthTotal": 43555,
-                    "monthTb": "248.58",
-                    "rate": "248.58",
-                    "value": 43555,
-                    "name": "宝塔",
-                    "label": {
-                        "rich": {
-                            "rate": {
-                                "color": "#fcf500"
-                            }
-                        }
-                    },
-                    "itemStyle": {
-                        "normal": {
-                            "areaColor": "#102867"
-                        }
-                    }
-                },
-                {
-                    "total": 3,
-                    "cityName": "安塞",
-                    "monthTotal": 971,
-                    "monthTb": "148.97",
-                    "rate": "148.97",
-                    "value": 971,
-                    "name": "安塞",
-                    "label": {
-                        "rich": {
-                            "rate": {
-                                "color": "#fcf500"
-                            }
-                        }
-                    },
-                    "itemStyle": {
-                        "normal": {
-                            "areaColor": "#4670d8"
-                        }
-                    }
-                },
-                {
-                    "total": 19,
-                    "cityName": "黄陵",
-                    "monthTotal": 4464,
-                    "monthTb": "48.65",
-                    "rate": "48.65",
-                    "value": 4464,
-                    "name": "黄陵",
-                    "label": {
-                        "rich": {
-                            "rate": {
-                                "color": "#fcf500"
-                            }
-                        }
-                    },
-                    "itemStyle": {
-                        "normal": {
-                            "areaColor": "#4670d8"
-                        }
-                    }
-                },
-                {
-                    "total": 12,
-                    "cityName": "黄龙",
-                    "monthTotal": 2362,
-                    "monthTb": "20.57",
-                    "rate": "20.57",
-                    "value": 2362,
-                    "name": "黄龙",
-                    "label": {
-                        "rich": {
-                            "rate": {
-                                "color": "#fcf500"
-                            }
-                        }
-                    },
-                    "itemStyle": {
-                        "normal": {
-                            "areaColor": "#4670d8"
-                        }
-                    }
-                },
-                {
-                    "total": 16,
-                    "cityName": "宜川",
-                    "monthTotal": 1142,
-                    "monthTb": "-27.68",
-                    "rate": "-27.68",
-                    "value": 1142,
-                    "name": "宜川",
-                    "label": {
-                        "rich": {
-                            "rate": {
-                                "color": "#ff3116"
-                            }
-                        }
-                    },
-                    "itemStyle": {
-                        "normal": {
-                            "areaColor": "#4670d8"
-                        }
-                    }
-                },
-                {
-                    "total": 19,
-                    "cityName": "洛川",
-                    "monthTotal": 2236,
-                    "monthTb": "8.49",
-                    "rate": "8.49",
-                    "value": 2236,
-                    "name": "洛川",
-                    "label": {
-                        "rich": {
-                            "rate": {
-                                "color": "#fcf500"
-                            }
-                        }
-                    },
-                    "itemStyle": {
-                        "normal": {
-                            "areaColor": "#4670d8"
-                        }
-                    }
-                },
-                {
-                    "total": 33,
-                    "cityName": "延长",
-                    "monthTotal": 3805,
-                    "monthTb": "49.80",
-                    "rate": "49.80",
-                    "value": 3805,
-                    "name": "延长",
-                    "label": {
-                        "rich": {
-                            "rate": {
-                                "color": "#fcf500"
-                            }
-                        }
-                    },
-                    "itemStyle": {
-                        "normal": {
-                            "areaColor": "#4670d8"
-                        }
-                    }
-                },
-                {
-                    "total": 11,
-                    "cityName": "甘泉",
-                    "monthTotal": 3052,
-                    "monthTb": "52.83",
-                    "rate": "52.83",
-                    "value": 3052,
-                    "name": "甘泉",
-                    "label": {
-                        "rich": {
-                            "rate": {
-                                "color": "#fcf500"
-                            }
-                        }
-                    },
-                    "itemStyle": {
-                        "normal": {
-                            "areaColor": "#4670d8"
-                        }
-                    }
-                },
-                {
-                    "total": 27,
-                    "cityName": "延川",
-                    "monthTotal": 7167,
-                    "monthTb": "75.15",
-                    "rate": "75.15",
-                    "value": 7167,
-                    "name": "延川",
-                    "label": {
-                        "rich": {
-                            "rate": {
-                                "color": "#fcf500"
-                            }
-                        }
-                    },
-                    "itemStyle": {
-                        "normal": {
-                            "areaColor": "#4670d8"
-                        }
-                    }
-                },
-                {
-                    "total": 20,
-                    "cityName": "吴起",
-                    "monthTotal": 3244,
-                    "monthTb": "79.23",
-                    "rate": "79.23",
-                    "value": 3244,
-                    "name": "吴起",
-                    "label": {
-                        "rich": {
-                            "rate": {
-                                "color": "#fcf500"
-                            }
-                        }
-                    },
-                    "itemStyle": {
-                        "normal": {
-                            "areaColor": "#4670d8"
-                        }
-                    }
-                },
-                {
-                    "total": 11,
-                    "cityName": "富县",
-                    "monthTotal": 3052,
-                    "monthTb": "52.83",
-                    "rate": "52.83",
-                    "value": 3052,
-                    "name": "富县",
-                    "label": {
-                        "rich": {
-                            "rate": {
-                                "color": "#fcf500"
-                            }
-                        }
-                    },
-                    "itemStyle": {
-                        "normal": {
-                            "areaColor": "#4670d8"
-                        }
-                    }
-                },
-                {
-                    "total": 27,
-                    "cityName": "子长",
-                    "monthTotal": 7167,
-                    "monthTb": "75.15",
-                    "rate": "75.15",
-                    "value": 7167,
-                    "name": "子长",
-                    "label": {
-                        "rich": {
-                            "rate": {
-                                "color": "#fcf500"
-                            }
-                        }
-                    },
-                    "itemStyle": {
-                        "normal": {
-                            "areaColor": "#4670d8"
-                        }
-                    }
-                },
-                {
-                    "total": 20,
-                    "cityName": "志丹",
-                    "monthTotal": 3244,
-                    "monthTb": "79.23",
-                    "rate": "79.23",
-                    "value": 3244,
-                    "name": "志丹",
-                    "label": {
-                        "rich": {
-                            "rate": {
-                                "color": "#fcf500"
-                            }
-                        }
-                    },
-                    "itemStyle": {
-                        "normal": {
-                            "areaColor": "#4670d8"
-                        }
-                    }
-                }
-            ],
-            "total": 321,
-            "monthTotal": 71998,
-            "monthTb": "125.52"
-        },
-        "data_1_map": {
-            "cityMap": [
-                {
-                    "total": 32,
-                    "cityName": "宝塔",
-                    "monthTotal": 10752,
-                    "monthTb": "84.52"
-                },
-                {
-                    "total": 0,
-                    "cityName": "安塞",
-                    "monthTotal": 213,
-                    "monthTb": "124.21"
-                },
-                {
-                    "total": 1,
-                    "cityName": "黄陵",
-                    "monthTotal": 309,
-                    "monthTb": "-5.21"
-                },
-                {
-                    "total": 4,
-                    "cityName": "黄龙",
-                    "monthTotal": 630,
-                    "monthTb": "42.86"
-                },
-                {
-                    "total": 1,
-                    "cityName": "宜川",
-                    "monthTotal": 317,
-                    "monthTb": "-8.12"
-                },
-                {
-                    "total": 7,
-                    "cityName": "洛川",
-                    "monthTotal": 572,
-                    "monthTb": "57.58"
-                },
-                {
-                    "total": 4,
-                    "cityName": "延长",
-                    "monthTotal": 487,
-                    "monthTb": "123.39"
-                },
-                {
-                    "total": 0,
-                    "cityName": "甘泉",
-                    "monthTotal": 383,
-                    "monthTb": "157.05"
-                },
-                {
-                    "total": 7,
-                    "cityName": "延川",
-                    "monthTotal": 4368,
-                    "monthTb": "120.49"
-                },
-                {
-                    "total": 0,
-                    "cityName": "吴起",
-                    "monthTotal": 781,
-                    "monthTb": "116.94"
-                },
-                {
-                    "total": 0,
-                    "cityName": "富县",
-                    "monthTotal": 383,
-                    "monthTb": "157.05"
-                },
-                {
-                    "total": 7,
-                    "cityName": "子长",
-                    "monthTotal": 4368,
-                    "monthTb": "120.49"
-                },
-                {
-                    "total": 0,
-                    "cityName": "志丹",
-                    "monthTotal": 781,
-                    "monthTb": "116.94"
-                }
-            ],
-            "total": 56,
-            "monthTotal": 18812,
-            "monthTb": "86.17"
-        },
-        "callCount": 790,
-        "data_1_top": [
-            {
-                "name": "畅爽冰激凌5G套餐129元",
-                "value": 11202
-            },
-            {
-                "name": "5G副卡基本套餐(优享服务)",
-                "value": 4227
-            },
-            {
-                "name": "5G副卡基本套餐(极速服务)",
-                "value": 606
-            },
-            {
-                "name": "5G副卡基本套餐（基础服务）",
-                "value": 583
-            },
-            {
-                "name": "冰激凌专属5G套餐（钉钉版）99元",
-                "value": 548
-            },
-            {
-                "name": "畅爽冰激凌5G套餐159元-优化版",
-                "value": 348
-            },
-            {
-                "name": "畅爽冰激凌5G套餐199元（极速）",
-                "value": 298
-            },
-            {
-                "name": "畅爽冰激凌5G套餐399元",
-                "value": 267
-            },
-            {
-                "name": "冰激凌专属5G套餐（钉钉版）199元（极速）",
-                "value": 227
-            },
-            {
-                "name": "冰激凌专属5G套餐（钉钉版）129元",
-                "value": 218
-            }
-        ],
-        "data_1_top_qd": [
-        {
-            "name": "畅爽冰激凌1",
-            "value": 11202
-        },
-        {
-            "name": "5G副卡基本2",
-            "value": 4227
-        },
-        {
-            "name": "5G副卡3",
-            "value": 606
-        },
-        {
-            "name": "5G副卡4",
-            "value": 583
-        },
-        {
-            "name": "冰激凌专属5",
-            "value": 548
-        },
-        {
-            "name": "畅爽冰激凌6",
-            "value": 348
-        },
-        {
-            "name": "畅爽冰激凌7",
-            "value": 298
-        }
-    ],
-        "data_3_top": [
-            {
-                "name": "4G流量王39元套餐（陕西）",
-                "value": 16355
-            },
-            {
-                "name": "畅爽冰激凌5G套餐129元",
-                "value": 11202
-            },
-            {
-                "name": "4G流量王59元套餐（陕西）",
-                "value": 10764
-            },
-            {
-                "name": "沃派单卡(陕西)",
-                "value": 9060
-            },
-            {
-                "name": "地王卡",
-                "value": 5538
-            },
-            {
-                "name": "中介卡59元套餐(陕西)",
-                "value": 3845
-            },
-            {
-                "name": "4G畅爽冰激凌国内流量套餐-99元/月（放心用版）",
-                "value": 2402
-            },
-            {
-                "name": "流量王套餐59元（陕西）",
-                "value": 2116
-            },
-            {
-                "name": "流量王套餐39元（陕西）",
-                "value": 1896
-            },
-            {
-                "name": "4G流量王79元套餐（陕西）",
-                "value": 1706
-            }
-        ],
-        "data_3_top_qd": [
-            {
-                "name": "4G流量王1",
-                "value": 16355
-            },
-            {
-                "name": "畅爽冰激凌2",
-                "value": 11202
-            },
-            {
-                "name": "4G流量王3",
-                "value": 10764
-            },
-            {
-                "name": "沃派单卡4",
-                "value": 9060
-            },
-            {
-                "name": "地王卡5",
-                "value": 5538
-            },
-            {
-                "name": "中介卡59元6",
-                "value": 3845
-            },
-            {
-                "name": "4G畅爽冰激7",
-                "value": 2402
-            }
-        ],
-        "onNet": "8375085",
-        "times": 6263,
-        "data_all_top": [
-            {
-                "name": "腾讯大王卡",
-                "value": 70222
-            },
-            {
-                "name": "4G流量王39元套餐（陕西）",
-                "value": 16355
-            },
-            {
-                "name": "阿里小宝卡",
-                "value": 14280
-            },
-            {
-                "name": "畅爽冰激凌5G套餐129元",
-                "value": 11202
-            },
-            {
-                "name": "4G流量王59元套餐（陕西）",
-                "value": 10764
-            },
-            {
-                "name": "沃派单卡(陕西)",
-                "value": 9060
-            },
-            {
-                "name": "4G主副卡业务-语音副卡基本套餐",
-                "value": 7681
-            },
-            {
-                "name": "电商中间号专属产品",
-                "value": 6382
-            },
-            {
-                "name": "地王卡",
-                "value": 5538
-            },
-            {
-                "name": "亲情卡",
-                "value": 4443
-            }
-        ],
-        "data_all_top_qd": [
-            {
-                "name": "腾讯大王卡1",
-                "value": 70222
-            },
-            {
-                "name": "4G流量王2",
-                "value": 16355
-            },
-            {
-                "name": "阿里小宝卡3",
-                "value": 14280
-            },
-            {
-                "name": "畅爽冰激凌4",
-                "value": 11202
-            },
-            {
-                "name": "4G流量王5",
-                "value": 10764
-            },
-            {
-                "name": "沃派单卡6",
-                "value": 19060
-            },
-            {
-                "name": "4G主副卡7",
-                "value": 17681
-            }
-        ],
-        "data_2_map": {
-            "cityMap": [
-                {
-                    "total": 259,
-                    "cityName": "宝塔",
-                    "monthTotal": 90496,
-                    "monthTb": "76.94"
-                },
-                {
-                    "total": 10,
-                    "cityName": "安塞",
-                    "monthTotal": 1834,
-                    "monthTb": "-26.49"
-                },
-                {
-                    "total": 66,
-                    "cityName": "黄陵",
-                    "monthTotal": 11518,
-                    "monthTb": "-1.93"
-                },
-                {
-                    "total": 56,
-                    "cityName": "黄龙",
-                    "monthTotal": 11455,
-                    "monthTb": "-16.67"
-                },
-                {
-                    "total": 30,
-                    "cityName": "宜川",
-                    "monthTotal": 5373,
-                    "monthTb": "-40.11"
-                },
-                {
-                    "total": 51,
-                    "cityName": "洛川",
-                    "monthTotal": 7210,
-                    "monthTb": "-34.20"
-                },
-                {
-                    "total": 122,
-                    "cityName": "延长",
-                    "monthTotal": 16005,
-                    "monthTb": "-3.86"
-                },
-                {
-                    "total": 52,
-                    "cityName": "甘泉",
-                    "monthTotal": 11944,
-                    "monthTb": "-17.10"
-                },
-                {
-                    "total": 72,
-                    "cityName": "延川",
-                    "monthTotal": 12210,
-                    "monthTb": "-40.16"
-                },
-                {
-                    "total": 49,
-                    "cityName": "吴起",
-                    "monthTotal": 9375,
-                    "monthTb": "-23.59"
-                },
-                {
-                    "total": 52,
-                    "cityName": "富县",
-                    "monthTotal": 11944,
-                    "monthTb": "-17.10"
-                },
-                {
-                    "total": 72,
-                    "cityName": "子长",
-                    "monthTotal": 12210,
-                    "monthTb": "-40.16"
-                },
-                {
-                    "total": 49,
-                    "cityName": "志丹",
-                    "monthTotal": 9375,
-                    "monthTb": "-23.59"
-                }
-            ],
-            "total": 767,
-            "monthTotal": 177420,
-            "monthTb": "8.99"
-        },
-        "monthLine": [
-            189970,
-            179338,
-            135278,
-            139665,
-            183236,
-            198076,
-            196232
-        ],
-        "data_kd_map": {
-            "cityMap": [
-                {
-                    "total": 291,
-                    "cityName": "宝塔",
-                    "monthTotal": 111248,
-                    "monthTb": "77.72",
-                },
-                {
-                    "total": 10,
-                    "cityName": "安塞",
-                    "monthTotal": 2047,
-                    "monthTb": "-20.97",
-                },
-                {
-                    "total": 67,
-                    "cityName": "延长",
-                    "monthTotal": 11827,
-                    "monthTb": "-2.02",
-                },
-                {
-                    "total": 60,
-                    "cityName": "延川",
-                    "monthTotal": 12085,
-                    "monthTb": "-14.82",
-                },
-                {
-                    "total": 31,
-                    "cityName": "志丹",
-                    "monthTotal": 5690,
-                    "monthTb": "-38.92",
-                },
-                {
-                    "total": 58,
-                    "cityName": "吴起",
-                    "monthTotal": 7782,
-                    "monthTb": "-31.26",
-                },
-                {
-                    "total": 126,
-                    "cityName": "甘泉",
-                    "monthTotal": 16493,
-                    "monthTb": "-2.32",
-                },
-                {
-                    "total": 52,
-                    "cityName": "宜川",
-                    "monthTotal": 12327,
-                    "monthTb": "-15.32",
-                },
-                {
-                    "total": 79,
-                    "cityName": "富县",
-                    "monthTotal": 16578,
-                    "monthTb": "-25.94",
-                },
-                {
-                    "total": 49,
-                    "cityName": "洛川",
-                    "monthTotal": 10156,
-                    "monthTb": "-19.58",
-                },
-                {
-                    "total": 49,
-                    "cityName": "黄龙",
-                    "monthTotal": 10156,
-                    "monthTb": "-19.58",
-                },
-                {
-                    "total": 49,
-                    "cityName": "黄陵",
-                    "monthTotal": 10156,
-                    "monthTb": "-19.58",
-                },
-                {
-                    "total": 49,
-                    "cityName": "子长",
-                    "monthTotal": 10156,
-                    "monthTb": "-19.58",
-                },
-                {
-                    "total": 60,
-                    "cityName": "宝塔营业",
-                    "monthTotal": 12085,
-                    "monthTb": "-14.82",
-                },
-                {
-                    "total": 31,
-                    "cityName": "宝塔新区",
-                    "monthTotal": 5690,
-                    "monthTb": "-38.92",
-                },
-                {
-                    "total": 58,
-                    "cityName": "宝塔七里铺",
-                    "monthTotal": 7782,
-                    "monthTb": "-31.26",
-                },
-                {
-                    "total": 126,
-                    "cityName": "宝塔社会",
-                    "monthTotal": 12492,
-                    "monthTb": "-2.22",
-                },
-                {
-                    "total": 52,
-                    "cityName": "宝塔政企",
-                    "monthTotal": 12327,
-                    "monthTb": "-15.32",
-                },
-                {
-                    "total": 79,
-                    "cityName": "宝塔商企",
-                    "monthTotal": 16578,
-                    "monthTb": "-25.94",
-                },
-                {
-                    "total": 49,
-                    "cityName": "政企",
-                    "monthTotal": 10156,
-                    "monthTb": "-19.58",
-                },
-                {
-                    "total": 49,
-                    "cityName": "市分外呼",
-                    "monthTotal": 10156,
-                    "monthTb": "-19.58",
-                },
-                {
-                    "total": 49,
-                    "cityName": "线上",
-                    "monthTotal": 17156,
-                    "monthTb": "-19.58",
-                },
-                {
-                    "total": 49,
-                    "cityName": "延安未归属",
-                    "monthTotal": 10156,
-                    "monthTb": "-19.58",
-                }
-            ],
-            "total": 242,
-            "monthTotal": 32775,
-            "monthTb": "100.34"
-        },
-        "data_all_map": {
-            "cityMap": [
-                {
-                    "total": 291,
-                    "cityName": "宝塔",
-                    "monthTotal": 101248,
-                    "monthTb": "77.72",
-                    "rate": "77.72",
-                    "value": 291,
-                    "name": "宝塔",
-                    "rank": 1
-                },
-                {
-                    "total": 10,
-                    "cityName": "安塞",
-                    "monthTotal": 2047,
-                    "monthTb": "-20.97",
-                    "rate": "-20.97",
-                    "value": 10,
-                    "name": "安塞",
-                    "rank": 7
-                },
-                {
-                    "total": 67,
-                    "cityName": "延长",
-                    "monthTotal": 11827,
-                    "monthTb": "-2.02",
-                    "rate": "-2.02",
-                    "value": 67,
-                    "name": "延长",
-                    "rank": 2
-                },
-                {
-                    "total": 60,
-                    "cityName": "延川",
-                    "monthTotal": 12085,
-                    "monthTb": "-14.82",
-                    "rate": "-14.82",
-                    "value": 60,
-                    "name": "延川",
-                    "rank": 4
-                },
-                {
-                    "total": 31,
-                    "cityName": "志丹",
-                    "monthTotal": 5690,
-                    "monthTb": "-38.92",
-                    "rate": "-38.92",
-                    "value": 31,
-                    "name": "志丹",
-                    "rank": 10
-                },
-                {
-                    "total": 58,
-                    "cityName": "吴起",
-                    "monthTotal": 7782,
-                    "monthTb": "-31.26",
-                    "rate": "-31.26",
-                    "value": 58,
-                    "name": "吴起",
-                    "rank": 9
-                },
-                {
-                    "total": 126,
-                    "cityName": "甘泉",
-                    "monthTotal": 16592,
-                    "monthTb": "-2.22",
-                },
-                {
-                    "total": 52,
-                    "cityName": "宜川",
-                    "monthTotal": 12327,
-                    "monthTb": "-15.32",
-                    "rate": "-15.32",
-                    "value": 52,
-                    "name": "宜川",
-                    "rank": 5
-                },
-                {
-                    "total": 79,
-                    "cityName": "富县",
-                    "monthTotal": 16578,
-                    "monthTb": "-25.94",
-                    "rate": "-25.94",
-                    "value": 79,
-                    "name": "富县",
-                    "rank": 8
-                },
-                {
-                    "total": 49,
-                    "cityName": "洛川",
-                    "monthTotal": 10156,
-                    "monthTb": "-19.58",
-                    "rate": "-19.58",
-                    "value": 49,
-                    "name": "洛川",
-                    "rank": 6
-                },
-                {
-                    "total": 49,
-                    "cityName": "黄龙",
-                    "monthTotal": 10156,
-                    "monthTb": "-19.58",
-                    "rate": "-19.58",
-                    "value": 49,
-                    "name": "黄龙",
-                    "rank": 6
-                },
-                {
-                    "total": 49,
-                    "cityName": "黄陵",
-                    "monthTotal": 10156,
-                    "monthTb": "-19.58",
-                    "rate": "-19.58",
-                    "value": 49,
-                    "name": "黄陵",
-                    "rank": 6
-                },
-                {
-                    "total": 49,
-                    "cityName": "子长",
-                    "monthTotal": 10156,
-                    "monthTb": "-19.58",
-                    "rate": "-19.58",
-                    "value": 49,
-                    "name": "子长",
-                    "rank": 6
-                },
-                {
-                    "total": 60,
-                    "cityName": "宝塔营业",
-                    "monthTotal": 12085,
-                    "monthTb": "-14.82",
-                    "rate": "-14.82",
-                    "value": 60,
-                    "name": "宝塔营业",
-                    "rank": 4
-                },
-                {
-                    "total": 31,
-                    "cityName": "宝塔新区",
-                    "monthTotal": 5690,
-                    "monthTb": "-38.92",
-                    "rate": "-38.92",
-                    "value": 31,
-                    "name": "宝塔新区",
-                    "rank": 10
-                },
-                {
-                    "total": 58,
-                    "cityName": "宝塔七里铺",
-                    "monthTotal": 7782,
-                    "monthTb": "-31.26",
-                    "rate": "-31.26",
-                    "value": 58,
-                    "name": "宝塔七里铺",
-                    "rank": 9
-                },
-                {
-                    "total": 126,
-                    "cityName": "宝塔社会",
-                    "monthTotal": 16492,
-                    "monthTb": "-2.22",
-                    "rate": "-2.22",
-                    "value": 126,
-                    "name": "宝塔社会",
-                    "rank": 3
-                },
-                {
-                    "total": 52,
-                    "cityName": "宝塔政企",
-                    "monthTotal": 12327,
-                    "monthTb": "-15.32",
-                    "rate": "-15.32",
-                    "value": 52,
-                    "name": "宝塔政企",
-                    "rank": 5
-                },
-                {
-                    "total": 79,
-                    "cityName": "宝塔商企",
-                    "monthTotal": 16578,
-                    "monthTb": "-25.94",
-                    "rate": "-25.94",
-                    "value": 79,
-                    "name": "宝塔商企",
-                    "rank": 8
-                },
-                {
-                    "total": 49,
-                    "cityName": "政企",
-                    "monthTotal": 10156,
-                    "monthTb": "-19.58",
-                    "rate": "-19.58",
-                    "value": 49,
-                    "name": "政企",
-                    "rank": 6
-                },
-                {
-                    "total": 49,
-                    "cityName": "市分外呼",
-                    "monthTotal": 10156,
-                    "monthTb": "-19.58",
-                    "rate": "-19.58",
-                    "value": 49,
-                    "name": "市分外呼",
-                    "rank": 6
-                },
-                {
-                    "total": 49,
-                    "cityName": "线上",
-                    "monthTotal": 10156,
-                    "monthTb": "-19.58",
-                    "rate": "-19.58",
-                    "value": 49,
-                    "name": "线上",
-                    "rank": 6
-                },
-                {
-                    "total": 49,
-                    "cityName": "延安未归属",
-                    "monthTotal": 10156,
-                    "monthTb": "-19.58",
-                    "rate": "-19.58",
-                    "value": 49,
-                    "name": "延安未归属",
-                    "rank": 6
-                }
-            ],
-            "total": 823,
-            "monthTotal": 196232,
-            "monthTb": "13.50"
-        },
-        "data_2_top": [
-            {
-                "name": "腾讯大王卡",
-                "value": 70222
-            },
-            {
-                "name": "4G流量王39元套餐（陕西）",
-                "value": 16355
-            },
-            {
-                "name": "阿里小宝卡",
-                "value": 14280
-            },
-            {
-                "name": "4G流量王59元套餐（陕西）",
-                "value": 10764
-            },
-            {
-                "name": "沃派单卡(陕西)",
-                "value": 9060
-            },
-            {
-                "name": "4G主副卡业务-语音副卡基本套餐",
-                "value": 7681
-            },
-            {
-                "name": "电商中间号专属产品",
-                "value": 6382
-            },
-            {
-                "name": "地王卡",
-                "value": 5538
-            },
-            {
-                "name": "亲情卡",
-                "value": 4443
-            },
-            {
-                "name": "中介卡59元套餐(陕西)",
-                "value": 3845
-            }
-        ],
-        "data_2_top_qd": [
-            {
-                "name": "腾讯大王卡1",
-                "value": 70222
-            },
-            {
-                "name": "4G流量王2",
-                "value": 16355
-            },
-            {
-                "name": "阿里小宝卡3",
-                "value": 14280
-            },
-            {
-                "name": "4G流量王4",
-                "value": 10764
-            },
-            {
-                "name": "沃派单卡5",
-                "value": 9060
-            },
-            {
-                "name": "4G主副卡6",
-                "value": 7681
-            },
-            {
-                "name": "电商中间号7",
-                "value": 6382
-            }
-        ]
-    }*/
+    /*dataAll = {"data_3_map":{"cityMap":[{"total":1,"cityName":"延川","monthTotal":52,"monthTb":"-24.64"},{"total":16,"cityName":"宝塔社会","monthTotal":255,"monthTb":"62.42"},{"total":18,"cityName":"宝塔营业","monthTotal":231,"monthTb":"95.76"},{"total":0,"cityName":"黄龙","monthTotal":1,"monthTb":"-90.00"},{"total":8,"cityName":"洛川","monthTotal":112,"monthTb":"115.38"},{"total":13,"cityName":"政企","monthTotal":48,"monthTb":"20.00"},{"total":0,"cityName":"甘泉","monthTotal":20,"monthTb":"-78.49"},{"total":2,"cityName":"宝塔政企","monthTotal":20,"monthTb":"53.85"},{"total":7,"cityName":"子长","monthTotal":77,"monthTb":"-35.29"},{"total":0,"cityName":"宝塔商企","monthTotal":2,"monthTb":"100.00"},{"total":0,"cityName":"黄陵","monthTotal":16,"monthTb":"-78.08"},{"total":0,"cityName":"洛川","monthTotal":0,"monthTb":"NaN"},{"total":8,"cityName":"宜川","monthTotal":65,"monthTb":"-41.96"},{"total":0,"cityName":"市分外呼","monthTotal":0,"monthTb":"NaN"},{"total":1,"cityName":"线上","monthTotal":43,"monthTb":"-21.82"},{"total":0,"cityName":"延安未归属","monthTotal":0,"monthTb":"NaN"},{"total":0,"cityName":"富县","monthTotal":14,"monthTb":"-79.10"},{"total":2,"cityName":"安塞","monthTotal":92,"monthTb":"64.29"},{"total":6,"cityName":"志丹","monthTotal":63,"monthTb":"-21.25"},{"total":3,"cityName":"宝塔新区","monthTotal":33,"monthTb":"57.14"},{"total":1,"cityName":"线上","monthTotal":74,"monthTb":"Infinity"},{"total":2,"cityName":"延长","monthTotal":41,"monthTb":"20.59"},{"total":2,"cityName":"宝塔七里铺","monthTotal":65,"monthTb":"-18.75"},{"total":7,"cityName":"吴起","monthTotal":93,"monthTb":"-45.61"},{"total":16,"monthTb":"62.42","cityName":"宝塔","monthTotal":255}],"total":97,"monthTotal":1430,"departData":[{"name":"自有营业厅","value":27},{"name":"集团渠道","value":27},{"name":"公众直销","value":11},{"name":"电子渠道","value":1},{"name":"电话渠道","value":1},{"name":"社会实体","value":30},{"name":"其他","value":0}],"monthTb":"0.63"},"data_1_map":{"cityMap":[{"total":1,"cityName":"延川","monthTotal":35,"monthTb":"12.90"},{"total":4,"cityName":"宝塔社会","monthTotal":49,"monthTb":"36.11"},{"total":6,"cityName":"宝塔营业","monthTotal":49,"monthTb":"-24.62"},{"total":0,"cityName":"黄龙","monthTotal":2,"monthTb":"-50.00"},{"total":1,"cityName":"洛川","monthTotal":15,"monthTb":"-6.25"},{"total":13,"cityName":"政企","monthTotal":21,"monthTb":"2000.00"},{"total":0,"cityName":"甘泉","monthTotal":11,"monthTb":"450.00"},{"total":0,"cityName":"宝塔政企","monthTotal":1,"monthTb":"Infinity"},{"total":0,"cityName":"子长","monthTotal":14,"monthTb":"55.56"},{"total":0,"cityName":"宝塔商企","monthTotal":1,"monthTb":"0.00"},{"total":0,"cityName":"黄陵","monthTotal":11,"monthTb":"-31.25"},{"total":0,"cityName":"洛川","monthTotal":0,"monthTb":"NaN"},{"total":1,"cityName":"宜川","monthTotal":24,"monthTb":"33.33"},{"total":0,"cityName":"市分外呼","monthTotal":0,"monthTb":"NaN"},{"total":0,"cityName":"线上","monthTotal":2,"monthTb":"-85.71"},{"total":0,"cityName":"延安未归属","monthTotal":0,"monthTb":"-100.00"},{"total":0,"cityName":"富县","monthTotal":3,"monthTb":"0.00"},{"total":0,"cityName":"安塞","monthTotal":1,"monthTb":"-80.00"},{"total":1,"cityName":"志丹","monthTotal":29,"monthTb":"163.64"},{"total":2,"cityName":"宝塔新区","monthTotal":7,"monthTb":"Infinity"},{"total":0,"cityName":"线上","monthTotal":0,"monthTb":"NaN"},{"total":0,"cityName":"延长","monthTotal":13,"monthTb":"62.50"},{"total":2,"cityName":"宝塔七里铺","monthTotal":34,"monthTb":"13.33"},{"total":0,"cityName":"吴起","monthTotal":3,"monthTb":"200.00"},{"total":4,"monthTb":"36.11","cityName":"宝塔","monthTotal":49}],"total":31,"monthTotal":325,"departData":[{"name":"自有营业厅","value":16},{"name":"集团渠道","value":13},{"name":"公众直销","value":1},{"name":"电子渠道","value":0},{"name":"电话渠道","value":0},{"name":"社会实体","value":1},{"name":"其他","value":0}],"monthTb":"18.61"},"callCount":25,"data_1_top":[{"name":"5G副卡基本套餐(优享服务)","value":190},{"name":"冰激凌专属5G套餐（钉钉版）99元","value":28},{"name":"5G副卡基本套餐（基础服务）","value":28},{"name":"畅爽冰激凌5G套餐129元","value":22},{"name":"5G副卡基本套餐(极速服务)","value":18},{"name":"畅爽冰激凌5G套餐199元（极速）","value":17},{"name":"冰激凌专属5G套餐（钉钉版）159元","value":12},{"name":"畅爽冰激凌5G套餐159元-优化版","value":6},{"name":"冰激凌专属5G套餐（钉钉版）129元","value":3},{"name":"冰激凌专属5G套餐（钉钉版）199元（极速）","value":1}],"data_3_top":[{"name":"流量王套餐39元（陕西）","value":537},{"name":"流量王套餐59元（陕西）","value":410},{"name":"地王卡","value":153},{"name":"黄金大流量牛气卡语音版38元套餐（陕西）","value":90},{"name":"流量王套餐79元（陕西）","value":36},{"name":"腾讯天王卡","value":28},{"name":"冰激凌专属5G套餐（钉钉版）99元","value":28},{"name":"4G畅爽冰激凌国内流量套餐-99元/月（放心用版）","value":27},{"name":"菜鸟小宝卡（新）","value":25},{"name":"畅爽冰激凌5G套餐129元","value":22}],"onNet":"420218","times":1122,"data_all_top":[{"name":"腾讯大王卡","value":1851},{"name":"流量王套餐39元（陕西）","value":537},{"name":"流量王套餐19元（陕西）","value":412},{"name":"流量王套餐59元（陕西）","value":410},{"name":"阿里小宝卡","value":345},{"name":"4G主副卡业务-语音副卡基本套餐","value":263},{"name":"5G副卡基本套餐(优享服务)","value":190},{"name":"地王卡","value":153},{"name":"流量王套餐29元（陕西）","value":121},{"name":"黄金大流量牛气卡语音版38元套餐（陕西）","value":90}],"data_2_map":{"cityMap":[{"total":6,"cityName":"延川","monthTotal":135,"monthTb":"-6.90"},{"total":20,"cityName":"宝塔社会","monthTotal":361,"monthTb":"29.39"},{"total":30,"cityName":"宝塔营业","monthTotal":440,"monthTb":"58.84"},{"total":0,"cityName":"黄龙","monthTotal":43,"monthTb":"7.50"},{"total":24,"cityName":"洛川","monthTotal":210,"monthTb":"14.13"},{"total":1,"cityName":"政企","monthTotal":61,"monthTb":"-10.29"},{"total":1,"cityName":"甘泉","monthTotal":94,"monthTb":"-17.54"},{"total":2,"cityName":"宝塔政企","monthTotal":22,"monthTb":"37.50"},{"total":35,"cityName":"子长","monthTotal":269,"monthTb":"30.58"},{"total":0,"cityName":"宝塔商企","monthTotal":2,"monthTb":"-66.67"},{"total":6,"cityName":"黄陵","monthTotal":138,"monthTb":"28.97"},{"total":0,"cityName":"洛川","monthTotal":0,"monthTb":"NaN"},{"total":10,"cityName":"宜川","monthTotal":87,"monthTb":"-61.50"},{"total":0,"cityName":"市分外呼","monthTotal":0,"monthTb":"NaN"},{"total":148,"cityName":"线上","monthTotal":1692,"monthTb":"-18.85"},{"total":0,"cityName":"延安未归属","monthTotal":2,"monthTb":"-66.67"},{"total":7,"cityName":"富县","monthTotal":146,"monthTb":"16.80"},{"total":5,"cityName":"安塞","monthTotal":144,"monthTb":"67.44"},{"total":17,"cityName":"志丹","monthTotal":169,"monthTb":"-6.11"},{"total":1,"cityName":"宝塔新区","monthTotal":57,"monthTb":"32.56"},{"total":1,"cityName":"线上","monthTotal":74,"monthTb":"Infinity"},{"total":2,"cityName":"延长","monthTotal":96,"monthTb":"6.67"},{"total":5,"cityName":"宝塔七里铺","monthTotal":154,"monthTb":"-10.98"},{"total":11,"cityName":"吴起","monthTotal":136,"monthTb":"-46.46"},{"total":20,"monthTb":"29.39","cityName":"宝塔","monthTotal":361}],"total":332,"monthTotal":4558,"departData":[{"name":"自有营业厅","value":53},{"name":"集团渠道","value":62},{"name":"公众直销","value":28},{"name":"电子渠道","value":148},{"name":"电话渠道","value":1},{"name":"社会实体","value":40},{"name":"其他","value":0}],"monthTb":"-3.60"},"monthLine":[0,5574,9202,10844,11500,13353,4883],"data_kd_map":{"cityMap":[{"total":2,"cityName":"延川","monthTotal":70,"monthTb":"112.12"},{"total":7,"cityName":"宝塔社会","monthTotal":65,"monthTb":"-4.41"},{"total":5,"cityName":"宝塔营业","monthTotal":94,"monthTb":"-9.62"},{"total":0,"cityName":"黄龙","monthTotal":9,"monthTb":"200.00"},{"total":8,"cityName":"洛川","monthTotal":71,"monthTb":"-1.39"},{"total":0,"cityName":"政企","monthTotal":8,"monthTb":"-52.94"},{"total":4,"cityName":"甘泉","monthTotal":30,"monthTb":"3.45"},{"total":1,"cityName":"宝塔政企","monthTotal":4,"monthTb":"-33.33"},{"total":1,"cityName":"子长","monthTotal":46,"monthTb":"-31.34"},{"total":0,"cityName":"宝塔商企","monthTotal":0,"monthTb":"-100.00"},{"total":0,"cityName":"黄陵","monthTotal":21,"monthTb":"31.25"},{"total":1,"cityName":"宜川","monthTotal":24,"monthTb":"-20.00"},{"total":0,"cityName":"市分外呼","monthTotal":0,"monthTb":"NaN"},{"total":0,"cityName":"线上","monthTotal":0,"monthTb":"NaN"},{"total":0,"cityName":"延安未归属","monthTotal":0,"monthTb":"NaN"},{"total":1,"cityName":"富县","monthTotal":17,"monthTb":"-26.09"},{"total":1,"cityName":"安塞","monthTotal":32,"monthTb":"-66.32"},{"total":0,"cityName":"志丹","monthTotal":24,"monthTb":"-27.27"},{"total":3,"cityName":"宝塔新区","monthTotal":26,"monthTb":"0.00"},{"total":1,"cityName":"延长","monthTotal":22,"monthTb":"57.14"},{"total":4,"cityName":"宝塔七里铺","monthTotal":64,"monthTb":"18.52"},{"total":1,"cityName":"吴起","monthTotal":25,"monthTb":"25.00"},{"total":7,"monthTb":"-4.41","cityName":"宝塔","monthTotal":65}],"total":40,"monthTotal":652,"departData":[{"name":"自有营业厅","value":0},{"name":"集团渠道","value":0},{"name":"公众直销","value":0},{"name":"电子渠道","value":0},{"name":"电话渠道","value":0},{"name":"社会实体","value":0},{"name":"其他","value":0}],"monthTb":"-8.56"},"data_all_map":{"cityMap":[{"total":7,"cityName":"延川","monthTotal":170,"monthTb":"-3.41"},{"total":24,"cityName":"宝塔社会","monthTotal":410,"monthTb":"30.16"},{"total":36,"cityName":"宝塔营业","monthTotal":489,"monthTb":"42.98"},{"total":0,"cityName":"黄龙","monthTotal":45,"monthTb":"2.27"},{"total":14,"cityName":"政企","monthTotal":82,"monthTb":"18.84"},{"total":1,"cityName":"甘泉","monthTotal":105,"monthTb":"-9.48"},{"total":2,"cityName":"宝塔政企","monthTotal":23,"monthTb":"43.75"},{"total":35,"cityName":"子长","monthTotal":283,"monthTb":"31.63"},{"total":0,"cityName":"宝塔商企","monthTotal":3,"monthTb":"-57.14"},{"total":6,"cityName":"黄陵","monthTotal":149,"monthTb":"21.14"},{"total":0,"cityName":"洛川","monthTotal":0,"monthTb":"NaN"},{"total":11,"cityName":"宜川","monthTotal":111,"monthTb":"-54.51"},{"total":0,"cityName":"市分外呼","monthTotal":0,"monthTb":"NaN"},{"total":0,"cityName":"延安未归属","monthTotal":2,"monthTb":"-71.43"},{"total":7,"cityName":"富县","monthTotal":149,"monthTb":"16.41"},{"total":5,"cityName":"安塞","monthTotal":145,"monthTb":"59.34"},{"total":18,"cityName":"志丹","monthTotal":198,"monthTb":"3.66"},{"total":3,"cityName":"宝塔新区","monthTotal":64,"monthTb":"48.84"},{"total":1,"cityName":"线上","monthTotal":74,"monthTb":"Infinity"},{"total":2,"cityName":"延长","monthTotal":109,"monthTb":"11.22"},{"total":7,"cityName":"宝塔七里铺","monthTotal":188,"monthTb":"-7.39"},{"total":11,"cityName":"吴起","monthTotal":139,"monthTb":"-45.49"},{"total":24,"monthTb":"30.16","cityName":"宝塔","monthTotal":410}],"total":363,"monthTotal":4883,"departData":[{"name":"自有营业厅","value":69},{"name":"集团渠道","value":75},{"name":"公众直销","value":29},{"name":"电子渠道","value":148},{"name":"电话渠道","value":1},{"name":"社会实体","value":41},{"name":"其他","value":0}],"monthTb":"-2.38"},"data_2_top":[{"name":"腾讯大王卡","value":1851},{"name":"流量王套餐39元（陕西）","value":537},{"name":"流量王套餐19元（陕西）","value":412},{"name":"流量王套餐59元（陕西）","value":410},{"name":"阿里小宝卡","value":345},{"name":"4G主副卡业务-语音副卡基本套餐","value":263},{"name":"地王卡","value":153},{"name":"流量王套餐29元（陕西）","value":121},{"name":"黄金大流量牛气卡语音版38元套餐（陕西）","value":90},{"name":"亲情卡","value":68}]}
+    refreshHtml();*/
+
     fetchData();
     setInterval(function () {
         fetchData()
@@ -1206,11 +74,10 @@ function fetchData(){
 }
 function refreshHtml() {
     var kdData = dataAll.data_kd_map.cityMap;
-    dataAll.data_kd_map.cityMap = kdData;
+   /* dataAll.data_kd_map.cityMap = kdData;*/
     /*月累计访问量*/
     $('#monthVisited').html(dataAll.callCount);
     //左二数据处理
-    // var xData = ['宝塔', '安塞', '黄陵', '黄龙', '宜川', '洛川', '延长', '甘泉', '延川', '吴起','富县','子长','志丹'];
     var xData = [
         "宝塔营业",
         "宝塔新区",
@@ -1252,7 +119,7 @@ function refreshHtml() {
                 rankData[j].name = rankData[j].cityName;
                 var rank = xData.length;
                 $.each(rankData,function(m,s){
-                    if(Number(rankData[j].monthTb) >= Number(s.monthTb)){
+                    if(Number(rankData[j].monthTb) >= Number(s.monthTb) || s.monthTb === "NaN" || s.monthTb === "Infinity"){
                         rank --;
                     }
                 })
@@ -1266,9 +133,9 @@ function refreshHtml() {
                 kdData[j].rate = kdData[j].monthTb;
                 kdData[j].value = kdData[j].total;
                 kdData[j].name = kdData[j].cityName;
-                var rank = xData.length;
+                var rank = kdData.length;
                 $.each(kdData,function(m,s){
-                    if(Number(kdData[j].monthTb) >= Number(s.monthTb)){
+                    if(Number(kdData[j].monthTb) >= Number(s.monthTb) || s.monthTb === "NaN" || s.monthTb === "Infinity"){
                         rank --;
                     }
                 })
@@ -1277,7 +144,7 @@ function refreshHtml() {
             }
         }
     });
-    //
+    //左三
     timeChart(rankDataNew);
     remRankData = rankDataNew;
     //右二
@@ -1393,37 +260,37 @@ function rightOneDiv() {
             $('#legend').css('display','none');
             $("#mapContainer").css('display','none');
             $("#pieContainer").css('display','block');
-            topData = getTopData(dataAll.data_all_top_qd);
+            topData = getTopData(dataAll.data_all_map.departData);
             mapData = dataAll.data_all_map.cityMap;
             $('#rwWcl').css('display','inline-block');
             $('#rw_wcl').html(dataAll.data_all_map.taskCompletionRate + '%');
             setInfoTitleQd('全部', dataAll.data_all_map.monthTotal, dataAll.data_all_map.monthTb);
-            pieChart(dataAll.data_all_top_qd,topData.name);
+            pieChart(dataAll.data_all_map.departData,topData.name);
             topChartQd(topData);
             break;
         case 5:
             $(".btn:eq(1)").addClass("active");
-            topData = getTopData(dataAll.data_1_top_qd);
+            topData = getTopData(dataAll.data_1_map.departData);
             mapData = dataAll.data_1_map.cityMap;
             $('#rwWcl').css('display','none');
             setInfoTitleQd('5G', dataAll.data_1_map.monthTotal, dataAll.data_1_map.monthTb);
-            pieChart(dataAll.data_1_top_qd,topData.name);
+            pieChart(dataAll.data_1_map.departData,topData.name);
             topChartQd(topData);
             break;
         case 6:
             $(".btn:eq(2)").addClass("active");
-            topData = getTopData(dataAll.data_2_top_qd);
+            topData = getTopData(dataAll.data_2_map.departData);
             mapData = dataAll.data_2_map.cityMap;
             setInfoTitleQd('4G', dataAll.data_2_map.monthTotal, dataAll.data_2_map.monthTb);
-            pieChart(dataAll.data_2_top_qd,topData.name);
+            pieChart(dataAll.data_2_map.departData,topData.name);
             topChartQd(topData);
             break;
         default:
             $(".btn:eq(3)").addClass("active");
-            topData = getTopData(dataAll.data_3_top_qd);
+            topData = getTopData(dataAll.data_3_map.departData);
             mapData = dataAll.data_3_map.cityMap;
             setInfoTitleQd('中高端', dataAll.data_3_map.monthTotal, dataAll.data_3_map.monthTb);
-            pieChart(dataAll.data_3_top_qd,topData.name);
+            pieChart(dataAll.data_3_map.departData,topData.name);
             topChartQd(topData);
             break;
     }
@@ -1435,8 +302,8 @@ function setInfoTitle(title, month_value, day_hb) {
     $('#day_hb').html(day_hb + '%');
 }
 function setInfoTitleQd(title, month_value, day_hb) {
-    $('#info-title').html('延安' + title + '渠道发展量<span style="font-size: 0.8rem">(户)</span>');
-    $('.chart-title').html(title + '渠道月累计发展量');
+    $('#info-title').html('延安渠道' + title + '发展量<span style="font-size: 0.8rem">(户)</span>');
+    $('.chart-title').html('渠道月累计' + title + '发展量');
     $('#month_value').html(month_value);
     $('#day_hb').html(day_hb + '%');
 }
@@ -1452,6 +319,10 @@ function mapChart(data) {
     }
     var temp1 = Math.round(remMax/333) *100;
     var temp2 = Math.round(remMax/143) *100;
+    if(remMax<333){
+        temp1 = Math.round(remMax/33) *10;
+        temp2 = Math.round(remMax/14) *10;
+    }
     var myChart = echarts.init(document.getElementById('mapContainer'));
     var areaColors = ['#102867', '#1635b2', '#4670d8'];
     $('#mapRank1').html('0-'+temp1);
@@ -1875,7 +746,7 @@ function cityChart(kdData) {
     });*/
     /*barData.push(zhwjBarData);
     lineData.push(zhwjLineData);*/
-    option = {
+    var option = {
         grid: {
             width: '80%',
             height: '70%',
@@ -1972,7 +843,7 @@ function cityChart(kdData) {
                     interval: 0,
                     rotate:30,
                     textStyle: {
-                        color: '#40848c',
+                        color: '#47adb5',
                         fontSize: 12
                     },
                 },
@@ -2609,7 +1480,7 @@ function timeChart(datas) {
                     interval: 0,//x坐标显示全部
                     rotate:30,
                     textStyle: {
-                        color: '#40848c',
+                        color: '#47adb5',
                         fontSize: 12
                     },
                 },

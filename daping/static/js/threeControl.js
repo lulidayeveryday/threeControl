@@ -324,6 +324,14 @@ function showTime() {
 }
 
 function fetchData() {
+    var pd = fetchAjax('controlCarryOut');
+    if( pd.controlCarryOutData.headerData[0].DAY_WEIWAN!== '0' && pd.controlCarryOutData.headerData[0].DAY_WEIWAN!== 0 && pd.controlCarryOutData.headerData[0].HB1 !== 'undefine'){
+
+        //控携出
+        rightDiv1 = fetchAjax('controlCarryOut');
+        //携入携出
+        rightDiv2 = fetchAjax('carryInAndOut');
+    }
     //控流失
     leftTop = fetchAjax('controlLossHead');
     //沉默激活
@@ -336,10 +344,10 @@ function fetchData() {
     centerDiv1 = fetchAjax('controlLossActiveRate');
     //控降套
     centerDiv2 = fetchAjax('controlLowerSleeve');
-    //控携出
+    /*//控携出
     rightDiv1 = fetchAjax('controlCarryOut');
     //携入携出
-    rightDiv2 = fetchAjax('carryInAndOut');
+    rightDiv2 = fetchAjax('carryInAndOut');*/
 
 
     /*leftTop = {"controlLossHead": [{"MONTH_ACTIVERATE": 53, "STRATEGY": "5", "COVER_USER": 69.7}]}

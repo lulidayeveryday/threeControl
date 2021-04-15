@@ -180,12 +180,73 @@
     </div>
 </div>
 </body>
-<!--<script th:src="../static/js/jquery-1.11.3.js"></script>
-<script th:src="../static/js/echarts.min.js"></script>
+<!--<script src="../static/js/jquery-1.11.3.js"></script>
+<script src="../static/js/echarts.min.js"></script>
 <script src="../static/js/yanan.js"></script>
 <script src="../static/js/index-yanAn.js"></script>-->
 <script th:src="@{/js/jquery-1.11.3.js}"></script>
+<script th:inline="javascript">
+    function getExplorerInfo(){
+        var ua = navigator.userAgent.toLocaleLowerCase();
+        var browserType=null;
+        if (ua.match(/msie/) != null || ua.match(/trident/) != null) {
+            $('.isIe').css('display','block');
+            browserType = "IE";
+            browserVersion = ua.match(/msie ([\d.]+)/) != null ? ua.match(/msie ([\d.]+)/)[1] : ua.match(/rv:([\d.]+)/)[1];
+            if(browserVersion==9.0||browserVersion==10.0||browserVersion==11.0){
+                return { browserType: "IE" };
+            }else{
+                return { browserType: "IE8以下" };
+            }
+
+        } else if (ua.match(/firefox/) != null) {
+            browserType = "火狐";
+            return { browserType: "火狐" };
+        }else if (ua.match(/ubrowser/) != null) {
+            browserType = "UC";
+            return { browserType: "UC" };
+        }else if (ua.match(/opera/) != null) {
+            browserType = "欧朋";
+            return { browserType: "欧朋" };
+        } else if (ua.match(/bidubrowser/) != null) {
+            browserType = "百度";
+            return { browserType: "百度" };
+        }else if (ua.match(/metasr/) != null) {
+            browserType = "搜狗";
+            return { browserType: "搜狗" };
+        }else if (ua.match(/tencenttraveler/) != null || ua.match(/qqbrowse/) != null) {
+            browserType = "QQ";
+            return { browserType: "QQ" };
+        }else if (ua.match(/maxthon/) != null) {
+            browserType = "遨游";
+            return { browserType: "遨游" };
+        }else if (ua.match(/chrome/) != null) {
+            var is360 = _mime("type", "application/vnd.chromium.remoting-viewer");
+            function _mime(option, value) {
+                var mimeTypes = navigator.mimeTypes;
+                for (var mt in mimeTypes) {
+                    if (mimeTypes[mt][option] == value) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+            if(is360){
+                $('.isIe').css('display','block');
+                browserType = '360';
+            }else{
+                browserType = '谷歌';
+            }
+            return { browserType: "360" };
+        }else if (ua.match(/safari/) != null) {
+            browserType = "Safari";
+            return { browserType: "Safari" };
+        }
+    }
+    getExplorerInfo();
+</script>
 <script th:src="@{/js/echarts.min.js}"></script>
 <script th:src="@{/js/yanan.js}"></script>
 <script th:src="@{/js/index-yanAn.js}"></script>
+
 </html>

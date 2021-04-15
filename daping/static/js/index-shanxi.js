@@ -962,8 +962,8 @@ function setInfoTitle(title, month_value, day_hb) {
     $('#day_hb').html(day_hb + '%');
 }
 function setInfoTitleQd(title, month_value, day_hb) {
-    $('#info-title').html('全省' + title + '渠道发展量<span style="font-size: 0.8rem">(户)</span>');
-    $('.chart-title').html(title + '渠道月累计发展量');
+    $('#info-title').html('全省渠道' + title + '发展量<span style="font-size: 0.8rem">(户)</span>');
+    $('.chart-title').html('渠道月累计' + title + '发展量');
     $('#month_value').html(month_value);
     $('#day_hb').html(day_hb + '%');
 }
@@ -1408,7 +1408,7 @@ function cityChart(kdData) {
     });*/
     /*barData.push(zhwjBarData);
     lineData.push(zhwjLineData);*/
-    option = {
+    var option = {
         grid: {
             width: '80%',
             height: '70%',
@@ -1504,7 +1504,7 @@ function cityChart(kdData) {
                 axisLabel: {
                     interval: 0,
                     textStyle: {
-                        color: '#40848c',
+                        color: '#47adb5',
                         fontSize: 12
                     },
                 },
@@ -2090,7 +2090,7 @@ function timeChart(datas) {
                 axisLabel: {
                     /*interval: 0,//x坐标显示全部*/
                     textStyle: {
-                        color: '#40848c',
+                        color: '#47adb5',
                         fontSize: 12
                     },
                 },

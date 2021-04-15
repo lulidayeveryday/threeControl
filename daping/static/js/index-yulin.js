@@ -18,1452 +18,573 @@ $(function () {
     setInterval(showTime, 1000);
     /*获取数据*/
     /*dataAll = {
-        "data_kyrh_map": {
-            "total": 510,
-            "monthTotal": 85728,
-            "monthTb": "367.90"
-        },
         "data_3_map": {
-            "cityMap": [
-                {
-                    "total": 161,
-                    "cityName": "宝塔",
-                    "monthTotal": 43555,
-                    "monthTb": "248.58",
-                    "rate": "248.58",
-                    "value": 43555,
-                    "name": "宝塔",
-                    "label": {
-                        "rich": {
-                            "rate": {
-                                "color": "#fcf500"
-                            }
-                        }
-                    },
-                    "itemStyle": {
-                        "normal": {
-                            "areaColor": "#102867"
-                        }
-                    }
-                },
-                {
-                    "total": 3,
-                    "cityName": "安塞",
-                    "monthTotal": 971,
-                    "monthTb": "148.97",
-                    "rate": "148.97",
-                    "value": 971,
-                    "name": "安塞",
-                    "label": {
-                        "rich": {
-                            "rate": {
-                                "color": "#fcf500"
-                            }
-                        }
-                    },
-                    "itemStyle": {
-                        "normal": {
-                            "areaColor": "#4670d8"
-                        }
-                    }
-                },
-                {
-                    "total": 19,
-                    "cityName": "黄陵",
-                    "monthTotal": 4464,
-                    "monthTb": "48.65",
-                    "rate": "48.65",
-                    "value": 4464,
-                    "name": "黄陵",
-                    "label": {
-                        "rich": {
-                            "rate": {
-                                "color": "#fcf500"
-                            }
-                        }
-                    },
-                    "itemStyle": {
-                        "normal": {
-                            "areaColor": "#4670d8"
-                        }
-                    }
-                },
-                {
-                    "total": 12,
-                    "cityName": "黄龙",
-                    "monthTotal": 2362,
-                    "monthTb": "20.57",
-                    "rate": "20.57",
-                    "value": 2362,
-                    "name": "黄龙",
-                    "label": {
-                        "rich": {
-                            "rate": {
-                                "color": "#fcf500"
-                            }
-                        }
-                    },
-                    "itemStyle": {
-                        "normal": {
-                            "areaColor": "#4670d8"
-                        }
-                    }
-                },
-                {
-                    "total": 16,
-                    "cityName": "宜川",
-                    "monthTotal": 1142,
-                    "monthTb": "-27.68",
-                    "rate": "-27.68",
-                    "value": 1142,
-                    "name": "宜川",
-                    "label": {
-                        "rich": {
-                            "rate": {
-                                "color": "#ff3116"
-                            }
-                        }
-                    },
-                    "itemStyle": {
-                        "normal": {
-                            "areaColor": "#4670d8"
-                        }
-                    }
-                },
-                {
-                    "total": 19,
-                    "cityName": "洛川",
-                    "monthTotal": 2236,
-                    "monthTb": "8.49",
-                    "rate": "8.49",
-                    "value": 2236,
-                    "name": "洛川",
-                    "label": {
-                        "rich": {
-                            "rate": {
-                                "color": "#fcf500"
-                            }
-                        }
-                    },
-                    "itemStyle": {
-                        "normal": {
-                            "areaColor": "#4670d8"
-                        }
-                    }
-                },
-                {
-                    "total": 33,
-                    "cityName": "延长",
-                    "monthTotal": 3805,
-                    "monthTb": "49.80",
-                    "rate": "49.80",
-                    "value": 3805,
-                    "name": "延长",
-                    "label": {
-                        "rich": {
-                            "rate": {
-                                "color": "#fcf500"
-                            }
-                        }
-                    },
-                    "itemStyle": {
-                        "normal": {
-                            "areaColor": "#4670d8"
-                        }
-                    }
-                },
-                {
-                    "total": 11,
-                    "cityName": "甘泉",
-                    "monthTotal": 3052,
-                    "monthTb": "52.83",
-                    "rate": "52.83",
-                    "value": 3052,
-                    "name": "甘泉",
-                    "label": {
-                        "rich": {
-                            "rate": {
-                                "color": "#fcf500"
-                            }
-                        }
-                    },
-                    "itemStyle": {
-                        "normal": {
-                            "areaColor": "#4670d8"
-                        }
-                    }
-                },
-                {
-                    "total": 27,
-                    "cityName": "延川",
-                    "monthTotal": 7167,
-                    "monthTb": "75.15",
-                    "rate": "75.15",
-                    "value": 7167,
-                    "name": "延川",
-                    "label": {
-                        "rich": {
-                            "rate": {
-                                "color": "#fcf500"
-                            }
-                        }
-                    },
-                    "itemStyle": {
-                        "normal": {
-                            "areaColor": "#4670d8"
-                        }
-                    }
-                },
-                {
-                    "total": 20,
-                    "cityName": "吴起",
-                    "monthTotal": 3244,
-                    "monthTb": "79.23",
-                    "rate": "79.23",
-                    "value": 3244,
-                    "name": "吴起",
-                    "label": {
-                        "rich": {
-                            "rate": {
-                                "color": "#fcf500"
-                            }
-                        }
-                    },
-                    "itemStyle": {
-                        "normal": {
-                            "areaColor": "#4670d8"
-                        }
-                    }
-                },
-                {
-                    "total": 11,
-                    "cityName": "富县",
-                    "monthTotal": 3052,
-                    "monthTb": "52.83",
-                    "rate": "52.83",
-                    "value": 3052,
-                    "name": "富县",
-                    "label": {
-                        "rich": {
-                            "rate": {
-                                "color": "#fcf500"
-                            }
-                        }
-                    },
-                    "itemStyle": {
-                        "normal": {
-                            "areaColor": "#4670d8"
-                        }
-                    }
-                },
-                {
-                    "total": 27,
-                    "cityName": "子长",
-                    "monthTotal": 7167,
-                    "monthTb": "75.15",
-                    "rate": "75.15",
-                    "value": 7167,
-                    "name": "子长",
-                    "label": {
-                        "rich": {
-                            "rate": {
-                                "color": "#fcf500"
-                            }
-                        }
-                    },
-                    "itemStyle": {
-                        "normal": {
-                            "areaColor": "#4670d8"
-                        }
-                    }
-                },
-                {
-                    "total": 20,
-                    "cityName": "志丹",
-                    "monthTotal": 3244,
-                    "monthTb": "79.23",
-                    "rate": "79.23",
-                    "value": 3244,
-                    "name": "志丹",
-                    "label": {
-                        "rich": {
-                            "rate": {
-                                "color": "#fcf500"
-                            }
-                        }
-                    },
-                    "itemStyle": {
-                        "normal": {
-                            "areaColor": "#4670d8"
-                        }
-                    }
-                }
-            ],
-            "total": 321,
-            "monthTotal": 71998,
-            "monthTb": "125.52"
+            "cityMap": [{
+                "total": 0,
+                "cityName": "高新政企",
+                "monthTotal": 0,
+                "monthTb": "NaN"
+            }, {"total": 0, "cityName": "榆阳社区", "monthTotal": 8, "monthTb": "-27.27"}, {
+                "total": 0,
+                "cityName": "民生BU",
+                "monthTotal": 0,
+                "monthTb": "NaN"
+            }, {"total": 1, "cityName": "榆阳政企", "monthTotal": 1, "monthTb": "Infinity"}, {
+                "total": 1,
+                "cityName": "榆阳乡镇",
+                "monthTotal": 20,
+                "monthTb": "-47.37"
+            }, {"total": 5, "cityName": "神木公众", "monthTotal": 98, "monthTb": "-25.76"}, {
+                "total": 0,
+                "cityName": "米脂",
+                "monthTotal": 2,
+                "monthTb": "-77.78"
+            }, {"total": 0, "cityName": "产业BU", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 0,
+                "cityName": "靖边政企",
+                "monthTotal": 0,
+                "monthTb": "NaN"
+            }, {"total": 0, "cityName": "横山政企", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 1,
+                "cityName": "清涧",
+                "monthTotal": 9,
+                "monthTb": "-55.00"
+            }, {"total": 3, "cityName": "靖边公众", "monthTotal": 93, "monthTb": "-37.58"}, {
+                "total": 3,
+                "cityName": "高新社区",
+                "monthTotal": 9,
+                "monthTb": "-25.00"
+            }, {"total": 0, "cityName": "府谷公众", "monthTotal": 21, "monthTb": "-63.79"}, {
+                "total": 0,
+                "cityName": "政府BU",
+                "monthTotal": 0,
+                "monthTb": "NaN"
+            }, {"total": 66, "cityName": "榆林未归属", "monthTotal": 690, "monthTb": "-35.09"}, {
+                "total": 0,
+                "cityName": "子洲",
+                "monthTotal": 18,
+                "monthTb": "260.00"
+            }, {"total": 1, "cityName": "绥德公众", "monthTotal": 28, "monthTb": "-49.09"}, {
+                "total": 0,
+                "cityName": "定边政企",
+                "monthTotal": 0,
+                "monthTb": "-100.00"
+            }, {"total": 0, "cityName": "工厂BU", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 0,
+                "cityName": "横山公众",
+                "monthTotal": 12,
+                "monthTb": "-20.00"
+            }, {"total": 23, "cityName": "定边公众", "monthTotal": 176, "monthTb": "35.38"}, {
+                "total": 0,
+                "cityName": "绥德政企",
+                "monthTotal": 0,
+                "monthTb": "NaN"
+            }, {"total": 7, "cityName": "榆阳渠道", "monthTotal": 56, "monthTb": "-30.86"}, {
+                "total": 0,
+                "cityName": "高新开发",
+                "monthTotal": 0,
+                "monthTb": "NaN"
+            }, {"total": 0, "cityName": "吴堡", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 0,
+                "cityName": "矿山BU",
+                "monthTotal": 0,
+                "monthTb": "NaN"
+            }, {"total": 0, "cityName": "佳县", "monthTotal": 6, "monthTb": "-40.00"}, {
+                "total": 0,
+                "cityName": "神木政企",
+                "monthTotal": 0,
+                "monthTb": "NaN"
+            }, {"total": 1, "cityName": "榆神", "monthTotal": 23, "monthTb": "-72.62"}, {
+                "total": 0,
+                "cityName": "政企",
+                "monthTotal": 0,
+                "monthTb": "NaN"
+            }, {"total": 6, "cityName": "大柳塔", "monthTotal": 136, "monthTb": "166.67"}, {
+                "total": 0,
+                "cityName": "榆林未归属",
+                "monthTotal": 0,
+                "monthTb": "NaN"
+            }, {"total": 3, "cityName": "榆林未归属", "monthTotal": 114, "monthTb": "Infinity"}, {
+                "total": 10,
+                "cityName": "电子",
+                "monthTotal": 156,
+                "monthTb": "188.89"
+            }, {"total": 0, "cityName": "府谷政企", "monthTotal": 0, "monthTb": "NaN"}],
+            "total": 131,
+            "monthTotal": 1676,
+            "departData": [{"name": "自有营业厅", "value": 20}, {"name": "集团渠道", "value": 33}, {
+                "name": "公众直销",
+                "value": 12
+            }, {"name": "电子渠道", "value": 10}, {"name": "电话渠道", "value": 4}, {
+                "name": "社会实体",
+                "value": 52
+            }, {"name": "其他", "value": 0}],
+            "monthTb": "-15.27"
         },
         "data_1_map": {
-            "cityMap": [
-                {
-                    "total": 32,
-                    "cityName": "大柳塔",
-                    "monthTotal": 1752,
-                    "monthTb": "84.52"
-                },
-                {
-                    "total": 0,
-                    "cityName": "定边政企",
-                    "monthTotal": 213,
-                    "monthTb": "124.21"
-                },
-                {
-                    "total": 1,
-                    "cityName": "府谷公众",
-                    "monthTotal": 309,
-                    "monthTb": "-5.21"
-                },
-                {
-                    "total": 4,
-                    "cityName": "府谷政企",
-                    "monthTotal": 630,
-                    "monthTb": "42.86"
-                },
-                {
-                    "total": 1,
-                    "cityName": "高新社区",
-                    "monthTotal": 317,
-                    "monthTb": "-8.12"
-                },
-                {
-                    "total": 7,
-                    "cityName": "定边公众",
-                    "monthTotal": 572,
-                    "monthTb": "57.58"
-                },
-                {
-                    "total": 4,
-                    "cityName": "高新政企",
-                    "monthTotal": 487,
-                    "monthTb": "123.39"
-                },
-                {
-                    "total": 0,
-                    "cityName": "横山公众",
-                    "monthTotal": 383,
-                    "monthTb": "157.05"
-                },
-                {
-                    "total": 7,
-                    "cityName": "横山政企",
-                    "monthTotal": 4368,
-                    "monthTb": "120.49"
-                },
-                {
-                    "total": 0,
-                    "cityName": "佳县",
-                    "monthTotal": 781,
-                    "monthTb": "116.94"
-                },
-                {
-                    "total": 0,
-                    "cityName": "靖边公众",
-                    "monthTotal": 383,
-                    "monthTb": "157.05"
-                },
-                {
-                    "total": 7,
-                    "cityName": "靖边政企",
-                    "monthTotal": 4368,
-                    "monthTb": "120.49"
-                },
-                {
-                    "total": 0,
-                    "cityName": "米脂",
-                    "monthTotal": 781,
-                    "monthTb": "116.94"
-                },
-                {
-                    "total": 0,
-                    "cityName": "清涧",
-                    "monthTotal": 213,
-                    "monthTb": "124.21"
-                },
-                {
-                    "total": 1,
-                    "cityName": "神木公众",
-                    "monthTotal": 309,
-                    "monthTb": "-5.21"
-                },
-                {
-                    "total": 4,
-                    "cityName": "神木政企",
-                    "monthTotal": 630,
-                    "monthTb": "42.86"
-                },
-                {
-                    "total": 1,
-                    "cityName": "绥德公众",
-                    "monthTotal": 317,
-                    "monthTb": "-8.12"
-                },
-                {
-                    "total": 7,
-                    "cityName": "绥德政企",
-                    "monthTotal": 572,
-                    "monthTb": "57.58"
-                },
-                {
-                    "total": 4,
-                    "cityName": "吴堡",
-                    "monthTotal": 487,
-                    "monthTb": "123.39"
-                },
-                {
-                    "total": 0,
-                    "cityName": "榆神",
-                    "monthTotal": 383,
-                    "monthTb": "157.05"
-                },
-                {
-                    "total": 7,
-                    "cityName": "榆阳渠道",
-                    "monthTotal": 4368,
-                    "monthTb": "120.49"
-                },
-                {
-                    "total": 0,
-                    "cityName": "榆阳社区",
-                    "monthTotal": 781,
-                    "monthTb": "116.94"
-                },
-                {
-                    "total": 0,
-                    "cityName": "榆阳乡镇",
-                    "monthTotal": 383,
-                    "monthTb": "157.05"
-                },
-                {
-                    "total": 7,
-                    "cityName": "榆阳政企",
-                    "monthTotal": 4368,
-                    "monthTb": "120.49"
-                },
-                {
-                    "total": 0,
-                    "cityName": "政企",
-                    "monthTotal": 781,
-                    "monthTb": "116.94"
-                },
-                {
-                    "total": 1,
-                    "cityName": "产业BU",
-                    "monthTotal": 317,
-                    "monthTb": "-8.12"
-                },
-                {
-                    "total": 7,
-                    "cityName": "政府BU",
-                    "monthTotal": 572,
-                    "monthTb": "57.58"
-                },
-                {
-                    "total": 4,
-                    "cityName": "工厂BU",
-                    "monthTotal": 487,
-                    "monthTb": "123.39"
-                },
-                {
-                    "total": 0,
-                    "cityName": "矿山BU",
-                    "monthTotal": 383,
-                    "monthTb": "157.05"
-                },
-                {
-                    "total": 7,
-                    "cityName": "民生BU",
-                    "monthTotal": 4368,
-                    "monthTb": "120.49"
-                },
-                {
-                    "total": 0,
-                    "cityName": "电子",
-                    "monthTotal": 781,
-                    "monthTb": "116.94"
-                },
-                {
-                    "total": 0,
-                    "cityName": "高新开发",
-                    "monthTotal": 383,
-                    "monthTb": "157.05"
-                },
-                {
-                    "total": 7,
-                    "cityName": "榆林未归属",
-                    "monthTotal": 4368,
-                    "monthTb": "120.49"
-                },
-                {
-                    "total": 0,
-                    "cityName": "子洲",
-                    "monthTotal": 781,
-                    "monthTb": "116.94"
-                }
-            ],
-            "total": 56,
-            "monthTotal": 18812,
-            "monthTb": "86.17"
+            "cityMap": [{"total": 0, "cityName": "高新政企", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 0,
+                "cityName": "榆阳社区",
+                "monthTotal": 1,
+                "monthTb": "0.00"
+            }, {"total": 0, "cityName": "民生BU", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 0,
+                "cityName": "榆阳政企",
+                "monthTotal": 0,
+                "monthTb": "NaN"
+            }, {"total": 0, "cityName": "榆阳乡镇", "monthTotal": 0, "monthTb": "-100.00"}, {
+                "total": 0,
+                "cityName": "神木公众",
+                "monthTotal": 2,
+                "monthTb": "0.00"
+            }, {"total": 0, "cityName": "米脂", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 0,
+                "cityName": "产业BU",
+                "monthTotal": 0,
+                "monthTb": "NaN"
+            }, {"total": 0, "cityName": "靖边政企", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 0,
+                "cityName": "横山政企",
+                "monthTotal": 0,
+                "monthTb": "NaN"
+            }, {"total": 0, "cityName": "清涧", "monthTotal": 0, "monthTb": "-100.00"}, {
+                "total": 0,
+                "cityName": "靖边公众",
+                "monthTotal": 3,
+                "monthTb": "Infinity"
+            }, {"total": 0, "cityName": "高新社区", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 0,
+                "cityName": "府谷公众",
+                "monthTotal": 1,
+                "monthTb": "-50.00"
+            }, {"total": 0, "cityName": "政府BU", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 26,
+                "cityName": "榆林未归属",
+                "monthTotal": 171,
+                "monthTb": "12.50"
+            }, {"total": 0, "cityName": "子洲", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 0,
+                "cityName": "绥德公众",
+                "monthTotal": 0,
+                "monthTb": "NaN"
+            }, {"total": 0, "cityName": "定边政企", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 0,
+                "cityName": "工厂BU",
+                "monthTotal": 0,
+                "monthTb": "NaN"
+            }, {"total": 0, "cityName": "横山公众", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 0,
+                "cityName": "定边公众",
+                "monthTotal": 1,
+                "monthTb": "Infinity"
+            }, {"total": 0, "cityName": "绥德政企", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 0,
+                "cityName": "榆阳渠道",
+                "monthTotal": 5,
+                "monthTb": "-75.00"
+            }, {"total": 0, "cityName": "高新开发", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 0,
+                "cityName": "吴堡",
+                "monthTotal": 0,
+                "monthTb": "NaN"
+            }, {"total": 0, "cityName": "矿山BU", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 0,
+                "cityName": "佳县",
+                "monthTotal": 0,
+                "monthTb": "-100.00"
+            }, {"total": 0, "cityName": "神木政企", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 1,
+                "cityName": "榆神",
+                "monthTotal": 4,
+                "monthTb": "-50.00"
+            }, {"total": 0, "cityName": "政企", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 0,
+                "cityName": "大柳塔",
+                "monthTotal": 12,
+                "monthTb": "20.00"
+            }, {"total": 0, "cityName": "榆林未归属", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 0,
+                "cityName": "榆林未归属",
+                "monthTotal": 0,
+                "monthTb": "NaN"
+            }, {"total": 0, "cityName": "电子", "monthTotal": 2, "monthTb": "-50.00"}, {
+                "total": 0,
+                "cityName": "府谷政企",
+                "monthTotal": 0,
+                "monthTb": "NaN"
+            }],
+            "total": 27,
+            "monthTotal": 202,
+            "departData": [{"name": "自有营业厅", "value": 13}, {"name": "集团渠道", "value": 8}, {
+                "name": "公众直销",
+                "value": 5
+            }, {"name": "电子渠道", "value": 0}, {"name": "电话渠道", "value": 0}, {"name": "社会实体", "value": 1}, {
+                "name": "其他",
+                "value": 0
+            }],
+            "monthTb": "-2.42"
         },
-        "callCount": 790,
-        "data_1_top": [
-            {
-                "name": "畅爽冰激凌5G套餐129元",
-                "value": 11202
-            },
-            {
-                "name": "5G副卡基本套餐(优享服务)",
-                "value": 4227
-            },
-            {
-                "name": "5G副卡基本套餐(极速服务)",
-                "value": 606
-            },
-            {
-                "name": "5G副卡基本套餐（基础服务）",
-                "value": 583
-            },
-            {
-                "name": "冰激凌专属5G套餐（钉钉版）99元",
-                "value": 548
-            },
-            {
-                "name": "畅爽冰激凌5G套餐159元-优化版",
-                "value": 348
-            },
-            {
-                "name": "畅爽冰激凌5G套餐199元（极速）",
-                "value": 298
-            },
-            {
-                "name": "畅爽冰激凌5G套餐399元",
-                "value": 267
-            },
-            {
-                "name": "冰激凌专属5G套餐（钉钉版）199元（极速）",
-                "value": 227
-            },
-            {
-                "name": "冰激凌专属5G套餐（钉钉版）129元",
-                "value": 218
-            }
-        ],
-        "data_1_top_qd": [
-        {
-            "name": "畅爽冰激凌1",
-            "value": 11202
-        },
-        {
-            "name": "5G副卡基本2",
-            "value": 4227
-        },
-        {
-            "name": "5G副卡3",
-            "value": 606
-        },
-        {
-            "name": "5G副卡4",
-            "value": 583
-        },
-        {
-            "name": "冰激凌专属5",
-            "value": 548
-        },
-        {
-            "name": "畅爽冰激凌6",
-            "value": 348
-        },
-        {
-            "name": "畅爽冰激凌7",
-            "value": 298
-        }
-    ],
-        "data_3_top": [
-            {
-                "name": "4G流量王39元套餐（陕西）",
-                "value": 16355
-            },
-            {
-                "name": "畅爽冰激凌5G套餐129元",
-                "value": 11202
-            },
-            {
-                "name": "4G流量王59元套餐（陕西）",
-                "value": 10764
-            },
-            {
-                "name": "沃派单卡(陕西)",
-                "value": 9060
-            },
-            {
-                "name": "地王卡",
-                "value": 5538
-            },
-            {
-                "name": "中介卡59元套餐(陕西)",
-                "value": 3845
-            },
-            {
-                "name": "4G畅爽冰激凌国内流量套餐-99元/月（放心用版）",
-                "value": 2402
-            },
-            {
-                "name": "流量王套餐59元（陕西）",
-                "value": 2116
-            },
-            {
-                "name": "流量王套餐39元（陕西）",
-                "value": 1896
-            },
-            {
-                "name": "4G流量王79元套餐（陕西）",
-                "value": 1706
-            }
-        ],
-        "data_3_top_qd": [
-            {
-                "name": "4G流量王1",
-                "value": 16355
-            },
-            {
-                "name": "畅爽冰激凌2",
-                "value": 11202
-            },
-            {
-                "name": "4G流量王3",
-                "value": 10764
-            },
-            {
-                "name": "沃派单卡4",
-                "value": 9060
-            },
-            {
-                "name": "地王卡5",
-                "value": 5538
-            },
-            {
-                "name": "中介卡59元6",
-                "value": 3845
-            },
-            {
-                "name": "4G畅爽冰激7",
-                "value": 2402
-            }
-        ],
-        "onNet": "8375085",
-        "times": 6263,
-        "data_all_top": [
-            {
-                "name": "腾讯大王卡",
-                "value": 70222
-            },
-            {
-                "name": "4G流量王39元套餐（陕西）",
-                "value": 16355
-            },
-            {
-                "name": "阿里小宝卡",
-                "value": 14280
-            },
-            {
-                "name": "畅爽冰激凌5G套餐129元",
-                "value": 11202
-            },
-            {
-                "name": "4G流量王59元套餐（陕西）",
-                "value": 10764
-            },
-            {
-                "name": "沃派单卡(陕西)",
-                "value": 9060
-            },
-            {
-                "name": "4G主副卡业务-语音副卡基本套餐",
-                "value": 7681
-            },
-            {
-                "name": "电商中间号专属产品",
-                "value": 6382
-            },
-            {
-                "name": "地王卡",
-                "value": 5538
-            },
-            {
-                "name": "亲情卡",
-                "value": 4443
-            }
-        ],
-        "data_all_top_qd": [
-            {
-                "name": "腾讯大王卡1",
-                "value": 70222
-            },
-            {
-                "name": "4G流量王2",
-                "value": 16355
-            },
-            {
-                "name": "阿里小宝卡3",
-                "value": 14280
-            },
-            {
-                "name": "畅爽冰激凌4",
-                "value": 11202
-            },
-            {
-                "name": "4G流量王5",
-                "value": 10764
-            },
-            {
-                "name": "沃派单卡6",
-                "value": 19060
-            },
-            {
-                "name": "4G主副卡7",
-                "value": 17681
-            }
-        ],
+        "callCount": 13,
+        "data_1_top": [{"name": "5G副卡基本套餐(优享服务)", "value": 107}, {
+            "name": "畅爽冰激凌5G套餐129元",
+            "value": 20
+        }, {"name": "冰激凌专属5G套餐（钉钉版）99元", "value": 19}, {
+            "name": "5G副卡基本套餐(极速服务)",
+            "value": 15
+        }, {"name": "冰激凌专属5G套餐（钉钉版）199元（极速）", "value": 14}, {
+            "name": "畅爽冰激凌5G套餐199元（极速）",
+            "value": 10
+        }, {"name": "5G副卡基本套餐（基础服务）", "value": 7}, {
+            "name": "畅爽冰激凌5G套餐159元-优化版",
+            "value": 6
+        }, {"name": "冰激凌专属5G套餐（钉钉版）129元", "value": 2}, {"name": "腾讯王卡5G版129元套餐", "value": 1}],
+        "data_3_top": [{"name": "流量王套餐59元（陕西）", "value": 681}, {
+            "name": "地王卡",
+            "value": 371
+        }, {"name": "黄金大流量牛气卡语音版38元套餐（陕西）", "value": 200}, {
+            "name": "流量王套餐39元（陕西）",
+            "value": 195
+        }, {"name": "4G畅爽冰激凌国内流量套餐-99元/月（放心用版）", "value": 49}, {"name": "腾讯天王卡", "value": 32}, {
+            "name": "流量王套餐79元（陕西）",
+            "value": 25
+        }, {"name": "畅爽冰激凌5G套餐129元", "value": 20}, {
+            "name": "冰激凌专属5G套餐（钉钉版）99元",
+            "value": 19
+        }, {"name": "冰激凌专属5G套餐（钉钉版）199元（极速）", "value": 14}],
+        "onNet": "826262",
+        "times": 918,
+        "data_all_top": [{"name": "腾讯大王卡", "value": 4222}, {
+            "name": "eSIM套餐智能手表-10元",
+            "value": 907
+        }, {"name": "流量王套餐59元（陕西）", "value": 681}, {"name": "4G主副卡业务-语音副卡基本套餐", "value": 421}, {
+            "name": "地王卡",
+            "value": 371
+        }, {"name": "黄金大流量牛气卡语音版38元套餐（陕西）", "value": 200}, {"name": "流量王套餐39元（陕西）", "value": 195}, {
+            "name": "阿里小宝卡",
+            "value": 145
+        }, {"name": "5G副卡基本套餐(优享服务)", "value": 107}, {"name": "流量王套餐29元（陕西）", "value": 104}],
         "data_2_map": {
-            "cityMap": [
-                {
-                    "total": 32,
-                    "cityName": "大柳塔",
-                    "monthTotal": 10752,
-                    "monthTb": "84.52"
-                },
-                {
-                    "total": 0,
-                    "cityName": "定边政企",
-                    "monthTotal": 213,
-                    "monthTb": "124.21"
-                },
-                {
-                    "total": 1,
-                    "cityName": "府谷公众",
-                    "monthTotal": 309,
-                    "monthTb": "-5.21"
-                },
-                {
-                    "total": 4,
-                    "cityName": "府谷政企",
-                    "monthTotal": 630,
-                    "monthTb": "42.86"
-                },
-                {
-                    "total": 1,
-                    "cityName": "高新社区",
-                    "monthTotal": 317,
-                    "monthTb": "-8.12"
-                },
-                {
-                    "total": 7,
-                    "cityName": "定边公众",
-                    "monthTotal": 572,
-                    "monthTb": "57.58"
-                },
-                {
-                    "total": 4,
-                    "cityName": "高新政企",
-                    "monthTotal": 487,
-                    "monthTb": "123.39"
-                },
-                {
-                    "total": 0,
-                    "cityName": "横山公众",
-                    "monthTotal": 383,
-                    "monthTb": "157.05"
-                },
-                {
-                    "total": 7,
-                    "cityName": "横山政企",
-                    "monthTotal": 4368,
-                    "monthTb": "120.49"
-                },
-                {
-                    "total": 0,
-                    "cityName": "佳县",
-                    "monthTotal": 781,
-                    "monthTb": "116.94"
-                },
-                {
-                    "total": 0,
-                    "cityName": "靖边公众",
-                    "monthTotal": 383,
-                    "monthTb": "157.05"
-                },
-                {
-                    "total": 7,
-                    "cityName": "靖边政企",
-                    "monthTotal": 4368,
-                    "monthTb": "120.49"
-                },
-                {
-                    "total": 0,
-                    "cityName": "米脂",
-                    "monthTotal": 781,
-                    "monthTb": "116.94"
-                },
-                {
-                    "total": 0,
-                    "cityName": "清涧",
-                    "monthTotal": 213,
-                    "monthTb": "124.21"
-                },
-                {
-                    "total": 1,
-                    "cityName": "神木公众",
-                    "monthTotal": 309,
-                    "monthTb": "-5.21"
-                },
-                {
-                    "total": 4,
-                    "cityName": "神木政企",
-                    "monthTotal": 630,
-                    "monthTb": "42.86"
-                },
-                {
-                    "total": 1,
-                    "cityName": "绥德公众",
-                    "monthTotal": 317,
-                    "monthTb": "-8.12"
-                },
-                {
-                    "total": 7,
-                    "cityName": "绥德政企",
-                    "monthTotal": 572,
-                    "monthTb": "57.58"
-                },
-                {
-                    "total": 4,
-                    "cityName": "吴堡",
-                    "monthTotal": 487,
-                    "monthTb": "123.39"
-                },
-                {
-                    "total": 0,
-                    "cityName": "榆神",
-                    "monthTotal": 383,
-                    "monthTb": "157.05"
-                },
-                {
-                    "total": 7,
-                    "cityName": "榆阳渠道",
-                    "monthTotal": 4368,
-                    "monthTb": "120.49"
-                },
-                {
-                    "total": 0,
-                    "cityName": "榆阳社区",
-                    "monthTotal": 781,
-                    "monthTb": "116.94"
-                },
-                {
-                    "total": 0,
-                    "cityName": "榆阳乡镇",
-                    "monthTotal": 383,
-                    "monthTb": "157.05"
-                },
-                {
-                    "total": 7,
-                    "cityName": "榆阳政企",
-                    "monthTotal": 4368,
-                    "monthTb": "120.49"
-                },
-                {
-                    "total": 0,
-                    "cityName": "政企",
-                    "monthTotal": 781,
-                    "monthTb": "116.94"
-                },
-                {
-                    "total": 1,
-                    "cityName": "产业BU",
-                    "monthTotal": 317,
-                    "monthTb": "-8.12"
-                },
-                {
-                    "total": 7,
-                    "cityName": "政府BU",
-                    "monthTotal": 572,
-                    "monthTb": "57.58"
-                },
-                {
-                    "total": 4,
-                    "cityName": "工厂BU",
-                    "monthTotal": 487,
-                    "monthTb": "123.39"
-                },
-                {
-                    "total": 0,
-                    "cityName": "矿山BU",
-                    "monthTotal": 383,
-                    "monthTb": "157.05"
-                },
-                {
-                    "total": 7,
-                    "cityName": "民生BU",
-                    "monthTotal": 4368,
-                    "monthTb": "120.49"
-                },
-                {
-                    "total": 0,
-                    "cityName": "电子",
-                    "monthTotal": 781,
-                    "monthTb": "116.94"
-                },
-                {
-                    "total": 0,
-                    "cityName": "高新开发",
-                    "monthTotal": 383,
-                    "monthTb": "157.05"
-                },
-                {
-                    "total": 7,
-                    "cityName": "榆林未归属",
-                    "monthTotal": 4368,
-                    "monthTb": "120.49"
-                },
-                {
-                    "total": 0,
-                    "cityName": "子洲",
-                    "monthTotal": 781,
-                    "monthTb": "116.94"
-                }
-            ],
-            "total": 767,
-            "monthTotal": 177420,
-            "monthTb": "8.99"
+            "cityMap": [{"total": 0, "cityName": "高新政企", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 0,
+                "cityName": "榆阳社区",
+                "monthTotal": 9,
+                "monthTb": "-43.75"
+            }, {"total": 0, "cityName": "民生BU", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 3,
+                "cityName": "榆阳政企",
+                "monthTotal": 34,
+                "monthTb": "Infinity"
+            }, {"total": 4, "cityName": "榆阳乡镇", "monthTotal": 112, "monthTb": "-23.81"}, {
+                "total": 7,
+                "cityName": "神木公众",
+                "monthTotal": 177,
+                "monthTb": "16.45"
+            }, {"total": 0, "cityName": "米脂", "monthTotal": 24, "monthTb": "-80.65"}, {
+                "total": 0,
+                "cityName": "产业BU",
+                "monthTotal": 0,
+                "monthTb": "NaN"
+            }, {"total": 0, "cityName": "靖边政企", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 0,
+                "cityName": "横山政企",
+                "monthTotal": 0,
+                "monthTb": "NaN"
+            }, {"total": 2, "cityName": "清涧", "monthTotal": 69, "monthTb": "38.00"}, {
+                "total": 20,
+                "cityName": "靖边公众",
+                "monthTotal": 232,
+                "monthTb": "22.75"
+            }, {"total": 3, "cityName": "高新社区", "monthTotal": 11, "monthTb": "-26.67"}, {
+                "total": 7,
+                "cityName": "府谷公众",
+                "monthTotal": 179,
+                "monthTb": "80.81"
+            }, {"total": 0, "cityName": "政府BU", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 166,
+                "cityName": "榆林未归属",
+                "monthTotal": 2666,
+                "monthTb": "-34.29"
+            }, {"total": 1, "cityName": "子洲", "monthTotal": 49, "monthTb": "308.33"}, {
+                "total": 19,
+                "cityName": "绥德公众",
+                "monthTotal": 168,
+                "monthTb": "93.10"
+            }, {"total": 0, "cityName": "定边政企", "monthTotal": 0, "monthTb": "-100.00"}, {
+                "total": 0,
+                "cityName": "工厂BU",
+                "monthTotal": 0,
+                "monthTb": "NaN"
+            }, {"total": 3, "cityName": "横山公众", "monthTotal": 67, "monthTb": "55.81"}, {
+                "total": 28,
+                "cityName": "定边公众",
+                "monthTotal": 436,
+                "monthTb": "125.91"
+            }, {"total": 0, "cityName": "绥德政企", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 20,
+                "cityName": "榆阳渠道",
+                "monthTotal": 223,
+                "monthTb": "88.98"
+            }, {"total": 0, "cityName": "高新开发", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 0,
+                "cityName": "吴堡",
+                "monthTotal": 15,
+                "monthTb": "Infinity"
+            }, {"total": 0, "cityName": "矿山BU", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 4,
+                "cityName": "佳县",
+                "monthTotal": 75,
+                "monthTb": "10.29"
+            }, {"total": 0, "cityName": "神木政企", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 11,
+                "cityName": "榆神",
+                "monthTotal": 265,
+                "monthTb": "18.83"
+            }, {"total": 0, "cityName": "政企", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 24,
+                "cityName": "大柳塔",
+                "monthTotal": 590,
+                "monthTb": "534.41"
+            }, {"total": 0, "cityName": "榆林未归属", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 3,
+                "cityName": "榆林未归属",
+                "monthTotal": 115,
+                "monthTb": "1177.78"
+            }, {"total": 159, "cityName": "电子", "monthTotal": 2101, "monthTb": "-16.89"}, {
+                "total": 0,
+                "cityName": "府谷政企",
+                "monthTotal": 0,
+                "monthTb": "NaN"
+            }],
+            "total": 484,
+            "monthTotal": 7617,
+            "departData": [{"name": "自有营业厅", "value": 53}, {"name": "集团渠道", "value": 35}, {
+                "name": "公众直销",
+                "value": 38
+            }, {"name": "电子渠道", "value": 201}, {"name": "电话渠道", "value": 4}, {
+                "name": "社会实体",
+                "value": 153
+            }, {"name": "其他", "value": 0}],
+            "monthTb": "-7.47"
         },
-        "monthLine": [
-            189970,
-            179338,
-            135278,
-            139665,
-            183236,
-            198076,
-            196232
-        ],
+        "monthLine": [8619, 10933, 10402, 13211, 14980, 21652, 7819],
         "data_kd_map": {
-            "cityMap": [
-                {
-                    "total": 32,
-                    "cityName": "大柳塔",
-                    "monthTotal": 1752,
-                    "monthTb": "84.52"
-                },
-                {
-                    "total": 0,
-                    "cityName": "定边政企",
-                    "monthTotal": 213,
-                    "monthTb": "124.21"
-                },
-                {
-                    "total": 1,
-                    "cityName": "府谷公众",
-                    "monthTotal": 309,
-                    "monthTb": "-5.21"
-                },
-                {
-                    "total": 4,
-                    "cityName": "府谷政企",
-                    "monthTotal": 630,
-                    "monthTb": "42.86"
-                },
-                {
-                    "total": 1,
-                    "cityName": "高新社区",
-                    "monthTotal": 317,
-                    "monthTb": "-8.12"
-                },
-                {
-                    "total": 7,
-                    "cityName": "定边公众",
-                    "monthTotal": 572,
-                    "monthTb": "57.58"
-                },
-                {
-                    "total": 4,
-                    "cityName": "高新政企",
-                    "monthTotal": 487,
-                    "monthTb": "123.39"
-                },
-                {
-                    "total": 0,
-                    "cityName": "横山公众",
-                    "monthTotal": 383,
-                    "monthTb": "157.05"
-                },
-                {
-                    "total": 7,
-                    "cityName": "横山政企",
-                    "monthTotal": 4368,
-                    "monthTb": "120.49"
-                },
-                {
-                    "total": 0,
-                    "cityName": "佳县",
-                    "monthTotal": 781,
-                    "monthTb": "116.94"
-                },
-                {
-                    "total": 0,
-                    "cityName": "靖边公众",
-                    "monthTotal": 383,
-                    "monthTb": "157.05"
-                },
-                {
-                    "total": 7,
-                    "cityName": "靖边政企",
-                    "monthTotal": 4368,
-                    "monthTb": "120.49"
-                },
-                {
-                    "total": 0,
-                    "cityName": "米脂",
-                    "monthTotal": 781,
-                    "monthTb": "116.94"
-                },
-                {
-                    "total": 0,
-                    "cityName": "清涧",
-                    "monthTotal": 213,
-                    "monthTb": "124.21"
-                },
-                {
-                    "total": 1,
-                    "cityName": "神木公众",
-                    "monthTotal": 309,
-                    "monthTb": "-5.21"
-                },
-                {
-                    "total": 4,
-                    "cityName": "神木政企",
-                    "monthTotal": 630,
-                    "monthTb": "42.86"
-                },
-                {
-                    "total": 1,
-                    "cityName": "绥德公众",
-                    "monthTotal": 317,
-                    "monthTb": "-8.12"
-                },
-                {
-                    "total": 7,
-                    "cityName": "绥德政企",
-                    "monthTotal": 572,
-                    "monthTb": "57.58"
-                },
-                {
-                    "total": 4,
-                    "cityName": "吴堡",
-                    "monthTotal": 487,
-                    "monthTb": "123.39"
-                },
-                {
-                    "total": 0,
-                    "cityName": "榆神",
-                    "monthTotal": 383,
-                    "monthTb": "157.05"
-                },
-                {
-                    "total": 7,
-                    "cityName": "榆阳渠道",
-                    "monthTotal": 4368,
-                    "monthTb": "120.49"
-                },
-                {
-                    "total": 0,
-                    "cityName": "榆阳社区",
-                    "monthTotal": 781,
-                    "monthTb": "116.94"
-                },
-                {
-                    "total": 0,
-                    "cityName": "榆阳乡镇",
-                    "monthTotal": 383,
-                    "monthTb": "157.05"
-                },
-                {
-                    "total": 7,
-                    "cityName": "榆阳政企",
-                    "monthTotal": 4368,
-                    "monthTb": "120.49"
-                },
-                {
-                    "total": 0,
-                    "cityName": "政企",
-                    "monthTotal": 781,
-                    "monthTb": "116.94"
-                },
-                {
-                    "total": 1,
-                    "cityName": "产业BU",
-                    "monthTotal": 317,
-                    "monthTb": "-8.12"
-                },
-                {
-                    "total": 7,
-                    "cityName": "政府BU",
-                    "monthTotal": 572,
-                    "monthTb": "57.58"
-                },
-                {
-                    "total": 4,
-                    "cityName": "工厂BU",
-                    "monthTotal": 487,
-                    "monthTb": "123.39"
-                },
-                {
-                    "total": 0,
-                    "cityName": "矿山BU",
-                    "monthTotal": 383,
-                    "monthTb": "157.05"
-                },
-                {
-                    "total": 7,
-                    "cityName": "民生BU",
-                    "monthTotal": 4368,
-                    "monthTb": "120.49"
-                },
-                {
-                    "total": 0,
-                    "cityName": "电子",
-                    "monthTotal": 781,
-                    "monthTb": "116.94"
-                },
-                {
-                    "total": 0,
-                    "cityName": "高新开发",
-                    "monthTotal": 383,
-                    "monthTb": "157.05"
-                },
-                {
-                    "total": 7,
-                    "cityName": "榆林未归属",
-                    "monthTotal": 4368,
-                    "monthTb": "120.49"
-                },
-                {
-                    "total": 0,
-                    "cityName": "子洲",
-                    "monthTotal": 781,
-                    "monthTb": "116.94"
-                }
-            ],
-            "total": 242,
-            "monthTotal": 32775,
-            "monthTb": "100.34"
+            "cityMap": [{"total": 0, "cityName": "高新政企", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 0,
+                "cityName": "榆阳社区",
+                "monthTotal": 6,
+                "monthTb": "50.00"
+            }, {"total": 0, "cityName": "民生BU", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 0,
+                "cityName": "榆阳政企",
+                "monthTotal": 0,
+                "monthTb": "NaN"
+            }, {"total": 0, "cityName": "榆阳乡镇", "monthTotal": 13, "monthTb": "-51.85"}, {
+                "total": 2,
+                "cityName": "神木公众",
+                "monthTotal": 14,
+                "monthTb": "-17.65"
+            }, {"total": 0, "cityName": "米脂", "monthTotal": 3, "monthTb": "Infinity"}, {
+                "total": 0,
+                "cityName": "产业BU",
+                "monthTotal": 0,
+                "monthTb": "NaN"
+            }, {"total": 0, "cityName": "靖边政企", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 0,
+                "cityName": "横山政企",
+                "monthTotal": 0,
+                "monthTb": "NaN"
+            }, {"total": 0, "cityName": "清涧", "monthTotal": 4, "monthTb": "-73.33"}, {
+                "total": 0,
+                "cityName": "靖边公众",
+                "monthTotal": 3,
+                "monthTb": "-25.00"
+            }, {"total": 0, "cityName": "高新社区", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 0,
+                "cityName": "府谷公众",
+                "monthTotal": 9,
+                "monthTb": "-35.71"
+            }, {"total": 0, "cityName": "政府BU", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 59,
+                "cityName": "榆林未归属",
+                "monthTotal": 1329,
+                "monthTb": "32.11"
+            }, {"total": 0, "cityName": "子洲", "monthTotal": 13, "monthTb": "Infinity"}, {
+                "total": 0,
+                "cityName": "绥德公众",
+                "monthTotal": 17,
+                "monthTb": "-43.33"
+            }, {"total": 0, "cityName": "定边政企", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 0,
+                "cityName": "工厂BU",
+                "monthTotal": 0,
+                "monthTb": "NaN"
+            }, {"total": 0, "cityName": "横山公众", "monthTotal": 4, "monthTb": "-33.33"}, {
+                "total": 1,
+                "cityName": "定边公众",
+                "monthTotal": 7,
+                "monthTb": "133.33"
+            }, {"total": 0, "cityName": "绥德政企", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 0,
+                "cityName": "榆阳渠道",
+                "monthTotal": 1,
+                "monthTb": "-75.00"
+            }, {"total": 0, "cityName": "高新开发", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 0,
+                "cityName": "吴堡",
+                "monthTotal": 0,
+                "monthTb": "NaN"
+            }, {"total": 0, "cityName": "矿山BU", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 0,
+                "cityName": "佳县",
+                "monthTotal": 3,
+                "monthTb": "-70.00"
+            }, {"total": 0, "cityName": "神木政企", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 0,
+                "cityName": "榆神",
+                "monthTotal": 16,
+                "monthTb": "-30.43"
+            }, {"total": 0, "cityName": "政企", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 5,
+                "cityName": "大柳塔",
+                "monthTotal": 23,
+                "monthTb": "64.29"
+            }, {"total": 0, "cityName": "榆林未归属", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 0,
+                "cityName": "榆林未归属",
+                "monthTotal": 0,
+                "monthTb": "NaN"
+            }, {"total": 0, "cityName": "电子", "monthTotal": 0, "monthTb": "-100.00"}, {
+                "total": 0,
+                "cityName": "府谷政企",
+                "monthTotal": 0,
+                "monthTb": "NaN"
+            }],
+            "total": 67,
+            "monthTotal": 1465,
+            "departData": [{"name": "自有营业厅", "value": 0}, {"name": "集团渠道", "value": 0}, {
+                "name": "公众直销",
+                "value": 0
+            }, {"name": "电子渠道", "value": 0}, {"name": "电话渠道", "value": 0}, {"name": "社会实体", "value": 0}, {
+                "name": "其他",
+                "value": 0
+            }],
+            "monthTb": "24.36"
         },
         "data_all_map": {
-            "cityMap": [
-                {
-                    "total": 32,
-                    "cityName": "大柳塔",
-                    "monthTotal": 10752,
-                    "monthTb": "84.52",
-                },
-                {
-                    "total": 0,
-                    "cityName": "定边政企",
-                    "monthTotal": 213,
-                    "monthTb": "124.21"
-                },
-                {
-                    "total": 1,
-                    "cityName": "府谷公众",
-                    "monthTotal": 309,
-                    "monthTb": "-5.21"
-                },
-                {
-                    "total": 4,
-                    "cityName": "府谷政企",
-                    "monthTotal": 630,
-                    "monthTb": "42.86"
-                },
-                {
-                    "total": 1,
-                    "cityName": "高新社区",
-                    "monthTotal": 317,
-                    "monthTb": "-8.12"
-                },
-                {
-                    "total": 7,
-                    "cityName": "定边公众",
-                    "monthTotal": 572,
-                    "monthTb": "57.58"
-                },
-                {
-                    "total": 4,
-                    "cityName": "高新政企",
-                    "monthTotal": 487,
-                    "monthTb": "123.39"
-                },
-                {
-                    "total": 0,
-                    "cityName": "横山公众",
-                    "monthTotal": 383,
-                    "monthTb": "157.05"
-                },
-                {
-                    "total": 7,
-                    "cityName": "横山政企",
-                    "monthTotal": 4368,
-                    "monthTb": "120.49"
-                },
-                {
-                    "total": 0,
-                    "cityName": "佳县",
-                    "monthTotal": 781,
-                    "monthTb": "116.94",
-                    "rate": "248.58",
-                    "value": 43555,
-                    "name": "佳县",
-                    "label": {
-                        "rich": {
-                            "rate": {
-                                "color": "#fcf500"
-                            }
-                        }
-                    },
-                    "itemStyle": {
-                        "normal": {
-                            "areaColor": "#102867"
-                        }
-                    }
-                },
-                {
-                    "total": 0,
-                    "cityName": "靖边公众",
-                    "monthTotal": 383,
-                    "monthTb": "157.05"
-                },
-                {
-                    "total": 7,
-                    "cityName": "靖边政企",
-                    "monthTotal": 4368,
-                    "monthTb": "120.49"
-                },
-                {
-                    "total": 0,
-                    "cityName": "米脂",
-                    "monthTotal": 781,
-                    "monthTb": "116.94"
-                },
-                {
-                    "total": 0,
-                    "cityName": "清涧",
-                    "monthTotal": 213,
-                    "monthTb": "124.21"
-                },
-                {
-                    "total": 1,
-                    "cityName": "神木公众",
-                    "monthTotal": 309,
-                    "monthTb": "-5.21"
-                },
-                {
-                    "total": 4,
-                    "cityName": "神木政企",
-                    "monthTotal": 630,
-                    "monthTb": "42.86"
-                },
-                {
-                    "total": 1,
-                    "cityName": "绥德公众",
-                    "monthTotal": 317,
-                    "monthTb": "-8.12"
-                },
-                {
-                    "total": 7,
-                    "cityName": "绥德政企",
-                    "monthTotal": 572,
-                    "monthTb": "57.58"
-                },
-                {
-                    "total": 4,
-                    "cityName": "吴堡",
-                    "monthTotal": 487,
-                    "monthTb": "123.39"
-                },
-                {
-                    "total": 0,
-                    "cityName": "榆神",
-                    "monthTotal": 383,
-                    "monthTb": "157.05"
-                },
-                {
-                    "total": 7,
-                    "cityName": "榆阳渠道",
-                    "monthTotal": 4368,
-                    "monthTb": "120.49"
-                },
-                {
-                    "total": 0,
-                    "cityName": "榆阳社区",
-                    "monthTotal": 781,
-                    "monthTb": "116.94"
-                },
-                {
-                    "total": 0,
-                    "cityName": "榆阳乡镇",
-                    "monthTotal": 383,
-                    "monthTb": "157.05"
-                },
-                {
-                    "total": 7,
-                    "cityName": "榆阳政企",
-                    "monthTotal": 4368,
-                    "monthTb": "120.49"
-                },
-                {
-                    "total": 0,
-                    "cityName": "政企",
-                    "monthTotal": 781,
-                    "monthTb": "116.94"
-                },
-                {
-                    "total": 1,
-                    "cityName": "产业BU",
-                    "monthTotal": 317,
-                    "monthTb": "-8.12"
-                },
-                {
-                    "total": 7,
-                    "cityName": "政府BU",
-                    "monthTotal": 572,
-                    "monthTb": "57.58"
-                },
-                {
-                    "total": 4,
-                    "cityName": "工厂BU",
-                    "monthTotal": 487,
-                    "monthTb": "123.39"
-                },
-                {
-                    "total": 0,
-                    "cityName": "矿山BU",
-                    "monthTotal": 383,
-                    "monthTb": "157.05"
-                },
-                {
-                    "total": 7,
-                    "cityName": "民生BU",
-                    "monthTotal": 4368,
-                    "monthTb": "120.49"
-                },
-                {
-                    "total": 0,
-                    "cityName": "电子",
-                    "monthTotal": 781,
-                    "monthTb": "116.94"
-                },
-                {
-                    "total": 0,
-                    "cityName": "高新开发",
-                    "monthTotal": 383,
-                    "monthTb": "157.05"
-                },
-                {
-                    "total": 7,
-                    "cityName": "榆林未归属",
-                    "monthTotal": 4368,
-                    "monthTb": "120.49"
-                },
-                {
-                    "total": 0,
-                    "cityName": "子洲",
-                    "monthTotal": 781,
-                    "monthTb": "116.94"
-                }
-            ],
-            "total": 823,
-            "monthTotal": 196232,
-            "monthTb": "13.50"
+            "cityMap": [{"total": 0, "cityName": "高新政企", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 0,
+                "cityName": "榆阳社区",
+                "monthTotal": 10,
+                "monthTb": "-41.18"
+            }, {"total": 0, "cityName": "民生BU", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 3,
+                "cityName": "榆阳政企",
+                "monthTotal": 34,
+                "monthTb": "Infinity"
+            }, {"total": 4, "cityName": "榆阳乡镇", "monthTotal": 112, "monthTb": "-26.32"}, {
+                "total": 7,
+                "cityName": "神木公众",
+                "monthTotal": 179,
+                "monthTb": "16.23"
+            }, {"total": 0, "cityName": "米脂", "monthTotal": 24, "monthTb": "-80.65"}, {
+                "total": 0,
+                "cityName": "产业BU",
+                "monthTotal": 0,
+                "monthTb": "NaN"
+            }, {"total": 0, "cityName": "靖边政企", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 0,
+                "cityName": "横山政企",
+                "monthTotal": 0,
+                "monthTb": "NaN"
+            }, {"total": 2, "cityName": "清涧", "monthTotal": 69, "monthTb": "32.69"}, {
+                "total": 20,
+                "cityName": "靖边公众",
+                "monthTotal": 235,
+                "monthTb": "24.34"
+            }, {"total": 3, "cityName": "高新社区", "monthTotal": 11, "monthTb": "-26.67"}, {
+                "total": 7,
+                "cityName": "府谷公众",
+                "monthTotal": 180,
+                "monthTb": "78.22"
+            }, {"total": 0, "cityName": "政府BU", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 192,
+                "cityName": "榆林未归属",
+                "monthTotal": 2837,
+                "monthTb": "-32.60"
+            }, {"total": 1, "cityName": "子洲", "monthTotal": 49, "monthTb": "308.33"}, {
+                "total": 19,
+                "cityName": "绥德公众",
+                "monthTotal": 168,
+                "monthTb": "93.10"
+            }, {"total": 0, "cityName": "定边政企", "monthTotal": 0, "monthTb": "-100.00"}, {
+                "total": 0,
+                "cityName": "工厂BU",
+                "monthTotal": 0,
+                "monthTb": "NaN"
+            }, {"total": 3, "cityName": "横山公众", "monthTotal": 67, "monthTb": "55.81"}, {
+                "total": 28,
+                "cityName": "定边公众",
+                "monthTotal": 437,
+                "monthTb": "126.42"
+            }, {"total": 0, "cityName": "绥德政企", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 20,
+                "cityName": "榆阳渠道",
+                "monthTotal": 228,
+                "monthTb": "65.22"
+            }, {"total": 0, "cityName": "高新开发", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 0,
+                "cityName": "吴堡",
+                "monthTotal": 15,
+                "monthTb": "Infinity"
+            }, {"total": 0, "cityName": "矿山BU", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 4,
+                "cityName": "佳县",
+                "monthTotal": 75,
+                "monthTb": "8.70"
+            }, {"total": 0, "cityName": "神木政企", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 12,
+                "cityName": "榆神",
+                "monthTotal": 269,
+                "monthTb": "16.45"
+            }, {"total": 0, "cityName": "政企", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 24,
+                "cityName": "大柳塔",
+                "monthTotal": 602,
+                "monthTb": "484.47"
+            }, {"total": 0, "cityName": "榆林未归属", "monthTotal": 0, "monthTb": "NaN"}, {
+                "total": 3,
+                "cityName": "榆林未归属",
+                "monthTotal": 115,
+                "monthTb": "1177.78"
+            }, {"total": 159, "cityName": "电子", "monthTotal": 2103, "monthTb": "-16.94"}, {
+                "total": 0,
+                "cityName": "府谷政企",
+                "monthTotal": 0,
+                "monthTb": "NaN"
+            }],
+            "total": 511,
+            "monthTotal": 7819,
+            "departData": [{"name": "自有营业厅", "value": 66}, {"name": "集团渠道", "value": 43}, {
+                "name": "公众直销",
+                "value": 43
+            }, {"name": "电子渠道", "value": 201}, {"name": "电话渠道", "value": 4}, {
+                "name": "社会实体",
+                "value": 154
+            }, {"name": "其他", "value": 0}],
+            "monthTb": "-7.35"
         },
-        "data_2_top": [
-            {
-                "name": "腾讯大王卡",
-                "value": 70222
-            },
-            {
-                "name": "4G流量王39元套餐（陕西）",
-                "value": 16355
-            },
-            {
-                "name": "阿里小宝卡",
-                "value": 14280
-            },
-            {
-                "name": "4G流量王59元套餐（陕西）",
-                "value": 10764
-            },
-            {
-                "name": "沃派单卡(陕西)",
-                "value": 9060
-            },
-            {
-                "name": "4G主副卡业务-语音副卡基本套餐",
-                "value": 7681
-            },
-            {
-                "name": "电商中间号专属产品",
-                "value": 6382
-            },
-            {
-                "name": "地王卡",
-                "value": 5538
-            },
-            {
-                "name": "亲情卡",
-                "value": 4443
-            },
-            {
-                "name": "中介卡59元套餐(陕西)",
-                "value": 3845
-            }
-        ],
-        "data_2_top_qd": [
-            {
-                "name": "腾讯大王卡1",
-                "value": 70222
-            },
-            {
-                "name": "4G流量王2",
-                "value": 16355
-            },
-            {
-                "name": "阿里小宝卡3",
-                "value": 14280
-            },
-            {
-                "name": "4G流量王4",
-                "value": 10764
-            },
-            {
-                "name": "沃派单卡5",
-                "value": 9060
-            },
-            {
-                "name": "4G主副卡6",
-                "value": 7681
-            },
-            {
-                "name": "电商中间号7",
-                "value": 6382
-            }
-        ]
-    }*/
-
+        "data_2_top": [{"name": "腾讯大王卡", "value": 4222}, {
+            "name": "eSIM套餐智能手表-10元",
+            "value": 907
+        }, {"name": "流量王套餐59元（陕西）", "value": 681}, {"name": "4G主副卡业务-语音副卡基本套餐", "value": 421}, {
+            "name": "地王卡",
+            "value": 371
+        }, {"name": "黄金大流量牛气卡语音版38元套餐（陕西）", "value": 200}, {"name": "流量王套餐39元（陕西）", "value": 195}, {
+            "name": "阿里小宝卡",
+            "value": 145
+        }, {"name": "流量王套餐29元（陕西）", "value": 104}, {"name": "亲情卡", "value": 53}]
+    }
+    refreshHtml();*/
     fetchData();
     setInterval(function () {
         fetchData()
@@ -1491,34 +612,36 @@ $(function () {
 })
 
 var param = {
-    cityCode:'0912'
+    cityCode: '0912'
 }
 var dataAll;
 var indexYw = 0;
-var indexLeftTwo = 0 ;
+var indexLeftTwo = 0;
 var remRankData;
-function fetchData(){
+
+function fetchData() {
     $.ajax({
-        type : 'POST',
-        headers:{'Content-Type':'application/json'},
-        url:'http://135.146.68.83:8080/shanxi/main/getJsonData',
-        data : JSON.stringify(param),
-        async:false,
-        success : function(datas) {
+        type: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        url: 'http://135.146.68.83:8080/shanxi/main/getJsonData',
+        data: JSON.stringify(param),
+        async: false,
+        success: function (datas) {
             // return JSON.parse(data)
             dataAll = datas;
             refreshHtml();
         },
-        error : function(datas) {
+        error: function (datas) {
             console.log(datas)
         },
-        dataType : 'json',
+        dataType: 'json',
 
     });
 }
+
 function refreshHtml() {
     var kdData = dataAll.data_kd_map.cityMap;
-    dataAll.data_kd_map.cityMap = kdData;
+    /*dataAll.data_kd_map.cityMap = kdData;*/
     /*月累计访问量*/
     $('#monthVisited').html(dataAll.callCount);
     //左二数据处理
@@ -1561,13 +684,14 @@ function refreshHtml() {
     ]//x轴数据
     var rankDataChange = dataAll.data_all_map.cityMap;
     var rankData = [];
-    for(var j = 0;j<rankDataChange.length;j++){
-        if(rankDataChange[j].cityName!=='宝塔'){
+    for (var j = 0; j < rankDataChange.length; j++) {
+        if (rankDataChange[j].cityName !== '宝塔') {
             rankData.push(rankDataChange[j])
         }
     }
 
     var rankDataNew = [];
+
     $.each(xData,function(i,e){
         for (var j = 0; j < rankData.length; j++) {
             if (e == rankData[j].cityName) {
@@ -1576,7 +700,7 @@ function refreshHtml() {
                 rankData[j].name = rankData[j].cityName;
                 var rank = xData.length;
                 $.each(rankData,function(m,s){
-                    if(Number(rankData[j].monthTb) >= Number(s.monthTb)){
+                    if(Number(rankData[j].monthTb) >= Number(s.monthTb) || s.monthTb === "NaN" || s.monthTb === "Infinity"){
                         rank --;
                     }
                 })
@@ -1590,9 +714,9 @@ function refreshHtml() {
                 kdData[j].rate = kdData[j].monthTb;
                 kdData[j].value = kdData[j].total;
                 kdData[j].name = kdData[j].cityName;
-                var rank = xData.length;
+                var rank = kdData.length;
                 $.each(kdData,function(m,s){
-                    if(Number(kdData[j].monthTb) >= Number(s.monthTb)){
+                    if(Number(kdData[j].monthTb) >= Number(s.monthTb) || s.monthTb === "NaN" || s.monthTb === "Infinity"){
                         rank --;
                     }
                 })
@@ -1608,42 +732,43 @@ function refreshHtml() {
     setCityData(dataAll.data_kd_map);
 }
 
-function getExplorerInfo(){
+function getExplorerInfo() {
     var ua = navigator.userAgent.toLocaleLowerCase();
-    var browserType=null;
+    var browserType = null;
     if (ua.match(/msie/) != null || ua.match(/trident/) != null) {
-        $('.isIe').css('display','block');
+        $('.isIe').css('display', 'block');
         browserType = "IE";
         browserVersion = ua.match(/msie ([\d.]+)/) != null ? ua.match(/msie ([\d.]+)/)[1] : ua.match(/rv:([\d.]+)/)[1];
-        if(browserVersion==9.0||browserVersion==10.0||browserVersion==11.0){
-            return { browserType: "IE" };
-        }else{
-            return { browserType: "IE8以下" };
+        if (browserVersion == 9.0 || browserVersion == 10.0 || browserVersion == 11.0) {
+            return {browserType: "IE"};
+        } else {
+            return {browserType: "IE8以下"};
         }
 
     } else if (ua.match(/firefox/) != null) {
         browserType = "火狐";
-        return { browserType: "火狐" };
-    }else if (ua.match(/ubrowser/) != null) {
+        return {browserType: "火狐"};
+    } else if (ua.match(/ubrowser/) != null) {
         browserType = "UC";
-        return { browserType: "UC" };
-    }else if (ua.match(/opera/) != null) {
+        return {browserType: "UC"};
+    } else if (ua.match(/opera/) != null) {
         browserType = "欧朋";
-        return { browserType: "欧朋" };
+        return {browserType: "欧朋"};
     } else if (ua.match(/bidubrowser/) != null) {
         browserType = "百度";
-        return { browserType: "百度" };
-    }else if (ua.match(/metasr/) != null) {
+        return {browserType: "百度"};
+    } else if (ua.match(/metasr/) != null) {
         browserType = "搜狗";
-        return { browserType: "搜狗" };
-    }else if (ua.match(/tencenttraveler/) != null || ua.match(/qqbrowse/) != null) {
+        return {browserType: "搜狗"};
+    } else if (ua.match(/tencenttraveler/) != null || ua.match(/qqbrowse/) != null) {
         browserType = "QQ";
-        return { browserType: "QQ" };
-    }else if (ua.match(/maxthon/) != null) {
+        return {browserType: "QQ"};
+    } else if (ua.match(/maxthon/) != null) {
         browserType = "遨游";
-        return { browserType: "遨游" };
-    }else if (ua.match(/chrome/) != null) {
+        return {browserType: "遨游"};
+    } else if (ua.match(/chrome/) != null) {
         var is360 = _mime("type", "application/vnd.chromium.remoting-viewer");
+
         function _mime(option, value) {
             var mimeTypes = navigator.mimeTypes;
             for (var mt in mimeTypes) {
@@ -1653,32 +778,34 @@ function getExplorerInfo(){
             }
             return false;
         }
-        if(is360){
-            $('.isIe').css('display','block');
+
+        if (is360) {
+            $('.isIe').css('display', 'block');
             browserType = '360';
-        }else{
+        } else {
             browserType = '谷歌';
         }
-        return { browserType: "360" };
-    }else if (ua.match(/safari/) != null) {
+        return {browserType: "360"};
+    } else if (ua.match(/safari/) != null) {
         browserType = "Safari";
-        return { browserType: "Safari" };
+        return {browserType: "Safari"};
     }
 }
+
 function rightOneDiv() {
-    var topData,mapData;
+    var topData, mapData;
     $(".btn.active").removeClass("active");
     switch (indexYw % 8) {
         case 0:
             $('#index-right1-div').removeClass('index-right1-div-qd')
                 .addClass('index-right1-div-cp')
             $(".btn:eq(0)").addClass("active");
-            $('#legend').css('display','block');
-            $("#mapContainer").css('display','block');
-            $("#pieContainer").css('display','none');
+            $('#legend').css('display', 'block');
+            $("#mapContainer").css('display', 'block');
+            $("#pieContainer").css('display', 'none');
             topData = getTopData(dataAll.data_all_top);
             mapData = dataAll.data_all_map.cityMap;
-            $('#rwWcl').css('display','inline-block');
+            $('#rwWcl').css('display', 'inline-block');
             $('#rw_wcl').html(dataAll.data_all_map.taskCompletionRate + '%');
             setInfoTitle('全部', dataAll.data_all_map.monthTotal, dataAll.data_all_map.monthTb);
             mapChart(mapData);
@@ -1689,7 +816,7 @@ function rightOneDiv() {
             $(".btn:eq(1)").addClass("active");
             topData = getTopData(dataAll.data_1_top);
             mapData = dataAll.data_1_map.cityMap;
-            $('#rwWcl').css('display','none');
+            $('#rwWcl').css('display', 'none');
             setInfoTitle('5G', dataAll.data_1_map.monthTotal, dataAll.data_1_map.monthTb);
             mapChart(mapData);
             topChart(topData);
@@ -1714,95 +841,102 @@ function rightOneDiv() {
             $('#index-right1-div').removeClass('index-right1-div-cp')
                 .addClass('index-right1-div-qd')
             $(".btn:eq(0)").addClass("active");
-            $('#legend').css('display','none');
-            $("#mapContainer").css('display','none');
-            $("#pieContainer").css('display','block');
-            topData = getTopData(dataAll.data_all_top_qd);
+            $('#legend').css('display', 'none');
+            $("#mapContainer").css('display', 'none');
+            $("#pieContainer").css('display', 'block');
+            topData = getTopData(dataAll.data_all_map.departData);
             mapData = dataAll.data_all_map.cityMap;
-            $('#rwWcl').css('display','inline-block');
+            $('#rwWcl').css('display', 'inline-block');
             $('#rw_wcl').html(dataAll.data_all_map.taskCompletionRate + '%');
             setInfoTitleQd('全部', dataAll.data_all_map.monthTotal, dataAll.data_all_map.monthTb);
-            pieChart(dataAll.data_all_top_qd,topData.name);
+            pieChart(dataAll.data_all_map.departData, topData.name);
             topChartQd(topData);
             break;
         case 5:
             $(".btn:eq(1)").addClass("active");
-            topData = getTopData(dataAll.data_1_top_qd);
+            topData = getTopData(dataAll.data_1_map.departData);
             mapData = dataAll.data_1_map.cityMap;
-            $('#rwWcl').css('display','none');
+            $('#rwWcl').css('display', 'none');
             setInfoTitleQd('5G', dataAll.data_1_map.monthTotal, dataAll.data_1_map.monthTb);
-            pieChart(dataAll.data_1_top_qd,topData.name);
+            pieChart(dataAll.data_1_map.departData, topData.name);
             topChartQd(topData);
             break;
         case 6:
             $(".btn:eq(2)").addClass("active");
-            topData = getTopData(dataAll.data_2_top_qd);
+            topData = getTopData(dataAll.data_2_map.departData);
             mapData = dataAll.data_2_map.cityMap;
             setInfoTitleQd('4G', dataAll.data_2_map.monthTotal, dataAll.data_2_map.monthTb);
-            pieChart(dataAll.data_2_top_qd,topData.name);
+            pieChart(dataAll.data_2_map.departData, topData.name);
             topChartQd(topData);
             break;
         default:
             $(".btn:eq(3)").addClass("active");
-            topData = getTopData(dataAll.data_3_top_qd);
+            topData = getTopData(dataAll.data_3_map.departData);
             mapData = dataAll.data_3_map.cityMap;
             setInfoTitleQd('中高端', dataAll.data_3_map.monthTotal, dataAll.data_3_map.monthTb);
-            pieChart(dataAll.data_3_top_qd,topData.name);
+            pieChart(dataAll.data_3_map.departData, topData.name);
             topChartQd(topData);
             break;
     }
 }
+
 function setInfoTitle(title, month_value, day_hb) {
     $('#info-title').html('榆林' + title + '产品发展量<span style="font-size: 0.8rem">(户)</span>');
     $('.chart-title').html(title + '产品月累计发展量TOP10');
     $('#month_value').html(month_value);
     $('#day_hb').html(day_hb + '%');
 }
+
 function setInfoTitleQd(title, month_value, day_hb) {
-    $('#info-title').html('榆林' + title + '渠道发展量<span style="font-size: 0.8rem">(户)</span>');
-    $('.chart-title').html(title + '渠道月累计发展量');
+    $('#info-title').html('榆林渠道' + title + '发展量<span style="font-size: 0.8rem">(户)</span>');
+    $('.chart-title').html('渠道月累计' + title + '发展量');
     $('#month_value').html(month_value);
     $('#day_hb').html(day_hb + '%');
 }
+
 function mapChart(data) {
     var remMax = 0;
-    for(var m = 0;m<data.length;m++){
+    for (var m = 0; m < data.length; m++) {
         data[m].rate = data[m].monthTb;
         data[m].value = data[m].monthTotal;
         data[m].name = data[m].cityName;
-        if(data[m].monthTotal > remMax){
+        if (data[m].monthTotal > remMax) {
             remMax = data[m].monthTotal
         }
     }
     var temp1 = Math.round(remMax/333) *100;
     var temp2 = Math.round(remMax/143) *100;
+    if(remMax<333){
+        temp1 = Math.round(remMax/33) *10;
+        temp2 = Math.round(remMax/14) *10;
+    }
     var myChart = echarts.init(document.getElementById('mapContainer'));
     var areaColors = ['#102867', '#1635b2', '#4670d8'];
-    $('#mapRank1').html('0-'+temp1);
-    $('#mapRank2').html(temp1+'-'+temp2);
-    $('#mapRank3').html('>='+temp2);
+    $('#mapRank1').html('0-' + temp1);
+    $('#mapRank2').html(temp1 + '-' + temp2);
+    $('#mapRank3').html('>=' + temp2);
     document.querySelectorAll("#legend .color").forEach((e, i) => {
-        $(e).css("background-color",areaColors[i])
-})
+        $(e).css("background-color", areaColors[i])
+    })
     // 配置样式
     data.forEach((e, i) => {
         var areaColor = e.value > temp2 ? areaColors[0]
             : e.value > temp1 ? areaColors[1]
                 : areaColors[2];
-    var rateColor = e.rate > 0 ? '#fcf500' : '#ff3116';
-    e.label = {
-        rich: {
-            rate: {
-                color: rateColor
+        var rateColor = e.rate > 0 ? '#fcf500' : '#ff3116';
+        e.label = {
+            rich: {
+                rate: {
+                    color: rateColor
+                },
+            }
+        };
+        e.itemStyle = {
+            normal: {
+                areaColor: areaColor
             },
-        }
-    };
-    e.itemStyle = {
-        normal: {
-            areaColor: areaColor
-        },
-    };
-});
+        };
+    });
     option = {
         geo: {
             map: '榆林',
@@ -1853,42 +987,43 @@ function mapChart(data) {
                         fontSize: 10
                     },
                     formatter: (obj) => {
-                    var name = obj.data.name, rate = obj.data.rate + "%";
-    return [
-        '{rate|' + rate + '}',
-        '{b|' + name + '}',
-    ].join('\n');
-},
-    rich: {
-        b: {
-            color: '#fff',
-                fontSize: 11
-        },
-        rate: {
-            fontWeight: 2,
-                fontSize: 13
-        },
-    }
-},
-    emphasis: {
-        label: {
-            show: false,
-                textStyle: {
-                color: '#ff0',
-                    fontSize: 10
+                        var name = obj.data.name, rate = obj.data.rate + "%";
+                        return [
+                            '{rate|' + rate + '}',
+                            '{b|' + name + '}',
+                        ].join('\n');
+                    },
+                    rich: {
+                        b: {
+                            color: '#fff',
+                            fontSize: 11
+                        },
+                        rate: {
+                            fontWeight: 2,
+                            fontSize: 13
+                        },
+                    }
+                },
+                emphasis: {
+                    label: {
+                        show: false,
+                        textStyle: {
+                            color: '#ff0',
+                            fontSize: 10
+                        },
+                    }
+                },
+                data: data
             },
-        }
-    },
-    data: data
-},
 
-]
-};
+        ]
+    };
     myChart.setOption(option);
-    $(window).resize(function() {
+    $(window).resize(function () {
         myChart.resize();
     });
 }
+
 function topChart(barData) {
     var topChart = echarts.init(document.getElementById('topChart'));
     var height = $("#topChart").height();
@@ -1898,15 +1033,15 @@ function topChart(barData) {
     var category = barData.name;
     var maxArr = barData.value;
     var max = 0;
-    for(var i = 0;i<maxArr.length;i++){
-        if(maxArr[i]>max){
+    for (var i = 0; i < maxArr.length; i++) {
+        if (maxArr[i] > max) {
             max = maxArr[i];
         }
     }
-    max = (parseInt(max*11/6/1000)+1)*1000;
+    max = (parseInt(max * 11 / 6 / 1000) + 1) * 1000;
     /*var lineData = [max, max, max, max, max, max, max, max, max, max]*/
     var lineData = [];
-    for(var m = 0;m<maxArr.length;m++){
+    for (var m = 0; m < maxArr.length; m++) {
         lineData.push(max);
     }
     option = {
@@ -1949,55 +1084,56 @@ function topChart(barData) {
                 normal: {
                     show: true,
                     formatter: (series) => {
-                    return barData.value[series.dataIndex]
-                },
-                position: ['63%', '-50%'],
-                offset: [0, -0],
-                color: '#f9f457',
-                fontSize: 14
-            }
-        },
+                        return barData.value[series.dataIndex]
+                    },
+                    position: ['63%', '-50%'],
+                    offset: [0, -0],
+                    color: '#f9f457',
+                    fontSize: 14
+                }
+            },
             z: -100,
-        animationEasing: 'elasticOut',
-        animationDelay: function (dataIndex, params) {
-        return params.index * 30;
-    }
-}, {
-        name: '',
+            animationEasing: 'elasticOut',
+            animationDelay: function (dataIndex, params) {
+                return params.index * 30;
+            }
+        }, {
+            name: '',
             type: 'pictorialBar',
             symbol: 'rect',
             barWidth: height / 50,
             itemStyle: {
-            normal: {
-                barBorderRadius: 5,
+                normal: {
+                    barBorderRadius: 5,
                     color: '#6DE8FA'
-            }
-        },
-        symbolRepeat: true,
+                }
+            },
+            symbolRepeat: true,
             symbolSize: 14,
             data: barData.value,
             label: {
-            normal: {
-                show: true,
+                normal: {
+                    show: true,
                     formatter: '{b}',
                     position: ['0', '-50%'],
                     offset: [lefts, -0],
                     color: '#FFFFFF',
                     fontSize: 14
-            }
-        },
-        animationEasing: 'elasticOut',
+                }
+            },
+            animationEasing: 'elasticOut',
             animationDelay: function (dataIndex, params) {
-            return params.index * 30 * 1.1;
-        }
-    }],
-    animation: true
-};
+                return params.index * 30 * 1.1;
+            }
+        }],
+        animation: true
+    };
     topChart.setOption(option);
-    $(window).resize(function() {
+    $(window).resize(function () {
         topChart.resize();
     });
 }
+
 function topChartQd(barData) {
     var topChart = echarts.init(document.getElementById('topChart'));
     var height = $("#topChart").height();
@@ -2007,15 +1143,15 @@ function topChartQd(barData) {
     var category = barData.name;
     var maxArr = barData.value;
     var max = 0;
-    for(var i = 0;i<maxArr.length;i++){
-        if(maxArr[i]>max){
+    for (var i = 0; i < maxArr.length; i++) {
+        if (maxArr[i] > max) {
             max = maxArr[i];
         }
     }
-    max = (parseInt(max*11/6/1000)+1)*1000;
+    max = (parseInt(max * 11 / 6 / 1000) + 1) * 1000;
     /*var lineData = [max, max, max, max, max, max, max, max, max, max]*/
     var lineData = [];
-    for(var m = 0;m<maxArr.length;m++){
+    for (var m = 0; m < maxArr.length; m++) {
         lineData.push(max);
     }
     option = {
@@ -2103,22 +1239,25 @@ function topChartQd(barData) {
         animation: true
     };
     topChart.setOption(option);
-    $(window).resize(function() {
+    $(window).resize(function () {
         topChart.resize();
     });
 }
-function cityChart(kdData) {
 
-    var remMax=0;
-    for(var m = 0;m<kdData.length;m++){
+var interval2;
+
+function cityChart(kdData) {
+    clearInterval(interval2)
+    var remMax = 0;
+    for (var m = 0; m < kdData.length; m++) {
         kdData[m].rate = kdData[m].monthTb;
         kdData[m].value = kdData[m].total;
         kdData[m].name = kdData[m].cityName;
-        if (kdData[m].monthTotal > remMax){
+        if (kdData[m].monthTotal > remMax) {
             remMax = kdData[m].monthTotal
         }
     }
-    var yMax = remMax + 20 ;
+    var yMax = remMax + 20;
     var myChart = echarts.init(document.getElementById('city'));
     //  // TODO:value值
     var xData = [
@@ -2168,7 +1307,7 @@ function cityChart(kdData) {
     }
     var ymaxs = [];
     var xDatas = [];
-    for(var m=0;m<xData.length;m++){
+    for (var m = 0; m < 15; m++) {
         ymaxs.push(yMax);
         xDatas.push("0")
     }
@@ -2176,7 +1315,7 @@ function cityChart(kdData) {
     var kdBarData = [];
     var kdBarDataMonth = [];
     var kdLineData = [];
-    $.each(xData,function(i,e){
+    $.each(xData, function (i, e) {
         var flag = true;
         for (var j = 0; j < kdData.length; j++) {
             if (e == kdData[j].name) {
@@ -2208,7 +1347,7 @@ function cityChart(kdData) {
     });*/
     /*barData.push(zhwjBarData);
     lineData.push(zhwjLineData);*/
-    option = {
+    var option = {
         grid: {
             width: '80%',
             height: '63%',
@@ -2227,6 +1366,14 @@ function cityChart(kdData) {
             '#9b5923',
             '#3deaff',
             '#db2d18'
+        ],
+        dataZoom: [//滑动条
+            {
+                show: false,//是否显示滑动条
+                type: 'slider', // 这个 dataZoom 组件是 slider 型 dataZoom 组件
+                startValue: 0, // 从头开始。
+                endValue: 14  // 一次性展示15个。
+            }
         ],
         yAxis: [
             {
@@ -2303,9 +1450,9 @@ function cityChart(kdData) {
                 },
                 axisLabel: {
                     interval: 0,
-                    rotate:40,
+                    rotate: 40,
                     textStyle: {
-                        color: '#40848c',
+                        color: '#47adb5',
                         fontSize: 12
                     },
                 },
@@ -2395,7 +1542,7 @@ function cityChart(kdData) {
                 label: {
                     normal: {
                         show: false,//顶部显示值
-                        formatter:'{c}%',
+                        formatter: '{c}%',
                         position: 'top',
                         textStyle: {
                             color: '#f3ef91',
@@ -2420,16 +1567,29 @@ function cityChart(kdData) {
         ]
     };
     myChart.setOption(option);
-    $(window).resize(function() {
+    interval2 = setInterval(function () {
+        // 每次向后滚动一个，最后一个从头开始。
+        if (option.dataZoom[0].endValue + 1 >= xData.length) {
+            option.dataZoom[0].endValue = 14;
+            option.dataZoom[0].startValue = 0;
+        }
+        else {
+            option.dataZoom[0].endValue = option.dataZoom[0].endValue + 10;
+            option.dataZoom[0].startValue = option.dataZoom[0].startValue + 10;
+        }
+        myChart.setOption(option);
+    }, 10000);
+    $(window).resize(function () {
         myChart.resize();
     });
 }
+
 function getTopData(array) {
     // console.log(array);
     var topName = [];
     var topValue = [];
     for (var i = array.length - 1; i >= 0; i--) {
-        if(array[i].value !== 0){
+        if (array[i].value !== 0) {
             var name = array[i].name;
             /*if (name.length > 6) {
                 name = name.substring(0, 6) + "...";
@@ -2443,6 +1603,7 @@ function getTopData(array) {
     topData.value = topValue;
     return topData;
 }
+
 function letfOneDiv() {
     var proTypes = ['1', '2', '3'];
     $.each(proTypes, function (i, e) {
@@ -2481,6 +1642,7 @@ function showTime() {
 }
 
 var monthLineData;
+
 /*左一 移网发展、移网网上切换*/
 function fzwsData(dataFZ, dataWS) {
     //发展假数据
@@ -2535,8 +1697,9 @@ function fzwsData(dataFZ, dataWS) {
     //charts
 
 }
+
 function getMonthLineXData() {
-    var date=new Date;
+    var date = new Date;
     var month = date.getMonth() + 1;
     var months = [];
     for (var i = 6; i >= 0; i--) {
@@ -2548,6 +1711,7 @@ function getMonthLineXData() {
     }
     return months;
 }
+
 function monthLineChart(yAxis) {
     var yData = yAxis || [970000, 1020000, 930000, 965000, 1050000, 1100000, 860000];
     var lineChart = echarts.init(document.getElementById('lineMonth'));
@@ -2663,129 +1827,129 @@ function monthLineChart(yAxis) {
         ]
     };
     lineChart.setOption(option);
-    $(window).resize(function() {
+    $(window).resize(function () {
         lineChart.resize();
     });
 }
 
 function departTop10(array) {
     var storeHtml = '';
-    var title = ['排名','网格','日发展','月发展','月环比','排名','网格','日发展','月发展','月环比'];
+    var title = ['排名', '网格', '日发展', '月发展', '月环比', '排名', '网格', '日发展', '月发展', '月环比'];
     var data = array;
     storeHtml += '<table border="0" cellspacing="0" cellpadding="0" class="rank-table">';
     storeHtml += '<thead>';
     storeHtml += '<tr>';
-    for (var i = 0;i<title.length;i++){
+    for (var i = 0; i < title.length; i++) {
         storeHtml += '<th>' + title[i] + '</th>';
     }
     storeHtml += '</tr>';
     storeHtml += '</thead>';
     storeHtml += '<tbody>';
-    if(indexLeftTwo%4 === 0){
+    if (indexLeftTwo % 4 === 0) {
         $('.table-tab').removeClass('table-tab')
         $('#table-tab0').addClass('table-tab')
-        for (var q = 0;q < 5 ;q++){
+        for (var q = 0; q < 5; q++) {
             var j = q;
             storeHtml += '<tr>';
             storeHtml += '<td>' + data[j].rank + '</td>';
             storeHtml += '<td>' + data[j].name + '</td>';
             storeHtml += '<td>' + data[j].total + '</td>';
             storeHtml += '<td>' + data[j].monthTotal + '</td>';
-            if(data[j].monthTb >= 0){
+            if (data[j].monthTb >= 0) {
                 storeHtml += '<td style="border-right: solid 1px #dbdbdb;color: #40d0e0;">' + data[j].monthTb + '%</td>';
-            }else{
+            } else {
                 storeHtml += '<td style="border-right: solid 1px #dbdbdb;color: #ff3116;">' + data[j].monthTb + '%</td>';
             }
             storeHtml += '<td>' + data[j + 5].rank + '</td>';
             storeHtml += '<td>' + data[j + 5].name + '</td>';
             storeHtml += '<td>' + data[j + 5].total + '</td>';
             storeHtml += '<td>' + data[j + 5].monthTotal + '</td>';
-            if(data[j + 5].monthTb >= 0){
+            if (data[j + 5].monthTb >= 0) {
                 storeHtml += '<td style="color: #40d0e0;">' + data[j + 5].monthTb + '%</td>';
-            }else{
+            } else {
                 storeHtml += '<td style="color: #ff3116;">' + data[j + 5].monthTb + '%</td>';
             }
             storeHtml += '</tr>';
         }
-    }else if(indexLeftTwo%4 === 1){
+    } else if (indexLeftTwo % 4 === 1) {
         $('.table-tab').removeClass('table-tab')
         $('#table-tab1').addClass('table-tab')
-        for (var q = 0;q < 5 ;q++){
+        for (var q = 0; q < 5; q++) {
             var j = q + 10;
             storeHtml += '<tr>';
             storeHtml += '<td>' + data[j].rank + '</td>';
             storeHtml += '<td>' + data[j].name + '</td>';
             storeHtml += '<td>' + data[j].total + '</td>';
             storeHtml += '<td>' + data[j].monthTotal + '</td>';
-            if(data[j].monthTb >= 0){
+            if (data[j].monthTb >= 0) {
                 storeHtml += '<td style="border-right: solid 1px #dbdbdb;color: #40d0e0;">' + data[j].monthTb + '%</td>';
-            }else{
+            } else {
                 storeHtml += '<td style="border-right: solid 1px #dbdbdb;color: #ff3116;">' + data[j].monthTb + '%</td>';
             }
             storeHtml += '<td>' + data[j + 5].rank + '</td>';
             storeHtml += '<td>' + data[j + 5].name + '</td>';
             storeHtml += '<td>' + data[j + 5].total + '</td>';
             storeHtml += '<td>' + data[j + 5].monthTotal + '</td>';
-            if(data[j + 5].monthTb >= 0){
+            if (data[j + 5].monthTb >= 0) {
                 storeHtml += '<td style="color: #40d0e0;">' + data[j + 5].monthTb + '%</td>';
-            }else{
+            } else {
                 storeHtml += '<td style="color: #ff3116;">' + data[j + 5].monthTb + '%</td>';
             }
             storeHtml += '</tr>';
         }
-    }else if(indexLeftTwo%4 === 2){
+    } else if (indexLeftTwo % 4 === 2) {
         $('.table-tab').removeClass('table-tab')
         $('#table-tab2').addClass('table-tab')
-        for (var q = 0;q < 5 ;q++){
+        for (var q = 0; q < 5; q++) {
             var j = q + 20;
             storeHtml += '<tr>';
             storeHtml += '<td>' + data[j].rank + '</td>';
             storeHtml += '<td>' + data[j].name + '</td>';
             storeHtml += '<td>' + data[j].total + '</td>';
             storeHtml += '<td>' + data[j].monthTotal + '</td>';
-            if(data[j].monthTb >= 0){
+            if (data[j].monthTb >= 0) {
                 storeHtml += '<td style="border-right: solid 1px #dbdbdb;color: #40d0e0;">' + data[j].monthTb + '%</td>';
-            }else{
+            } else {
                 storeHtml += '<td style="border-right: solid 1px #dbdbdb;color: #ff3116;">' + data[j].monthTb + '%</td>';
             }
             storeHtml += '<td>' + data[j + 5].rank + '</td>';
             storeHtml += '<td>' + data[j + 5].name + '</td>';
             storeHtml += '<td>' + data[j + 5].total + '</td>';
             storeHtml += '<td>' + data[j + 5].monthTotal + '</td>';
-            if(data[j + 5].monthTb >= 0){
+            if (data[j + 5].monthTb >= 0) {
                 storeHtml += '<td style="color: #40d0e0;">' + data[j + 5].monthTb + '%</td>';
-            }else{
+            } else {
                 storeHtml += '<td style="color: #ff3116;">' + data[j + 5].monthTb + '%</td>';
             }
             storeHtml += '</tr>';
         }
-    }else {
+    } else {
         $('.table-tab').removeClass('table-tab')
         $('#table-tab3').addClass('table-tab')
-        for (var q = 0;q < 2 ;q++){
+        for (var q = 0; q < 2; q++) {
             var j = q + 30;
             storeHtml += '<tr>';
             storeHtml += '<td>' + data[j].rank + '</td>';
             storeHtml += '<td>' + data[j].name + '</td>';
             storeHtml += '<td>' + data[j].total + '</td>';
             storeHtml += '<td>' + data[j].monthTotal + '</td>';
-            if(data[j].monthTb >= 0){
+            if (data[j].monthTb >= 0) {
                 storeHtml += '<td style="border-right: solid 1px #dbdbdb;color: #40d0e0;">' + data[j].monthTb + '%</td>';
-            }else{
+            } else {
                 storeHtml += '<td style="border-right: solid 1px #dbdbdb;color: #ff3116;">' + data[j].monthTb + '%</td>';
             }
             storeHtml += '<td>' + data[j + 2].rank + '</td>';
             storeHtml += '<td>' + data[j + 2].name + '</td>';
             storeHtml += '<td>' + data[j + 2].total + '</td>';
             storeHtml += '<td>' + data[j + 2].monthTotal + '</td>';
-            if(data[j + 2].monthTb >= 0){
+            if (data[j + 2].monthTb >= 0) {
                 storeHtml += '<td style="color: #40d0e0;">' + data[j + 2].monthTb + '%</td>';
-            }else{
+            } else {
                 storeHtml += '<td style="color: #ff3116;">' + data[j + 2].monthTb + '%</td>';
             }
             storeHtml += '</tr>';
         }
-        for(var k = 0;k<3;k++){
+        for (var k = 0; k < 3; k++) {
             storeHtml += '<tr>';
             storeHtml += '<td>&nbsp;</td>';
             storeHtml += '<td>&nbsp;</td>';
@@ -2805,27 +1969,30 @@ function departTop10(array) {
     $("#timeChart").html(storeHtml);
 }
 
+var interval1;
+
 function timeChart(datas) {
+    clearInterval(interval1);
     var pieChart = echarts.init(document.getElementById('storeRankChart'));
-    var yMax ;
-    var ymaxs=[];
+    var yMax;
+    var ymaxs = [];
     var xDatas = [];
     var xData = [];
     var barData1 = [];
     var barData2 = [];
     var lineData1 = [];
-    var remMax=0;
-    for(var i = 0;i < datas.length; i++){
+    var remMax = 0;
+    for (var i = 0; i < datas.length; i++) {
         xData.push(datas[i].cityName);
         barData1.push(datas[i].total);
         barData2.push(datas[i].monthTotal);
         lineData1.push(datas[i].monthTb);
-        if (datas[i].monthTotal > remMax){
+        if (datas[i].monthTotal > remMax) {
             remMax = datas[i].monthTotal
         }
     }
-    yMax = remMax + 20 ;
-    for(var m=0;m<datas.length;m++){
+    yMax = remMax + 20;
+    for (var m = 0; m < 15; m++) {
         ymaxs.push(yMax);
         xDatas.push("0")
     }
@@ -2848,6 +2015,14 @@ function timeChart(datas) {
             '#9b5923',
             '#3deaff',
             '#db2d18'
+        ],
+        dataZoom: [//滑动条
+            {
+                show: false,//是否显示滑动条
+                type: 'slider', // 这个 dataZoom 组件是 slider 型 dataZoom 组件
+                startValue: 0, // 从头开始。
+                endValue: 14  // 一次性展示15个。
+            }
         ],
         yAxis: [
             {
@@ -2924,9 +2099,9 @@ function timeChart(datas) {
                 },
                 axisLabel: {
                     interval: 0,//x坐标显示全部
-                    rotate:45,
+                    rotate: 45,
                     textStyle: {
-                        color: '#40848c',
+                        color: '#47adb5',
                         fontSize: 12
                     },
                 },
@@ -3029,7 +2204,19 @@ function timeChart(datas) {
         ]
     };
     pieChart.setOption(option);
-    $(window).resize(function() {
+    interval1 = setInterval(function () {
+        // 每次向后滚动一个，最后一个从头开始。
+        if (option.dataZoom[0].endValue + 1 >= xData.length) {
+            option.dataZoom[0].endValue = 14;
+            option.dataZoom[0].startValue = 0;
+        }
+        else {
+            option.dataZoom[0].endValue = option.dataZoom[0].endValue + 10;
+            option.dataZoom[0].startValue = option.dataZoom[0].startValue + 10;
+        }
+        pieChart.setOption(option);
+    }, 10000);
+    $(window).resize(function () {
         pieChart.resize();
     });
     /*//环形图
@@ -3134,9 +2321,9 @@ function setCityData(kdData) {
     $('#kd_num_month').html(kdData.monthTotal);
 
     var topHtml = "";
-    for (var i = 0;i < 3; i++) {
-        for(var m = 0;m<kdData.cityMap.length;m++){
-            if(kdData.cityMap[m].rank === (i+1)){
+    for (var i = 0; i < 3; i++) {
+        for (var m = 0; m < kdData.cityMap.length; m++) {
+            if (kdData.cityMap[m].rank === (i + 1)) {
                 topHtml += '<li class="top top' + (i + 1) + '">' + kdData.cityMap[m].cityName;
                 // topHtml += '<span class="up"></span>';
                 topHtml += '</li>';
@@ -3147,12 +2334,12 @@ function setCityData(kdData) {
     cityChart(kdData.cityMap);
 }
 
-function pieChart(trafficWay,xdata) {
+function pieChart(trafficWay, xdata) {
     var myChart = echarts.init(document.getElementById('pieContainer'));
 
 
     var data = [];
-    var color=['#00ffff','#00cfff','#006ced','#ffe000','#ffa800','#ff5b00','#ff3000']
+    var color = ['#00ffff', '#00cfff', '#006ced', '#ffe000', '#ffa800', '#ff5b00', '#ff3000']
     for (var i = 0; i < trafficWay.length; i++) {
         data.push({
             value: trafficWay[i].value,
@@ -3161,7 +2348,7 @@ function pieChart(trafficWay,xdata) {
                 normal: {
                     borderWidth: 5,
                     /*shadowBlur: 20,*/
-                    borderColor:color[i],
+                    borderColor: color[i],
                     shadowColor: color[i]
                 }
             }
@@ -3196,31 +2383,31 @@ function pieChart(trafficWay,xdata) {
                     show: true,
                     position: 'outside',
                     color: '#ddd',
-                    formatter: function(params) {
+                    formatter: function (params) {
                         var percent = 0;
                         var total = 0;
                         for (var i = 0; i < trafficWay.length; i++) {
                             total += trafficWay[i].value;
                         }
                         percent = ((params.value / total) * 100).toFixed(0);
-                        if(params.name !== '') {
+                        if (params.name !== '') {
                             /*return '' + params.name + '\n' + '\n' + '百分比：' + percent + '%';*/
                             return percent + '%';
-                        }else {
+                        } else {
                             return '';
                         }
                     },
                 },
                 labelLine: {
                     show: true,
-                    color:'#00ffff'
+                    color: '#00ffff'
                 }
             }
         },
         data: data
     }];
     var option = {
-        color : color,
+        color: color,
         title: {
             text: '渠道占比',
             top: '53%',
@@ -3241,7 +2428,7 @@ function pieChart(trafficWay,xdata) {
             orient: 'vertical',
             //orient: 'horizontal',
             // x: 'left',
-            data:xdata,
+            data: xdata,
             align: 'left',
             right: '1%',
             bottom: '2%',
@@ -3256,7 +2443,7 @@ function pieChart(trafficWay,xdata) {
         series: seriesOption
     }
     myChart.setOption(option);
-    $(window).resize(function() {
+    $(window).resize(function () {
         myChart.resize();
     });
 }
