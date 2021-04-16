@@ -1362,9 +1362,9 @@ function cityChart(kdData) {
     var lineData = [];
     if (kdData.length > 0) {
         // var yMax = kdData[0].value > zhwjData[0].value ? kdData[0].value + 20 : zhwjData[0].value + 20;
-        var yMax = kdData[0].monthTotal + 20 ;
+        var yMax = kdData[0].monthTotal/10000 + 0.002 ;
     } else {
-        yMax = 20;
+        yMax = 0.002;
     }
     var ymaxs = [];
     var xDatas = [];
@@ -1381,8 +1381,8 @@ function cityChart(kdData) {
         for (var j = 0; j < kdData.length; j++) {
             if (e == kdData[j].name) {
                 flag = false;
-                kdBarData.push(kdData[j].total);
-                kdBarDataMonth.push(kdData[j].monthTotal)
+                kdBarData.push(kdData[j].total/10000);
+                kdBarDataMonth.push(kdData[j].monthTotal/10000)
                 kdLineData.push(kdData[j].monthTb);
                 break;
             }
@@ -1430,6 +1430,7 @@ function cityChart(kdData) {
         ],
         yAxis: [
             {
+                name:'万',
                 type: 'value',
                 axisTick: {
                     show: true,
@@ -1982,14 +1983,14 @@ function timeChart(datas) {
     var remMax=0;
     for(var i = 0;i < datas.length; i++){
         xData.push(datas[i].cityName);
-        barData1.push(datas[i].total);
-        barData2.push(datas[i].monthTotal);
+        barData1.push(datas[i].total/10000);
+        barData2.push(datas[i].monthTotal/10000);
         lineData1.push(datas[i].monthTb);
-        if (datas[i].monthTotal > remMax){
-            remMax = datas[i].monthTotal
+        if (datas[i].monthTotal/10000 > remMax){
+            remMax = datas[i].monthTotal/10000
         }
     }
-    yMax = remMax + 20 ;
+    yMax = remMax + 0.002 ;
     for(var m=0;m<datas.length;m++){
         ymaxs.push(yMax);
         xDatas.push("0")
@@ -2016,6 +2017,7 @@ function timeChart(datas) {
         ],
         yAxis: [
             {
+                name:'万',
                 type: 'value',
                 axisTick: {
                     show: true,
