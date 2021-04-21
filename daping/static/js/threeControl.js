@@ -150,10 +150,10 @@ function refreshAll() {
     $('#controlLowerSleeve3').parent().removeClass('card-pie-s')
         .removeClass('card-pie-j')
     if (centerDiv2.controlLowerSleeveData.headerData[0].HB >= 0) {
-        $('#controlLowerSleeve3').parent().addClass('card-pie-s')
+        $('#controlLowerSleeve3').parent().addClass('card-pie-j')
         $('#controlLowerSleeve3').html(centerDiv2.controlLowerSleeveData.headerData[0].HB + '%↑')
     } else {
-        $('#controlLowerSleeve3').parent().addClass('card-pie-j')
+        $('#controlLowerSleeve3').parent().addClass('card-pie-s')
         $('#controlLowerSleeve3').html(centerDiv2.controlLowerSleeveData.headerData[0].HB + '%↓')
     }
     $('#controlLowerSleeve4').html(centerDiv2.controlLowerSleeveData.headerData[0].MONTH_SETDOWNREVE)
@@ -172,10 +172,10 @@ function refreshAll() {
     $('#controlCarryOut3').parent().removeClass('card-pie-s')
         .removeClass('card-pie-j')
     if (rightDiv1.controlCarryOutData.headerData[0].HB1 >= 0) {
-        $('#controlCarryOut3').parent().addClass('card-pie-s')
+        $('#controlCarryOut3').parent().addClass('card-pie-j')
         $('#controlCarryOut3').html(rightDiv1.controlCarryOutData.headerData[0].HB1 + '%↑')
     } else {
-        $('#controlCarryOut3').parent().addClass('card-pie-j')
+        $('#controlCarryOut3').parent().addClass('card-pie-s')
         $('#controlCarryOut3').html(rightDiv1.controlCarryOutData.headerData[0].HB1 + '%↓')
     }
     $('#controlCarryOut4').html(rightDiv1.controlCarryOutData.headerData[0].DAY_WEIWAN)
@@ -204,10 +204,10 @@ function refreshAll() {
     $('#carryInAndOut3').parent().removeClass('font-red')
         .removeClass('font-green');
     if (rightDiv2.carryInAndOutData.headerData[0].CARRYOUT_HB >= 0) {
-        $('#carryInAndOut3').parent().addClass('font-red');
+        $('#carryInAndOut3').parent().addClass('font-green');
         $('#carryInAndOut3Sj').html('↑')
     } else {
-        $('#carryInAndOut3').parent().addClass('font-green');
+        $('#carryInAndOut3').parent().addClass('font-red');
         $('#carryInAndOut3Sj').html('↓')
     }
     $('#carryInAndOut4').html(rightDiv2.carryInAndOutData.headerData[0].CARRYOUT_REDUCE)
@@ -215,10 +215,10 @@ function refreshAll() {
     $('#carryInAndOut5').parent().removeClass('font-red')
         .removeClass('font-green');
     if (rightDiv2.carryInAndOutData.headerData[0].REDUCE_HB >= 0) {
-        $('#carryInAndOut5').parent().addClass('font-red');
+        $('#carryInAndOut5').parent().addClass('font-green');
         $('#carryInAndOut5Sj').html('↑')
     } else {
-        $('#carryInAndOut5').parent().addClass('font-green');
+        $('#carryInAndOut5').parent().addClass('font-red');
         $('#carryInAndOut5Sj').html('↓')
     }
     $('#carryInAndOut6').html(rightDiv2.carryInAndOutData.headerData[0].DAY_CARRYIN)
@@ -299,16 +299,30 @@ function refreshMap() {
         } else if (mapData[j].AREA_DESC === '商洛') {
             cityName = 'Sl'
         }
-        if (mapData[j][arr] >= 0) {
-            $('#controlLossActiveRate' + cityName).html(mapData[j][arr] + '% ↑')
-                .removeClass('font-red')
-                .removeClass('font-green')
-                .addClass('font-red')
-        } else {
-            $('#controlLossActiveRate' + cityName).html(mapData[j][arr] + '% ↓')
-                .removeClass('font-red')
-                .removeClass('font-green')
-                .addClass('font-green')
+        if(remMap%3 === 1){
+            if (mapData[j][arr] >= 0) {
+                $('#controlLossActiveRate' + cityName).html(mapData[j][arr] + '% ↑')
+                    .removeClass('font-red')
+                    .removeClass('font-green')
+                    .addClass('font-green')
+            } else {
+                $('#controlLossActiveRate' + cityName).html(mapData[j][arr] + '% ↓')
+                    .removeClass('font-red')
+                    .removeClass('font-green')
+                    .addClass('font-red')
+            }
+        }else {
+            if (mapData[j][arr] >= 0) {
+                $('#controlLossActiveRate' + cityName).html(mapData[j][arr] + '% ↑')
+                    .removeClass('font-red')
+                    .removeClass('font-green')
+                    .addClass('font-red')
+            } else {
+                $('#controlLossActiveRate' + cityName).html(mapData[j][arr] + '% ↓')
+                    .removeClass('font-red')
+                    .removeClass('font-green')
+                    .addClass('font-green')
+            }
         }
     }
 }
@@ -325,7 +339,7 @@ function showTime() {
 
 function fetchData() {
     var pd = fetchAjax('controlCarryOut');
-    if( pd.controlCarryOutData.headerData[0].DAY_WEIWAN!== '0' && pd.controlCarryOutData.headerData[0].DAY_WEIWAN!== 0 && pd.controlCarryOutData.headerData[0].HB1 !== 'undefine'){
+    if( pd.controlCarryOutData.headerData[0].DAY_WEIWAN!== '0' && pd.controlCarryOutData.headerData[0].DAY_WEIWAN!== 0 && pd.controlCarryOutData.headerData[0].HB1 !== undefined){
 
         //控携出
         rightDiv1 = fetchAjax('controlCarryOut');
@@ -344,10 +358,6 @@ function fetchData() {
     centerDiv1 = fetchAjax('controlLossActiveRate');
     //控降套
     centerDiv2 = fetchAjax('controlLowerSleeve');
-    /*//控携出
-    rightDiv1 = fetchAjax('controlCarryOut');
-    //携入携出
-    rightDiv2 = fetchAjax('carryInAndOut');*/
 
 
     /*leftTop = {"controlLossHead": [{"MONTH_ACTIVERATE": 53, "STRATEGY": "5", "COVER_USER": 69.7}]}

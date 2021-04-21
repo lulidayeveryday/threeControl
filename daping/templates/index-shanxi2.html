@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <title>陕西大屏</title>
 
-    <!--<link rel="stylesheet" th:href="@{/css/index-all.css}"/>-->
-    <link rel="stylesheet" href="../static/css/index-all.css">
+    <link rel="stylesheet" th:href="@{/css/index-all.css}"/>
+    <!--<link rel="stylesheet" href="../static/css/index-all.css">-->
 </head>
-<body class="body-bg">
+<body class="body-ry-bg">
 <div class="isIe">
     若需访问大屏内容，请使用火狐或谷歌浏览器
 </div>
 <div class="index-div">
     <div class="index-title-div">
-        <!--<img src="../static/images/title-bg.png" class="index-title-bg">-->
+        <!--<img src="../static/images/bg_title.png" class="index-title-bg">-->
         <img id="title" th:src="@{/images/title-bg.png}" class="index-title-bg" alt=""/>
         <div class="index-title-fontDiv">
-            <!--<img src="../static/images/title-font.png" class="index-title-font">-->
+            <!--<img src="../static/images/title-bg-ry.png" class="index-title-font">-->
             <img th:src="@{/images/title-font.png}" class="index-title-font">
         </div>
         <div class="show-time"></div>
@@ -207,12 +207,12 @@
     </div>
 </div>
 </body>
-<script src="../static/js/jquery-1.11.3.js"></script>
+<!--<script src="../static/js/jquery-1.11.3.js"></script>
 <script src="../static/js/echarts.min.js"></script>
 <script src="../static/js/shanxi.js"></script>
-<script src="../static/js/index-shanxi.js"></script>
+<script src="../static/js/index-shanxi.js"></script>-->
 
-<!--<script th:src="@{/js/jquery-1.11.3.js}"></script>
+<script th:src="@{/js/jquery-1.11.3.js}"></script>
 <script th:inline="javascript">
     function getExplorerInfo(){
         var ua = navigator.userAgent.toLocaleLowerCase();
@@ -275,5 +275,5 @@
 </script>
 <script th:src="@{/js/echarts.min.js}"></script>
 <script th:src="@{/js/shanxi.js}"></script>
-<script th:src="@{/js/index-shanxi.js}"></script>-->
+<script th:src="@{/js/index-shanxi.js}"></script>
 </html>

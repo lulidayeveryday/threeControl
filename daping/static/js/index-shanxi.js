@@ -1,7 +1,7 @@
 
 $(function () {
     getExplorerInfo();
-    $.ajax({
+    /*$.ajax({
         url:'http://135.146.68.83:8080/shanxi/main/callcount',  // ajax请求要请求的地址
         headers:{'Content-Type':'application/json'},
         type:"post", // 请求的类型  get  post
@@ -14,11 +14,11 @@ $(function () {
         error:function (error) {
             // 请求失败之后要执行的内容
         }
-    })
+    })*/
     /*时间*/
     setInterval(showTime, 1000);
     /*获取数据*/
-    /*dataAll = {
+    dataAll = {
         "data_kyrh_map":{
             "total":129,
             "monthTotal":129,
@@ -222,7 +222,7 @@ $(function () {
                     "value":10
                 }
             ],
-            "monthTb":"-39.54"
+            "monthTb":"39.54"
         },
         "callCount":0,
         "data_1_top":[
@@ -568,7 +568,7 @@ $(function () {
                     "total":1184,
                     "cityName":"西安",
                     "monthTotal":4777,
-                    "monthTb":"-39.49"
+                    "monthTb":"39.49"
                 },
                 {
                     "total":15,
@@ -706,12 +706,12 @@ $(function () {
             }
         ]
     }
-    refreshHtml();*/
+    refreshHtml();
 
-    fetchData();
+    /*fetchData();
     setInterval(function () {
         fetchData()
-    }, 15000);
+    }, 15000);*/
 
 
     //左一
@@ -992,7 +992,7 @@ function mapChart(data) {
         var areaColor = e.value > temp2 ? areaColors[0]
             : e.value > temp1 ? areaColors[1]
                 : areaColors[2];
-    var rateColor = e.rate > 0 ? '#fcf500' : '#ff3116';
+    var rateColor = e.rate > 0 ? '#ff3116' : '#fcf500';
     e.label = {
         rich: {
             rate: {
@@ -1362,9 +1362,9 @@ function cityChart(kdData) {
     var lineData = [];
     if (kdData.length > 0) {
         // var yMax = kdData[0].value > zhwjData[0].value ? kdData[0].value + 20 : zhwjData[0].value + 20;
-        var yMax = kdData[0].monthTotal/10000 + 0.002 ;
+        var yMax = kdData[0].monthTotal+ 20 ;
     } else {
-        yMax = 0.002;
+        yMax = 20;
     }
     var ymaxs = [];
     var xDatas = [];
@@ -1381,8 +1381,8 @@ function cityChart(kdData) {
         for (var j = 0; j < kdData.length; j++) {
             if (e == kdData[j].name) {
                 flag = false;
-                kdBarData.push(kdData[j].total/10000);
-                kdBarDataMonth.push(kdData[j].monthTotal/10000)
+                kdBarData.push(kdData[j].total);
+                kdBarDataMonth.push(kdData[j].monthTotal)
                 kdLineData.push(kdData[j].monthTb);
                 break;
             }
@@ -1430,7 +1430,6 @@ function cityChart(kdData) {
         ],
         yAxis: [
             {
-                name:'万',
                 type: 'value',
                 axisTick: {
                     show: true,
@@ -1735,12 +1734,12 @@ function getTopData2(array) {
 function showTime() {
     var date = new Date();
     var year = date.getFullYear();
-    var month = date.getMonth() + 1;
-    var day = date.getDate();
+    var month = (date.getMonth() + 1) < 10 ? "0" + (date.getMonth() + 1) : (date.getMonth() + 1);
+    var day = date.getDate().toString().length == 1 ? "0" + date.getDate() : date.getDate();
     var hour = date.getHours().toString().length == 1 ? "0" + date.getHours() : date.getHours();
     var minute = date.getMinutes().toString().length == 1 ? "0" + date.getMinutes() : date.getMinutes();
     var second = date.getSeconds().toString().length == 1 ? "0" + date.getSeconds() : date.getSeconds();
-    $(".show-time").html(year + '年' + month + '月' + day + '日 ' + hour + ':' + minute + ':' + second);
+    $(".show-time").html(year + '-' + month + '-' + day + '  ' + hour + ':' + minute + ':' + second);
 }
 
 var monthLineData;
@@ -1951,18 +1950,18 @@ function departTop10(array) {
         storeHtml += '<td>' + data[j].total + '</td>';
         storeHtml += '<td>' + data[j].monthTotal + '</td>';
         if(data[j].monthTb >= 0){
-            storeHtml += '<td style="border-right: solid 1px #dbdbdb;color: #40d0e0;">' + data[j].monthTb + '%</td>';
-        }else{
             storeHtml += '<td style="border-right: solid 1px #dbdbdb;color: #ff3116;">' + data[j].monthTb + '%</td>';
+        }else{
+            storeHtml += '<td style="border-right: solid 1px #dbdbdb;color: #40d0e0;">' + data[j].monthTb + '%</td>';
         }
         storeHtml += '<td>' + data[j + 5].rank + '</td>';
         storeHtml += '<td>' + data[j + 5].name + '</td>';
         storeHtml += '<td>' + data[j + 5].total + '</td>';
         storeHtml += '<td>' + data[j + 5].monthTotal + '</td>';
         if(data[j + 5].monthTb >= 0){
-            storeHtml += '<td style="color: #40d0e0;">' + data[j + 5].monthTb + '%</td>';
-        }else{
             storeHtml += '<td style="color: #ff3116;">' + data[j + 5].monthTb + '%</td>';
+        }else{
+            storeHtml += '<td style="color: #40d0e0;">' + data[j + 5].monthTb + '%</td>';
         }
         storeHtml += '</tr>';
     }
@@ -1983,14 +1982,14 @@ function timeChart(datas) {
     var remMax=0;
     for(var i = 0;i < datas.length; i++){
         xData.push(datas[i].cityName);
-        barData1.push(datas[i].total/10000);
-        barData2.push(datas[i].monthTotal/10000);
+        barData1.push(datas[i].total);
+        barData2.push(datas[i].monthTotal);
         lineData1.push(datas[i].monthTb);
-        if (datas[i].monthTotal/10000 > remMax){
-            remMax = datas[i].monthTotal/10000
+        if (datas[i].monthTotal > remMax){
+            remMax = datas[i].monthTotal
         }
     }
-    yMax = remMax + 0.002 ;
+    yMax = remMax + 20 ;
     for(var m=0;m<datas.length;m++){
         ymaxs.push(yMax);
         xDatas.push("0")
@@ -2017,7 +2016,6 @@ function timeChart(datas) {
         ],
         yAxis: [
             {
-                name:'万',
                 type: 'value',
                 axisTick: {
                     show: true,

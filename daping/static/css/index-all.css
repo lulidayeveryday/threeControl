@@ -1,4 +1,8 @@
 @font-face {
+    font-family: 'lcdd';
+    src: url('../font/LcdD.ttf');
+}
+@font-face {
     font-family: 'auraregular';
     src: url('../font/aura-webfont.woff2') format('woff2'), url('../font/aura-webfont.woff') format('woff');
     font-weight: normal;
@@ -65,7 +69,7 @@ ul, li, p, h1, h2, h3, h4, h5, h6, dl, dt, dd {
     list-style: none;
 }
 
-body{
+.body-bg{
     margin: 0;
     width: 100%;
     height: 100%;
@@ -74,6 +78,15 @@ body{
     background: url(../images/bg.png) no-repeat;
     background-size: 100% 100%;
     /*background-image: url(../images/test01.png);*/
+}
+
+.body-ry-bg{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "microsoft yahei", Arial, Helvetica, sans-serif;
+    color: #333;
+    background-color: #02092d;
 }
 
 .isIe{
@@ -123,8 +136,9 @@ body{
     position: absolute;
     right: 3%;
     top: 40%;
-    font-size: 1.8rem;
-    color: #24faff;
+    font-family: lcdd;
+    color: #2579ff;
+    font-size: 1.3rem;
 }
 
 .show-visited{
@@ -317,17 +331,17 @@ body{
     font-size: 1.5rem;
 }
 #fzws > .body .month > .title > .up-rate {
-    color: #40d0e0;
-    font-size: 1rem;
-    padding-left: 1rem;
-    background: url(../images/arrow_up.png) no-repeat 0 50%;
-    background-size: 0.8rem;
-}
-#fzws > .body .month > .title > .down-rate {
     color: #ff3116;
     font-size: 1rem;
     padding-left: 1rem;
     background: url(../images/arrow_drop.png) no-repeat 0 50%;
+    background-size: 0.8rem;
+}
+#fzws > .body .month > .title > .down-rate {
+    color: #40d0e0;
+    font-size: 1rem;
+    padding-left: 1rem;
+    background: url(../images/arrow_up.png) no-repeat 0 50%;
     background-size: 0.8rem;
 }
 
@@ -401,17 +415,17 @@ body{
     font-size: 1.2rem;
 }
 .up-rate {
-    color: #40d0e0;
-    font-size: 1rem;
-    padding-left: 1rem;
-    background: url(../images/arrow_up.png) no-repeat 0 50%;
-    background-size: 0.8rem;
-}
-.down-rate {
     color: #ff3116;
     font-size: 1rem;
     padding-left: 1rem;
     background: url(../images/arrow_drop.png) no-repeat 0 50%;
+    background-size: 0.8rem;
+}
+.down-rate {
+    font-size: 1rem;
+    color: #40d0e0;
+    padding-left: 1rem;
+    background: url(../images/arrow_up.png) no-repeat 0 50%;
     background-size: 0.8rem;
 }
 #numList > div:nth-last-child(1) {
