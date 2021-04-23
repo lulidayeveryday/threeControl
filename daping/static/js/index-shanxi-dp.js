@@ -1,11 +1,7 @@
 
 $(function () {
     getExplorerInfo();
-    var wjbxue=screen.width;
-    if(wjbxue<1000){
-        fontSize = 0.6;
-    }
-    $.ajax({
+    /*$.ajax({
         url:'http://135.146.68.83:8080/shanxi/main/callcount',  // ajax请求要请求的地址
         headers:{'Content-Type':'application/json'},
         type:"post", // 请求的类型  get  post
@@ -18,11 +14,11 @@ $(function () {
         error:function (error) {
             // 请求失败之后要执行的内容
         }
-    })
+    })*/
     /*时间*/
     setInterval(showTime, 1000);
     /*获取数据*/
-    /*dataAll = {
+    dataAll = {
         "data_kyrh_map":{
             "total":129,
             "monthTotal":129,
@@ -710,12 +706,12 @@ $(function () {
             }
         ]
     }
-    refreshHtml();*/
+    refreshHtml();
 
-    fetchData();
+    /*fetchData();
     setInterval(function () {
         fetchData()
-    }, 15000);
+    }, 15000);*/
 
 
     //左一
@@ -738,7 +734,6 @@ var param = {
 }
 var dataAll;
 var indexYw = 0;
-var fontSize = 1;
 function fetchData(){
     $.ajax({
         type : 'POST',
@@ -1001,7 +996,7 @@ function mapChart(data) {
     e.label = {
         rich: {
             rate: {
-                color: rateColor,
+                color: rateColor
             },
         }
     };
@@ -1011,7 +1006,7 @@ function mapChart(data) {
         },
     };
 });
-    var option = {
+    option = {
         geo: {
             map: '陕西',
             zlevel: 0,
@@ -1020,7 +1015,7 @@ function mapChart(data) {
                 textStyle: {
                     color: '#fff',
                     fontWeight: '600',
-                    fontSize: 15 * fontSize,
+                    fontSize: 15,
                     backgroundColor: 'transparent'
                 }
             },
@@ -1058,7 +1053,7 @@ function mapChart(data) {
                     show: true,
                     textStyle: {
                         color: '#fff',
-                        fontSize: 10 * fontSize
+                        fontSize: 10
                     },
                     formatter: (obj) => {
                     var name = obj.data.name, rate = obj.data.rate + "%";
@@ -1224,7 +1219,7 @@ function topChart(barData) {
                     position: ['0', '-50%'],
                     offset: [lefts, -0],
                     color: '#FFFFFF',
-                    fontSize: 14 * fontSize
+                    fontSize: 14
             }
         },
         animationEasing: 'elasticOut',
@@ -1333,7 +1328,7 @@ function topChartQd(barData) {
                     position: ['0', '-50%'],
                     offset: [lefts, -0],
                     color: '#FFFFFF',
-                    fontSize: 14 * fontSize
+                    fontSize: 14
             }
         },
         animationEasing: 'elasticOut',
@@ -1417,19 +1412,15 @@ function cityChart(kdData) {
         grid: {
             width: '80%',
             height: '70%',
-            bottom: '12%',
+            bottom: '25',
             left: '12%'
         },
         legend: {
             show: true,
-            itemWidth: 25 * fontSize,
-            itemHeight: 14 * fontSize,
             textStyle: {
-                color: '#fff',
-                fontSize: 14 * fontSize
-
+                color: '#fff'
             },
-            top: 2 * fontSize
+            top: 2
         },
         color: [
             '#249eac',
@@ -1462,7 +1453,7 @@ function cityChart(kdData) {
                 axisLabel: {//y坐标轴
                     textStyle: {
                         color: '#40848c',
-                        fontSize: 14 * fontSize
+                        fontSize: 14
                     }
                 },
                 splitLine: {
@@ -1493,11 +1484,7 @@ function cityChart(kdData) {
                 },
                 "axisLabel": {
                     "interval": 0,
-                    formatter: '{value}%',
-                    textStyle: {
-                        color: '#40848c',
-                        fontSize: 14 * fontSize
-                    }
+                    formatter: '{value}%'
                 }
             }
         ],
@@ -1518,7 +1505,7 @@ function cityChart(kdData) {
                     interval: 0,
                     textStyle: {
                         color: '#47adb5',
-                        fontSize: 12 * fontSize
+                        fontSize: 12
                     },
                 },
                 axisLine: {
@@ -1615,7 +1602,7 @@ function cityChart(kdData) {
                         position: 'top',
                         textStyle: {
                             color: '#00e9c4',
-                            fontSize: 12 * fontSize
+                            fontSize: 12
                         }
                     }
                 },
@@ -1638,7 +1625,7 @@ function cityChart(kdData) {
                         textStyle: {
                             color: '#f3ef91',
 
-                            fontSize: 12 * fontSize
+                            fontSize: 12
                         }
                     }
                 },
@@ -1827,7 +1814,7 @@ function monthLineChart(yAxis) {
     var yData = yAxis || [970000, 1020000, 930000, 965000, 1050000, 1100000, 860000];
     var lineChart = echarts.init(document.getElementById('lineMonth'));
     var xData = getMonthLineXData();
-    var option = {
+    option = {
         tooltip: {
             trigger: 'axis',
             axisPointer: {
@@ -1848,7 +1835,7 @@ function monthLineChart(yAxis) {
             width: '70%',
             height: '70%',
             y: '18%',
-            top: 10 * fontSize,
+            top: 10,
             bottom: 0
         },
         xAxis: [
@@ -1876,8 +1863,7 @@ function monthLineChart(yAxis) {
                 axisLabel: {
                     show: true,
                     textStyle: {
-                        color: '#a7adae',
-                        fontSize: 12 * fontSize
+                        color: '#a7adae'
                     },
                     interval: 0
                 },
@@ -1910,8 +1896,7 @@ function monthLineChart(yAxis) {
                     show: true,
                     margin: 5,
                     textStyle: {
-                        color: '#a7adae',
-                        fontSize: 12 * fontSize
+                        color: '#a7adae'
                     }
                 },
                 axisTick: {
@@ -2013,19 +1998,15 @@ function timeChart(datas) {
         grid: {
             width: '80%',
             height: '70%',
-            bottom: '14%',
+            bottom: '25',
             left: '12%'
         },
         legend: {
             show: true,
-            itemWidth: 25 * fontSize,
-            itemHeight: 14 * fontSize,
             textStyle: {
-                color: '#fff',
-                fontSize: 14 * fontSize
-
+                color: '#fff'
             },
-            top: 2 * fontSize,
+            top: 2
         },
         color: [
             '#249eac',
@@ -2058,7 +2039,7 @@ function timeChart(datas) {
                 axisLabel: {//y坐标轴
                     textStyle: {
                         color: '#40848c',
-                        fontSize: 14 * fontSize
+                        fontSize: 14
                     }
                 },
                 splitLine: {
@@ -2089,11 +2070,7 @@ function timeChart(datas) {
                 },
                 "axisLabel": {
                     "interval": 0,
-                    formatter: '{value}%',
-                    textStyle: {
-                        color: '#40848c',
-                        fontSize: 14 * fontSize
-                    }
+                    formatter: '{value}%'
                 }
             }
         ],
@@ -2114,7 +2091,7 @@ function timeChart(datas) {
                     /*interval: 0,//x坐标显示全部*/
                     textStyle: {
                         color: '#47adb5',
-                        fontSize: 12 * fontSize
+                        fontSize: 12
                     },
                 },
                 axisLine: {
@@ -2242,6 +2219,7 @@ function timeChart(datas) {
                 data: barData2
             },
             {
+                name: '月发展环比',
                 name: '月发展环比',
                 type: 'line',
                 yAxisIndex: 1,
@@ -2393,7 +2371,7 @@ function pieChart(trafficWay,xdata) {
                     borderWidth: 5,
                     /*shadowBlur: 20,*/
                     borderColor:color[i],
-                    shadowColor: color[i],
+                    shadowColor: color[i]
                 }
             }
         }, {
@@ -2409,7 +2387,7 @@ function pieChart(trafficWay,xdata) {
                     },
                     color: 'rgba(0, 0, 0, 0)',
                     borderColor: 'rgba(0, 0, 0, 0)',
-                    borderWidth: 0,
+                    borderWidth: 0
                 }
             }
         });
@@ -2459,7 +2437,7 @@ function pieChart(trafficWay,xdata) {
             left: "35%",
             textStyle: {
                 color: '#fff',
-                fontSize: 18*fontSize,
+                fontSize: 18,
                 fontWeight: '400'
             }
         },
@@ -2477,10 +2455,9 @@ function pieChart(trafficWay,xdata) {
             right: '1%',
             bottom: '2%',
             textStyle: {
-                color: "#fff",
-                fontSize:12 * fontSize,
+                color: "#fff"
             },
-            itemGap: 10*fontSize
+            itemGap: 10
         },
         toolbox: {
             show: false

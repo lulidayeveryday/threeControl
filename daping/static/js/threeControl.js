@@ -13,7 +13,14 @@ var rightDiv1;
 //携入携出
 var rightDiv2;
 var remMap = 0;
+var fontSize = 1;
+var fontChange = 1;
 $(function () {
+    var wjbxue=screen.width;
+    if(wjbxue<1000){
+        fontSize = 0.5;
+        fontChange = 1.7
+    }
     /*时间*/
     setInterval(showTime, 1000);
     /*请求后台数据*/
@@ -591,11 +598,11 @@ function leftChart1(data, xData) {
             }
         },
         legend: {//图例组件，颜色和名字
-            right: '10',
-            top: '10',
-            itemGap: 16,
-            itemWidth: 13,
-            itemHeight: 2,
+            right: 10 * fontSize,
+            top: 10 * fontSize * fontSize,
+            itemGap: 16 * fontSize,
+            itemWidth: 13 * fontSize,
+            itemHeight: 2 * fontSize,
             data: [{
                 name: '月激活率',
                 icon: 'line'
@@ -605,21 +612,22 @@ function leftChart1(data, xData) {
                 color: '#88d7fd',
                 fontStyle: 'normal',
                 fontFamily: '微软雅黑',
-                fontSize: 12,
+                fontSize: 12 * fontSize,
             }
         },
         grid: {
-            x: '40', //距离左边
-            x2: '10', //距离右边
-            y: '33', // 上距离
-            y2: '30', // 下距离
+            x: 40 * fontSize, //距离左边
+            x2: 10 * fontSize, //距离右边
+            y: 33 * fontSize, // 上距离
+            y2: 30 * fontSize, // 下距离
         },
         xAxis: {
             axisLabel: {
                 interval: 0,
                 show: true,
                 textStyle: {
-                    color: '#5f9dc7'
+                    color: '#5f9dc7',
+                    fontSize: 12  * fontSize
                 },
             },
             axisLine: {
@@ -644,9 +652,9 @@ function leftChart1(data, xData) {
         yAxis: {
             nameTextStyle: {
                 color: "#5f9dc7",
-                fontSize: 12,
-                lineHeight: 12,
-                padding: [0, 0, -6, -30]
+                fontSize: 12 * fontSize,
+                lineHeight: 12 * fontSize,
+                padding: [0, 0, -6 * fontSize, -30 * fontSize]
             },
             splitNumber: 5,
             axisLabel: {
@@ -656,7 +664,8 @@ function leftChart1(data, xData) {
                     return value + '%';
                 },
                 textStyle: {
-                    color: '#5f9dc7'
+                    color: '#5f9dc7',
+                    fontSize: 12 * fontSize
                 },
             },
             axisLine: {
@@ -743,13 +752,14 @@ function leftChart2(data, data2, xData) {
                 color: '#fff',
                 fontStyle: 'normal',
                 fontFamily: '微软雅黑',
-                fontSize: 12,
+                fontSize: 12 * fontSize,
             }
         },
         legend: {//图例组件，颜色和名字
             show: true,
-            right: '90',
-            top: '5',
+            right: 90 * fontSize,
+            top: 5 * fontSize * fontSize,
+            itemWidth: 16 * fontSize,
             data: [{
                 name: '月激活率',
                 icon: 'line'
@@ -764,21 +774,22 @@ function leftChart2(data, data2, xData) {
                 color: '#88d7fd',
                 fontStyle: 'normal',
                 fontFamily: '微软雅黑',
-                fontSize: 12,
+                fontSize: 12 * fontSize,
             }
         },
         grid: {
-            x: '40', //距离左边
-            x2: '40', //距离右边
-            y: '33', // 上距离
-            y2: '30', // 下距离
+            x: 40 * fontSize, //距离左边
+            x2: 40 * fontSize, //距离右边
+            y: 33 * fontSize, // 上距离
+            y2: 30 * fontSize, // 下距离
         },
         xAxis: {
             axisLabel: {
                 interval: 0,
                 show: true,
                 textStyle: {
-                    color: '#5f9dc7'
+                    color: '#5f9dc7',
+                    fontSize: 12 * fontSize
                 },
             },
             axisLine: {
@@ -805,9 +816,9 @@ function leftChart2(data, data2, xData) {
                 name: '办理率',
                 nameTextStyle: {
                     color: "#5f9dc7",
-                    fontSize: 12,
-                    lineHeight: 12,
-                    padding: [0, 0, -6, -30]
+                    fontSize: 12 * fontSize,
+                    lineHeight: 12 * fontSize,
+                    padding: [0, 0, -6 * fontChange, -30 * fontSize]
                 },
                 splitNumber: 5,
                 axisLabel: {
@@ -817,7 +828,8 @@ function leftChart2(data, data2, xData) {
                         return value + '%';
                     },
                     textStyle: {
-                        color: '#5f9dc7'
+                        color: '#5f9dc7',
+                        fontSize:12 * fontSize
                     },
                 },
                 axisLine: {
@@ -843,9 +855,9 @@ function leftChart2(data, data2, xData) {
                 position: 'right',
                 nameTextStyle: {
                     color: "#5f9dc7",
-                    fontSize: 12,
-                    lineHeight: 12,
-                    padding: [0, 0, -6, 30]
+                    fontSize: 12 * fontSize,
+                    lineHeight: 12 * fontSize,
+                    padding: [0, 0, -6 * fontChange, 30 * fontSize]
                 },
                 splitNumber: 5,
                 axisLabel: {
@@ -855,7 +867,8 @@ function leftChart2(data, data2, xData) {
                         return value + '%';
                     },
                     textStyle: {
-                        color: '#5f9dc7'
+                        color: '#5f9dc7',
+                        fontSize:12 * fontSize
                     },
                 },
                 axisLine: {
@@ -961,15 +974,15 @@ function leftChart3(data, xdata) {
                 color: '#fff',
                 fontStyle: 'normal',
                 fontFamily: '微软雅黑',
-                fontSize: 12,
+                fontSize: 12 * fontSize,
             }
         },
         legend: {//图例组件，颜色和名字
-            right: '10',
-            top: '10',
-            itemWidth: 10,
-            itemHeight: 10,
-            itemGap: 16,
+            right: 10 * fontSize,
+            top: 10 * fontSize * fontSize,
+            itemWidth: 10 * fontSize,
+            itemHeight: 10 * fontSize,
+            itemGap: 16 * fontSize,
             data: [{
                 name: '月激活',
                 icon: 'rect',
@@ -979,14 +992,14 @@ function leftChart3(data, xdata) {
                 color: '#88d7fd',
                 fontStyle: 'normal',
                 fontFamily: '微软雅黑',
-                fontSize: 12,
+                fontSize: 12 * fontSize,
             }
         },
         grid: {
-            x: '60', //距离左边
-            x2: '10', //距离右边
-            y: '33', // 上距离
-            y2: '30', // 下距离
+            x: 60 * fontSize, //距离左边
+            x2: 10 * fontSize, //距离右边
+            y: 33 * fontSize, // 上距离
+            y2: 30 * fontSize, // 下距离
         },
         xAxis:
             [
@@ -994,9 +1007,10 @@ function leftChart3(data, xdata) {
                     axisLabel: {
                         interval: 0,
                         show: true,
-                        margin: 15,
+                        margin: 15 * fontSize,
                         textStyle: {
-                            color: '#5f9dc7'
+                            color: '#5f9dc7',
+                            fontSize:12 * fontSize
                         },
                     },
                     axisLine: {
@@ -1035,9 +1049,9 @@ function leftChart3(data, xdata) {
         yAxis: {
             nameTextStyle: {
                 color: "#5f9dc7",
-                fontSize: 12,
-                lineHeight: 12,
-                padding: [0, 0, -6, -30]
+                fontSize: 12 * fontSize,
+                lineHeight: 12 * fontSize,
+                padding: [0, 0, -6 * fontChange, -30 * fontSize]
             },
             min: 0,
             max: 100000,
@@ -1046,7 +1060,8 @@ function leftChart3(data, xdata) {
                 interval: 0,
                 show: true,
                 textStyle: {
-                    color: '#5f9dc7'
+                    color: '#5f9dc7',
+                    fontSize:12 * fontSize
                 },
             },
             axisLine: {
@@ -1073,7 +1088,7 @@ function leftChart3(data, xdata) {
             type: 'bar',
             xAxisIndex: 0,
             data: data,
-            barWidth: 5,
+            barWidth: 5 * fontSize,
             itemStyle: {
                 normal: {
                     color: '#06bcff',
@@ -1087,7 +1102,7 @@ function leftChart3(data, xdata) {
                 xAxisIndex: 1,
                 barGap: '-100%',
                 data: borderBg,
-                barWidth: 8,
+                barWidth: 8 * fontSize,
                 itemStyle: {
                     normal: {
                         color: '#0e2147',
@@ -1102,11 +1117,11 @@ function leftChart3(data, xdata) {
                 xAxisIndex: 2,
                 barGap: '-100%',
                 data: wBorder,
-                barWidth: 10,
+                barWidth: 10 * fontSize,
                 itemStyle: {
                     normal: {
                         color: '#4577BA',
-                        barBorderRadius: 50,
+                        barBorderRadius: 50 * fontSize,
                     },
                 },
                 z: 0,
@@ -1117,7 +1132,7 @@ function leftChart3(data, xdata) {
                 hoverAnimation: false,
                 data: zeroData,
                 xAxisIndex: 2,
-                symbolSize: 12,
+                symbolSize: 12 * fontSize,
                 itemStyle: {
                     normal: {
                         color: '#06bcff',
@@ -1132,7 +1147,7 @@ function leftChart3(data, xdata) {
                 hoverAnimation: false,
                 data: zeroData,
                 xAxisIndex: 1,
-                symbolSize: 20,
+                symbolSize: 20 * fontSize,
                 itemStyle: {
                     normal: {
                         color: '#0C2E6D',
@@ -1147,7 +1162,7 @@ function leftChart3(data, xdata) {
                 hoverAnimation: false,
                 data: zeroData,
                 xAxisIndex: 2,
-                symbolSize: 23,
+                symbolSize: 23 * fontSize,
                 itemStyle: {
                     normal: {
                         color: '#4577BA',
@@ -1192,15 +1207,15 @@ function centerChart(data, xdata) {
                 color: '#fff',
                 fontStyle: 'normal',
                 fontFamily: '微软雅黑',
-                fontSize: 12,
+                fontSize: 12 * fontSize,
             }
         },
         legend: {//图例组件，颜色和名字
-            right: '10',
-            top: '10',
-            itemGap: 16,
-            itemWidth: 12,
-            itemHeight: 12,
+            right: 10 * fontSize,
+            top: 10 * fontSize * fontSize,
+            itemGap: 16 * fontSize,
+            itemWidth: 12 * fontSize,
+            itemHeight: 12 * fontSize,
             data: [{
                 name: '月降套',
                 //icon:'image://../wwwroot/js/url2.png', //路径
@@ -1209,21 +1224,22 @@ function centerChart(data, xdata) {
                 color: '#88d7fd',
                 fontStyle: 'normal',
                 fontFamily: '微软雅黑',
-                fontSize: 12,
+                fontSize: 12 * fontSize,
             }
         },
         grid: {
-            x: '30', //距离左边
-            x2: '10', //距离右边
-            y: '33', // 上距离
-            y2: '30', // 下距离
+            x: 30 * fontSize * fontChange, //距离左边
+            x2: 10 * fontSize, //距离右边
+            y: 33 * fontSize, // 上距离
+            y2: 30 * fontSize, // 下距离
         },
         xAxis: {
             axisLabel: {
                 interval: 0,
                 show: true,
                 textStyle: {
-                    color: '#5f9dc7'
+                    color: '#5f9dc7',
+                    fontSize:12 * fontSize
                 },
             },
             axisLine: {
@@ -1249,16 +1265,17 @@ function centerChart(data, xdata) {
             name: '万',
             nameTextStyle: {
                 color: "#5f9dc7",
-                fontSize: 12,
-                lineHeight: 12,
-                padding: [0, 0, -6, -30]
+                fontSize: 12 * fontSize,
+                lineHeight: 12 * fontSize,
+                padding: [0, 0, -6 * fontChange, -30 * fontSize]
             },
             splitNumber: 5,
             axisLabel: {
                 interval: 0,
                 show: true,
                 textStyle: {
-                    color: '#5f9dc7'
+                    color: '#5f9dc7',
+                    fontSize:12 * fontSize
                 },
             },
             axisLine: {
@@ -1288,15 +1305,15 @@ function centerChart(data, xdata) {
             data: data,
 
             type: 'bar',
-            barWidth: 10,
+            barWidth: 10 * fontSize,
             /*barGap: 200,*/
             /*barCategoryGap: 200,*/
             label: {
                 show: false, // 柱子顶部的数值
                 position: 'top',
                 top: 0,
-                fontSize: 6,
-                offset: [0, -10]
+                fontSize: 6 * fontSize,
+                offset: [0, -10 * fontSize]
             },
             itemStyle: {
                 normal: {
@@ -1315,7 +1332,7 @@ function centerChart(data, xdata) {
             // barGap: 0
         }, {
             type: 'bar',
-            barWidth: 4,
+            barWidth: 4 * fontSize,
             itemStyle: {
                 normal: {
                     color: new echarts.graphic.LinearGradient(0, 1, 0, 0, [{
@@ -1345,8 +1362,8 @@ function centerChart(data, xdata) {
 
             },
             symbol: 'path://M 0,0 l 120,0 l -30,60 l -120,0 z',
-            symbolSize: ['13', '3'],
-            symbolOffset: ['-1', '-2'], // 左右 ，上下
+            symbolSize: [13 * fontSize, 3 * fontSize],
+            symbolOffset: [-1 * fontSize, -2 * fontSize], // 左右 ，上下
             symbolRotate: 0,
             symbolPosition: 'end',
             data: data,
@@ -1390,11 +1407,11 @@ function rightChart1(data, xdata) {
             }
         },
         legend: {//图例组件，颜色和名字
-            right: '10',
-            top: '10',
-            itemGap: 16,
-            itemWidth: 13,
-            itemHeight: 2,
+            right: 10 * fontSize,
+            top: 10 * fontSize * fontSize,
+            itemGap: 16 * fontSize,
+            itemWidth: 13 * fontSize,
+            itemHeight: 2 * fontSize,
             data: [{
                 name: '维挽率',
                 icon: 'line'
@@ -1404,21 +1421,22 @@ function rightChart1(data, xdata) {
                 color: '#88d7fd',
                 fontStyle: 'normal',
                 fontFamily: '微软雅黑',
-                fontSize: 12,
+                fontSize: 12 * fontSize,
             }
         },
         grid: {
-            x: '40', //距离左边
-            x2: '10', //距离右边
-            y: '33', // 上距离
-            y2: '30', // 下距离
+            x: 40 * fontSize * fontChange, //距离左边
+            x2: 10 * fontSize, //距离右边
+            y: 33 * fontSize, // 上距离
+            y2: 30 * fontSize, // 下距离
         },
         xAxis: {
             axisLabel: {
                 interval: 0,
                 show: true,
                 textStyle: {
-                    color: '#5f9dc7'
+                    color: '#5f9dc7',
+                    fontSize:12 * fontSize
                 },
             },
             axisLine: {
@@ -1443,9 +1461,9 @@ function rightChart1(data, xdata) {
         yAxis: {
             nameTextStyle: {
                 color: "#5f9dc7",
-                fontSize: 12,
-                lineHeight: 12,
-                padding: [0, 0, -6, -30]
+                fontSize: 12 * fontSize,
+                lineHeight: 12 * fontSize,
+                padding: [0, 0, -6 * fontChange, -30 * fontSize]
             },
             min: 0,
             max: 100,
@@ -1457,7 +1475,8 @@ function rightChart1(data, xdata) {
                     return value + '%';
                 },
                 textStyle: {
-                    color: '#5f9dc7'
+                    color: '#5f9dc7',
+                    fontSize:12 * fontSize
                 },
             },
             axisLine: {
@@ -1549,10 +1568,10 @@ function rightChart2(data, data2, xdata) {
         },
         legend: {//图例组件，颜色和名字
             show: true,
-            right: '90',
-            top: '5',
-            itemWidth: 13,
-            itemHeight: 13,
+            right: 90 * fontSize,
+            top: 5 * fontSize * fontSize,
+            itemWidth: 13 * fontSize,
+            itemHeight: 13 * fontSize,
             data: [{
                 name: '携出量',
                 icon: 'rect',
@@ -1567,21 +1586,22 @@ function rightChart2(data, data2, xdata) {
                 color: '#88d7fd',
                 fontStyle: 'normal',
                 fontFamily: '微软雅黑',
-                fontSize: 12,
+                fontSize: 12 * fontSize,
             }
         },
         grid: {
-            x: '40', //距离左边
-            x2: '40', //距离右边
-            y: '33', // 上距离
-            y2: '30', // 下距离
+            x: 40 * fontSize, //距离左边
+            x2: 40 * fontSize, //距离右边
+            y: 33 * fontSize, // 上距离
+            y2: 30 * fontSize, // 下距离
         },
         xAxis: {
             axisLabel: {
                 interval: 0,
                 show: true,
                 textStyle: {
-                    color: '#5f9dc7'
+                    color: '#5f9dc7',
+                    fontSize:12 * fontSize
                 },
             },
             axisLine: {
@@ -1614,16 +1634,17 @@ function rightChart2(data, data2, xdata) {
                 name: '万人',
                 nameTextStyle: {
                     color: "#5f9dc7",
-                    fontSize: 12,
-                    lineHeight: 12,
-                    padding: [0, 0, -6, -30]
+                    fontSize: 12 * fontSize,
+                    lineHeight: 12 * fontSize,
+                    padding: [0, 0, -6 * fontChange, -30 * fontSize]
                 },
                 splitNumber: 5,
                 axisLabel: {
                     interval: 0,
                     show: true,
                     textStyle: {
-                        color: '#5f9dc7'
+                        color: '#5f9dc7',
+                        fontSize:12 * fontSize
                     },
                 },
                 axisLine: {
@@ -1649,16 +1670,17 @@ function rightChart2(data, data2, xdata) {
                 position: 'right',
                 nameTextStyle: {
                     color: "#5f9dc7",
-                    fontSize: 12,
-                    lineHeight: 12,
-                    padding: [0, 0, -6, 30]
+                    fontSize: 12 * fontSize,
+                    lineHeight: 12 * fontSize,
+                    padding: [0, 0, -6 * fontChange, 30 * fontSize]
                 },
                 splitNumber: 5,
                 axisLabel: {
                     interval: 0,
                     show: true,
                     textStyle: {
-                        color: '#5f9dc7'
+                        color: '#5f9dc7',
+                        fontSize:12 * fontSize
                     },
                 },
                 axisLine: {
